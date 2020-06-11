@@ -41,21 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
+  - name: Background
     uniqueID: 2330636691
     locked: 0
-  - name: Decor
+  - name: BackgroundDecor
     uniqueID: 2189388735
     locked: 0
-  - name: Wall
-    uniqueID: 2819701659
-    locked: 0
-  - name: Obstacles
+  - name: ForegroundDecor
     uniqueID: 3294704331
     locked: 0
-  - name: Items
-    uniqueID: 3742801815
-    locked: 0
-  - name: Player
-    uniqueID: 3770526805
+  - name: Foreground
+    uniqueID: 2819701659
     locked: 0
