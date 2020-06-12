@@ -7,6 +7,7 @@ public class SceneSwitch : MonoBehaviour
 {
     public int scene_index;
     public GameObject player;
+    public float starting_pos_X;
     public float starting_pos_Y;
     static Vector3 playerPosition;
     static bool sceneSwitched = false;
@@ -20,7 +21,7 @@ public class SceneSwitch : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
             sceneSwitched = true;
-            playerPosition = new Vector3(player.transform.position.x, starting_pos_Y, 0);
+            playerPosition = new Vector3(starting_pos_X, starting_pos_Y, 0);
             SceneManager.LoadScene(scene_index);
         }
     }
