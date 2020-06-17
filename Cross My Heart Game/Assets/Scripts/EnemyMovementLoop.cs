@@ -91,7 +91,6 @@ public class EnemyMovementLoop : MonoBehaviour
             {
                 state = State.Startled;
                 waitTime = startledWatiTime;
-                GetComponent<AILerp>().enableRotation = true;
                 SetTarget(ray.collider.gameObject.transform);
                 SetSpeed(0);
             }
