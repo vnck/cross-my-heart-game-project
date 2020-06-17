@@ -85,6 +85,7 @@ namespace SuperTiled2Unity.Editor
                     var layerName = LayerMask.LayerToName(layerId);
                     var goCollider = new GameObject("Collision_" + layerName);
                     goCollider.layer = layerId;
+                    Debug.Log("LAYERNAME " + layerId);
                     m_TilemapGameObject.AddChildWithUniqueName(goCollider);
 
                     // Rigid body is needed for composite collider
