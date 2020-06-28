@@ -30,6 +30,7 @@ public class FollowPlayer : MonoBehaviour
     // LateUpdate is called last per frame
     void LateUpdate()
     {
+        target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         if(transform.position != target.position){
             Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
 
