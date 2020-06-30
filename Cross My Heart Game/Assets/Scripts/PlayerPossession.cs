@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerPossession : MonoBehaviour
 {
-    private bool isPossessed;
+    public bool isPossessed;
+    public bool isPossessing;
+    public bool isDepossessing;
 
     // Item attributes
     private GameObject item;
@@ -40,15 +42,26 @@ public class PlayerPossession : MonoBehaviour
         if (Input.GetKeyDown("p")) {
             if (!isPossessed && playerInRange) {
                 isPossessed = true;
+                isPossessing = true;
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
                 playerAnim.Play("possession", 0, 0);
                 StartCoroutine(waitForAnim());
             } else if (isPossessed) {
                 // health -= 1;
                 isPossessed = false;
+                isDepossessing = true;
                 GetComponent<PlayerMovement>().speed = 5;
                 playerAnim.enabled = true;
                 playerAnim.Play("depossession", 0, 0);
+                if (item != null) {
+                    Debug.Log("Help");
+                    item.transform.position = transform.position;
+                    item.SetActive(true);
+                } else {
+                    GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
+                    newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
+                    newItem.GetComponent<SpriteRenderer>().color = itemColor;
+                }
                 StartCoroutine(waitForDepossessAnim());
             }
         }
@@ -88,7 +101,9 @@ public class PlayerPossession : MonoBehaviour
         itemColor = item.GetComponent<SpriteRenderer>().color;
         playerSprite.sprite = itemSprite;
         playerSprite.color = itemColor;
+        transform.position = item.transform.position;
         item.SetActive(false);
+        isPossessing = false;
         yield return null;
     }
 
@@ -96,15 +111,7 @@ public class PlayerPossession : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         playerAnim.SetTrigger("depossessing");
         playerSprite.color = Color.white;
-        if (item != null) {
-            Debug.Log("Help");
-            item.transform.position = transform.position;
-            item.SetActive(true);
-        } else {
-            GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
-            newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
-            newItem.GetComponent<SpriteRenderer>().color = itemColor;
-        }
+        isDepossessing = false;
         yield return null;
     }
 }

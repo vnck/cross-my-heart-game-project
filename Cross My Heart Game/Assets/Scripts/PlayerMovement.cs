@@ -10,13 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private float timeDownX = 0.0f; //time which A/D was pressed
     private float timeDownY= 0.0f;  //time which W/S was pressed
-    
     private Animator playerAnimator;
+    private PlayerPossession playerPossession;
 
     // Use this for initialization
-    void Wake() 
-    {
-    }
 	void Start()
 	{
         rb2d = GetComponent<Rigidbody2D>();
@@ -24,12 +21,19 @@ public class PlayerMovement : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Player").Length > 1) {
             Destroy(gameObject);
         }
+        playerPossession = GetComponent<PlayerPossession>();
 	}
 
     void FixedUpdate() 
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        
+        if (playerPossession.isPossessing || playerPossession.isDepossessing)
+        {
+            movement.x = 0;
+            movement.y = 0;
+        }
         
         //if A/D pressed, save time it was pressed
         if (movement.x != 0) {
