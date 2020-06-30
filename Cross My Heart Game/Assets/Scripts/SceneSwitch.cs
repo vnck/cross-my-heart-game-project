@@ -7,6 +7,7 @@ public class SceneSwitch : MonoBehaviour
 {
     public int scene_index;
     public GameObject player;
+    public GameObject playerObj;
     public float starting_pos_X;
     public float starting_pos_Y;
     static Vector3 playerPosition;
@@ -14,7 +15,9 @@ public class SceneSwitch : MonoBehaviour
 
     private void Start() {
         if (sceneSwitched) {
-            player.transform.position = playerPosition;
+            playerObj = GameObject.FindGameObjectsWithTag("Player")[0];
+            playerObj.transform.position = playerPosition;
+            // player.transform.position = playerPosition;
         }
     }
 
