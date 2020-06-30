@@ -316,6 +316,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7078792947941310299, guid: a27e8efee1b94cd4795fc0d12fcc8bc6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a27e8efee1b94cd4795fc0d12fcc8bc6, type: 3}
 --- !u!1 &1055670879
@@ -537,12 +542,12 @@ PrefabInstance:
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.956
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
@@ -604,10 +609,40 @@ PrefabInstance:
       propertyPath: starting_pos_Y
       value: 18.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: destinationSwitchId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: switchId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5897762021902968338, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Name
       value: SceneSwitcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07920569
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.9149734
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.76467156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.39248943
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef703c10597d34874aaada298d9dab0b, type: 3}

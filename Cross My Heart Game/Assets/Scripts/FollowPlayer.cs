@@ -30,15 +30,18 @@ public class FollowPlayer : MonoBehaviour
     // LateUpdate is called last per frame
     void LateUpdate()
     {
-        target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
-        if(transform.position != target.position){
-            Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length >= 1) {
+            target = players[0].transform;
+            if(transform.position != target.position){
+                Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
 
-            // clamping
-            targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
-            targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y,maxPosition.y);
+                // clamping
+                targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
+                targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y,maxPosition.y);
 
-            transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+                transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+            }
         }
     }
 }

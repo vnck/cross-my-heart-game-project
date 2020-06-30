@@ -14,10 +14,16 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
 
     // Use this for initialization
+    void Wake() 
+    {
+    }
 	void Start()
 	{
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 1) {
+            Destroy(gameObject);
+        }
 	}
 
     void FixedUpdate() 

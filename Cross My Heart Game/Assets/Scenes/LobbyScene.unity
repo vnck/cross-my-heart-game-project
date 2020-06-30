@@ -482,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.41
+      value: 8.76
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
@@ -549,10 +549,40 @@ PrefabInstance:
       propertyPath: starting_pos_Y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: switchId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: destinationSwitchId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5897762021902968338, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Name
       value: SceneSwitcher (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03973937
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.7827973
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.47668076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.25567627
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef703c10597d34874aaada298d9dab0b, type: 3}
@@ -572,12 +602,12 @@ PrefabInstance:
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.74
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
@@ -644,6 +674,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1567259}
+    - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: switchId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5897762021902968338, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Name
@@ -652,22 +687,22 @@ PrefabInstance:
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.67336476
+      value: 0.039847374
       objectReference: {fileID: 0}
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.9766252
+      value: 1.9015503
       objectReference: {fileID: 0}
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.34900522
+      value: -1.249274
       objectReference: {fileID: 0}
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.31388378
+      value: 0.34078932
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef703c10597d34874aaada298d9dab0b, type: 3}
