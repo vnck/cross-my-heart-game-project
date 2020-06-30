@@ -27,7 +27,7 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 15f;
+
     }
 
     public void StationaryAction() {
