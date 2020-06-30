@@ -156,12 +156,20 @@ public class EnemyMovementLoop : MonoBehaviour
         SetTarget(keyObjects[currentKeyPointIndex].transform);
     }
 
-    void InvestigableTrigger(Transform transform) // Called when a distraction event occurs.
+    void InvestigableTrigger(Transform susTransform) // Called when a distraction event occurs.
     {
-        waitTime = suspiciousWaitTime;
-        SetTarget(transform);
-        SetSpeed(0);
-        state = State.Suspicious;
+        if (Vector3.Distance(transform.position, susTransform.position) < 4)
+        {
+            Debug.Log("SUSPICIOUS!!");
+            waitTime = suspiciousWaitTime;
+            SetTarget(transform);
+            SetSpeed(0);
+            state = State.Suspicious;
+        }
+    }
+
+    private void OnDestroy() {
+        PriestManager.investigableTrigger -= InvestigableTrigger;
     }
 
 }

@@ -36,6 +36,7 @@ public class Item : MonoBehaviour
         //     //go to player
         // }
         // health -= 1;
+        PriestManager.TriggerSuspicious();
         Debug.Log("HI");
     }
 
