@@ -63,6 +63,8 @@ public class PlayerPossession : MonoBehaviour
                     newItem.GetComponent<SpriteRenderer>().color = itemColor;
                 }
                 StartCoroutine(waitForDepossessAnim());
+            } else {
+                SaySmt.Line("Me", "Can't seem to possess anything nearby!");
             }
         }
 
@@ -104,6 +106,7 @@ public class PlayerPossession : MonoBehaviour
         transform.position = item.transform.position;
         item.SetActive(false);
         isPossessing = false;
+        SaySmt.Line("Me", "Spooktacular!");
         yield return null;
     }
 
