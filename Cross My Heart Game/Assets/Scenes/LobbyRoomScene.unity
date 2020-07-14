@@ -167,31 +167,6 @@ PolygonCollider2D:
       - {x: 6.0808797, y: -2.0632079}
       - {x: 5.0285425, y: -2.0639129}
       - {x: 5.0220776, y: -0.99344146}
---- !u!1 &301515003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4184026533300184147, guid: 92cd4db075057e64eb52125057a70b70,
-    type: 3}
-  m_PrefabInstance: {fileID: 1544271976}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &301515011
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301515003}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7364bbd8a54bd549bf62d3f04570e92, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &425287360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7193366061671003619, guid: ff612f73261a04d54a7e72e13abbfd61,
@@ -1519,10 +1494,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7873391677573667592, guid: 786de9967217de84bbc1852bb2244a91,
+    - target: {fileID: 6159193051005737819, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7873391677573667593, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}

@@ -8,6 +8,7 @@ public class EnemyMovementLoop : MonoBehaviour
     public enum State
     {
         Idle,
+        Patrolling,
         Suspicious,
         Investigating,
         Startled,
@@ -68,40 +69,28 @@ public class EnemyMovementLoop : MonoBehaviour
         SetNextKeyPoint();
         lastPos = transform.position;
         animator = GetComponent<Animator>();
-
     }
 
-    void Update() {
+    void Update() 
+    {
         UpdateCurrentDirection();
     }
 
     void FixedUpdate()
     {
-        Vector3 lineTo = Vector3.right;
-        if (currentDirection == Direction.Right) { lineTo = Vector3.right; }
-        if (currentDirection == Direction.Left) { lineTo = Vector3.left; }
-        if (currentDirection == Direction.Up) { lineTo = Vector3.up; }
-        if (currentDirection == Direction.Down) { lineTo = Vector3.down; }
-
-        RaycastHit2D ray = Physics2D.Linecast(transform.position + lineTo / 2, transform.position + lineTo * 5);
-
-        if (ray.collider != null) 
+        if (state != State.Chasing) 
         {
-            if (ray.collider.gameObject.CompareTag("Player"))
-            {
-                state = State.Startled;
-                waitTime = startledWatiTime;
-                SetTarget(ray.collider.gameObject.transform);
-                SetSpeed(0);
-            }
-
+            CheckPlayer();
         }
-
         if (GetComponent<AILerp>().reachedDestination || GetComponent<AILerp>().reachedEndOfPath || GetComponent<AILerp>().speed == 0)
         {
+            if (state == State.Patrolling)
+            {
+                state = State.Idle;
+            }
             if (waitTime > 0) 
             {
-                waitTime --;
+                waitTime -= Time.deltaTime;
                 return;
             }
 
@@ -111,15 +100,40 @@ public class EnemyMovementLoop : MonoBehaviour
                 waitTime = investigationWaitTime;
                 SetSpeed(investigationSpeed);
             }
-            else if (state == State.Investigating) { state = State.Idle; }
+            else if (state == State.Investigating) { state = State.Patrolling; }
             else if (state == State.Startled) 
             { 
                 state = State.Chasing; 
                 SetSpeed(chaseSpeed);
             }
             else if (state == State.Idle) { 
+                state = State.Patrolling;
                 SetSpeed(speed);
                 SetNextKeyPoint(); 
+            }
+        }
+    }
+
+    void CheckPlayer()
+    {
+        Vector3 lineTo = Vector3.right;
+        if (currentDirection == Direction.Right) { lineTo = Vector3.right; }
+        if (currentDirection == Direction.Left) { lineTo = Vector3.left; }
+        if (currentDirection == Direction.Up) { lineTo = Vector3.up; }
+        if (currentDirection == Direction.Down) { lineTo = Vector3.down; }
+
+        RaycastHit2D ray = Physics2D.Linecast(transform.position + lineTo*2, transform.position + lineTo * 20);
+
+        if (ray.collider != null) 
+        {
+            Debug.Log("Collided against " + ray.collider.gameObject);
+            if (ray.collider.gameObject.CompareTag("Player"))
+            {
+                Debug.Log("Saw player!!!");
+                state = State.Startled;
+                waitTime = startledWatiTime;
+                SetTarget(ray.collider.gameObject.transform);
+                SetSpeed(0);
             }
         }
     }
@@ -158,7 +172,7 @@ public class EnemyMovementLoop : MonoBehaviour
 
     void InvestigableTrigger(Transform susTransform) // Called when a distraction event occurs.
     {
-        if (Vector3.Distance(transform.position, susTransform.position) < 4)
+        if (Vector3.Distance(transform.position, susTransform.position) < 12)
         {
             Debug.Log("SUSPICIOUS!!");
             waitTime = suspiciousWaitTime;
