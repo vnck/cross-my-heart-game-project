@@ -130,6 +130,9 @@ public class EnemyMovementLoop : MonoBehaviour
             if (ray.collider.gameObject.CompareTag("Player"))
             {
                 Debug.Log("Saw player!!!");
+                PlayerPossession p = ray.collider.gameObject.GetComponent<PlayerPossession>();
+                PlayerMovement pm = ray.collider.gameObject.GetComponent<PlayerMovement>();
+                if (p.isPossessed && pm.IsStill()) { return; }
                 state = State.Startled;
                 waitTime = startledWatiTime;
                 SetTarget(ray.collider.gameObject.transform);

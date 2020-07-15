@@ -78,4 +78,9 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("moving", false);
         }
     }
+
+    public bool IsStill()
+    {
+        return movement.x == 0 && movement.y == 0;
+    }
 }
