@@ -186,4 +186,14 @@ public class EnemyMovementLoop : MonoBehaviour
         PriestManager.investigableTrigger -= InvestigableTrigger;
     }
 
+    private void OnDrawGizmos() {
+        Vector3 lineTo = Vector3.right;
+        if (currentDirection == Direction.Right) { lineTo = Vector3.right; }
+        if (currentDirection == Direction.Left) { lineTo = Vector3.left; }
+        if (currentDirection == Direction.Up) { lineTo = Vector3.up; }
+        if (currentDirection == Direction.Down) { lineTo = Vector3.down; }
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position + lineTo, transform.position + lineTo * 5);
+    }
+
 }

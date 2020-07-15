@@ -455,6 +455,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2112236581193641481, guid: 1f3454fead595bf49b2584bf79932499,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -1519477876558761164, guid: 1f3454fead595bf49b2584bf79932499,
         type: 3}
       propertyPath: m_CellSize.y
@@ -836,6 +841,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ConvoBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873391677612906506, guid: 786de9967217de84bbc1852bb2244a91,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5188679
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873391677612906506, guid: 786de9967217de84bbc1852bb2244a91,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5188679
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873391677612906506, guid: 786de9967217de84bbc1852bb2244a91,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5188679
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786de9967217de84bbc1852bb2244a91, type: 3}
