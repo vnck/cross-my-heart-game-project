@@ -835,7 +835,7 @@ PrefabInstance:
     - target: {fileID: 7873391677573667592, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7873391677573667593, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
@@ -955,17 +955,17 @@ PrefabInstance:
     - target: {fileID: 7873391677612906506, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.5188679
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7873391677612906506, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.5188679
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7873391677612906506, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.5188679
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786de9967217de84bbc1852bb2244a91, type: 3}
@@ -1111,6 +1111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Priest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184147, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4184026533300184156, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}

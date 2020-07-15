@@ -78,7 +78,7 @@ public class EnemyMovementLoop : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (state != State.Chasing) 
+        if (state != State.Chasing && state != State.Startled) 
         {
             CheckPlayer();
         }
@@ -122,7 +122,7 @@ public class EnemyMovementLoop : MonoBehaviour
         if (currentDirection == Direction.Up) { lineTo = Vector3.up; }
         if (currentDirection == Direction.Down) { lineTo = Vector3.down; }
 
-        RaycastHit2D ray = Physics2D.Linecast(transform.position + lineTo*2, transform.position + lineTo * 20);
+        RaycastHit2D ray = Physics2D.Linecast(transform.position + lineTo, transform.position + lineTo * 5);
 
         if (ray.collider != null) 
         {
