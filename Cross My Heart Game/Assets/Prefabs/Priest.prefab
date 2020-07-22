@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  repathRate: 0.5
+  repathRate: 0.1
   canSearch: 1
   canMove: 1
   speed: 2
