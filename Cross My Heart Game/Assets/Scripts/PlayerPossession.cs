@@ -130,7 +130,6 @@ public class PlayerPossession : MonoBehaviour
 
     IEnumerator waitForDepossessAnim() {
         yield return new WaitForSeconds(0.5f);
-        playerAnim.SetTrigger("deposessing");
         playerSprite.color = Color.white;
         isDepossessing = false;
         yield return null;
