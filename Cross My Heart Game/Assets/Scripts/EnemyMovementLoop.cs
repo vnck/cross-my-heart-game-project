@@ -103,12 +103,16 @@ public class EnemyMovementLoop : MonoBehaviour
 
             if (state == State.Suspicious) 
             { 
+                Debug.Log("Investigating!!");
                 state = State.Investigating; 
                 questionBox.enabled = false;
                 waitTime = investigationWaitTime;
                 SetSpeed(investigationSpeed);
             }
-            else if (state == State.Investigating) { state = State.Patrolling; }
+            else if (state == State.Investigating) { 
+                Debug.Log("Patrolling!!");
+                state = State.Patrolling; 
+            }
             else if (state == State.Startled) 
             { 
                 state = State.Chasing; 
@@ -189,7 +193,7 @@ public class EnemyMovementLoop : MonoBehaviour
         {
             Debug.Log("SUSPICIOUS!!");
             waitTime = suspiciousWaitTime;
-            SetTarget(transform);
+            SetTarget(susTransform);
             SetSpeed(0);
             state = State.Suspicious;
             questionBox.enabled = true;
