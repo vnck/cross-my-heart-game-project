@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -76,6 +78,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else {
             playerAnimator.SetBool("moving", false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            SaySmt.Line("", "GAME OVER!", true);
         }
     }
 

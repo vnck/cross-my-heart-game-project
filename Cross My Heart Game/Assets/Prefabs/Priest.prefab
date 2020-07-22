@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6885398092349177278}
   m_Layer: 0
   m_Name: Priest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,8 +279,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1475265637
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7263181891274304025, guid: 4344be9ada3734901a0f9ad1a2cc12d0,
     type: 3}
@@ -361,8 +361,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1475265637
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -7975249404588759376, guid: 4344be9ada3734901a0f9ad1a2cc12d0,
     type: 3}
