@@ -86,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             SaySmt.Line("", "GAME OVER!", true);
+            playerPossession.reset();
         }
     }
 

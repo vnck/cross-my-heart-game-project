@@ -23,6 +23,7 @@ public class PlayerPossession : MonoBehaviour
     //Animator
     private Animator playerAnim;
     private SpriteRenderer playerSprite;
+    private Sprite normalPlayerSprite;
 
     
 
@@ -32,6 +33,7 @@ public class PlayerPossession : MonoBehaviour
         isPossessed = false;
         playerInRange = false;
         playerSprite = GetComponent<SpriteRenderer>();
+        normalPlayerSprite = playerSprite.sprite;
         playerAnim = GetComponent<Animator>();
         DontDestroyOnLoad(this.gameObject);
     }
@@ -85,7 +87,23 @@ public class PlayerPossession : MonoBehaviour
         Debug.Log("Outside item");
         if (other.CompareTag("Item")) {
             playerInRange = false;
+            item = null;
         }
+    }
+
+    public void reset() {
+        isPossessed = false;
+        GetComponent<PlayerMovement>().speed = 5;
+        playerSprite.sprite = normalPlayerSprite;
+        playerSprite.color = Color.white;
+        playerAnim.enabled = true;
+        playerAnim.Play("Idle", 0);
+        if (item)
+        {
+            item.transform.position = transform.position;
+            item.SetActive(true);
+        }
+        item = null;
     }
 
     void StationaryAction() {
@@ -112,7 +130,7 @@ public class PlayerPossession : MonoBehaviour
 
     IEnumerator waitForDepossessAnim() {
         yield return new WaitForSeconds(0.5f);
-        playerAnim.SetTrigger("depossessing");
+        playerAnim.SetTrigger("deposessing");
         playerSprite.color = Color.white;
         isDepossessing = false;
         yield return null;
