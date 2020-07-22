@@ -48,6 +48,11 @@ public class EnemyMovementLoop : MonoBehaviour
 
     private Animator animator;
 
+    public GameObject alertBoxContainer;
+    public GameObject questionBoxContainer;
+    private SpriteRenderer alertBox;
+    private SpriteRenderer questionBox;
+
     void Start()
     {
         state = State.Idle;
@@ -69,6 +74,8 @@ public class EnemyMovementLoop : MonoBehaviour
         SetNextKeyPoint();
         lastPos = transform.position;
         animator = GetComponent<Animator>();
+        alertBox = alertBoxContainer.GetComponent<SpriteRenderer>();
+        questionBox = questionBoxContainer.GetComponent<SpriteRenderer>();
     }
 
     void Update() 
@@ -97,6 +104,7 @@ public class EnemyMovementLoop : MonoBehaviour
             if (state == State.Suspicious) 
             { 
                 state = State.Investigating; 
+                questionBox.enabled = false;
                 waitTime = investigationWaitTime;
                 SetSpeed(investigationSpeed);
             }
@@ -104,6 +112,7 @@ public class EnemyMovementLoop : MonoBehaviour
             else if (state == State.Startled) 
             { 
                 state = State.Chasing; 
+                alertBox.enabled = false;
                 SetSpeed(chaseSpeed);
             }
             else if (state == State.Idle) { 
@@ -134,6 +143,7 @@ public class EnemyMovementLoop : MonoBehaviour
                 PlayerMovement pm = ray.collider.gameObject.GetComponent<PlayerMovement>();
                 if (p.isPossessed && pm.IsStill()) { return; }
                 state = State.Startled;
+                alertBox.enabled = true;
                 waitTime = startledWatiTime;
                 SetTarget(ray.collider.gameObject.transform);
                 SetSpeed(0);
@@ -182,6 +192,7 @@ public class EnemyMovementLoop : MonoBehaviour
             SetTarget(transform);
             SetSpeed(0);
             state = State.Suspicious;
+            questionBox.enabled = true;
         }
     }
 
