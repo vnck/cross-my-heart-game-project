@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4898757211428337425}
   - component: {fileID: 451719911773821284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2548148039144594731}
   - component: {fileID: 412405773962148631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chair_03
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6491739814404181032}
   - component: {fileID: 1172320313986092322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02
   m_TagString: Furniture
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7162791688196477057}
   - component: {fileID: 6799174421514504824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 03
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5310257181400760755}
   - component: {fileID: 6231675173266287671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4412752894585478750}
   - component: {fileID: 4302262683920911938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Microwave
   m_TagString: Furniture
   m_Icon: {fileID: 0}

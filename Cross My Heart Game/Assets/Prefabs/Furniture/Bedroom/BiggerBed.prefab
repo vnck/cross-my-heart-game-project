@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3954911270329619197}
   - component: {fileID: 3099619282220485874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8836751393974172538}
   - component: {fileID: 5160754195721986435}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 03
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748880547109125703}
   - component: {fileID: 4423195899578817021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 04
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5797532674713905736}
   - component: {fileID: 5746153355902617548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2663902155417515429}
   - component: {fileID: 2481939245813507513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BiggerBed
   m_TagString: Furniture
   m_Icon: {fileID: 0}

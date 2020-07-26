@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1101839628847158259}
   - component: {fileID: 2242259382062110712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 917283354699892936}
   - component: {fileID: 5921564367205922799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cup_01
   m_TagString: Furniture
   m_Icon: {fileID: 0}

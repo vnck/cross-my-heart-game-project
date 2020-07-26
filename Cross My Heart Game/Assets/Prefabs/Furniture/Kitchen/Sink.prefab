@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4395464204901305044}
   - component: {fileID: 2385068250188600539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8124224542991016787}
   - component: {fileID: 5585544523077155242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 03
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34330449301628526}
   - component: {fileID: 3998950741550416340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 04
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6514880169012048481}
   - component: {fileID: 5017865092298399717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3379227329467723148}
   - component: {fileID: 2912957214948425104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sink
   m_TagString: Furniture
   m_Icon: {fileID: 0}

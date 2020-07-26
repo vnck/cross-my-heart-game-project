@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4850706981916160075}
   - component: {fileID: 6274893912176986125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 03
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4146996016800733923}
   - component: {fileID: 2748206343533003463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 09
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803852562804167300}
   - component: {fileID: 520955815787179146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 04
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2468607264119467281}
   - component: {fileID: 498045704694585386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 07
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4602770121893557889}
   - component: {fileID: 7023104378895616422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Table
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4327974764142996922}
   - component: {fileID: 3189833130217466289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7281607058530942536}
   - component: {fileID: 7547236120634506087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 06
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665200542179460351}
   - component: {fileID: 5327251832210838664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7593825743938903753}
   - component: {fileID: 566539398974276358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 08
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -731,7 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2354172207941005037}
   - component: {fileID: 6987137575509666290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 05
   m_TagString: Furniture
   m_Icon: {fileID: 0}

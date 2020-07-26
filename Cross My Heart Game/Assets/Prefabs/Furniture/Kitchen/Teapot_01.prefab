@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8544621640363237002}
   - component: {fileID: 2883393577849201069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teapot_01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8459102639640102321}
   - component: {fileID: 7291428137964536250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}

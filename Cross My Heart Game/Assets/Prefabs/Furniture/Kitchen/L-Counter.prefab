@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2954806548865434318}
   - component: {fileID: 1769071175201901624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 03
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8159857461438662684}
   - component: {fileID: 3596357597632370795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7990680799856665393}
   - component: {fileID: 5993231205738967317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 04
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4906365445650997593}
   - component: {fileID: 6071546271544124754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 5181026834495666786}
   - component: {fileID: 1833514006486058309}
   - component: {fileID: 437140209308010825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L-Counter
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4453859835379633229}
   - component: {fileID: 6975421576871268600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 06
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8903631742962403419}
   - component: {fileID: 3627644981774180721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 05
   m_TagString: Furniture
   m_Icon: {fileID: 0}
