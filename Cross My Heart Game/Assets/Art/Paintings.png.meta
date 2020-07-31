@@ -1,154 +1,157 @@
 fileFormatVersion: 2
-guid: ae82c7f3d58ac484ab04383d1964fa05
+guid: 4d8a9afc4ae96b14c8778ff5d99eebc5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2971042474641537412
-    second: Living Room_0
+      213: -7058793229908712487
+    second: Paintings_0
   - first:
-      213: -6918828221656280310
-    second: Living Room_1
+      213: 973314779911330088
+    second: Paintings_1
   - first:
-      213: 535910663221409304
-    second: Living Room_2
+      213: -7416979955704210309
+    second: Paintings_2
   - first:
-      213: -6960357871979061296
-    second: Living Room_3
+      213: -3724869316114444954
+    second: Paintings_3
   - first:
-      213: 5655019976876187752
-    second: Living Room_4
+      213: 8376729401139700508
+    second: Paintings_4
   - first:
-      213: -8357382415995335919
-    second: Living Room_5
+      213: -2972457009955882675
+    second: Paintings_5
   - first:
-      213: 8619691618059732756
-    second: Living Room_6
+      213: 3113477391215539690
+    second: Paintings_6
   - first:
-      213: 8965874167001646414
-    second: Living Room_7
+      213: 9076563221293691188
+    second: Paintings_7
   - first:
-      213: 4590239075693958351
-    second: Living Room_8
+      213: 8164749872444360586
+    second: Paintings_8
   - first:
-      213: 1992994885073540373
-    second: Living Room_9
+      213: -6967425928045344061
+    second: Paintings_9
   - first:
-      213: -8841202213151553988
-    second: Living Room_10
+      213: 5686383857530353141
+    second: Paintings_10
   - first:
-      213: 5808098757713878246
-    second: Living Room_11
+      213: -3691016489491251286
+    second: Paintings_11
   - first:
-      213: -7842804380977768490
-    second: Living Room_12
+      213: -5157104955736793407
+    second: Paintings_12
   - first:
-      213: -1949759571456537277
-    second: Living Room_13
+      213: 5838952799545648375
+    second: Paintings_13
   - first:
-      213: -2105693847489683533
-    second: Living Room_14
+      213: 7035409747259935957
+    second: Paintings_14
   - first:
-      213: -8125226314848542
-    second: Living Room_15
+      213: -6862079675862687352
+    second: Paintings_15
   - first:
-      213: 3368989120277531296
-    second: Living Room_16
+      213: -5996343805528815649
+    second: Paintings_16
   - first:
-      213: -6431146500592993734
-    second: Living Room_17
+      213: 3201338658959373834
+    second: Paintings_17
   - first:
-      213: -7138156680103377030
-    second: Living Room_18
+      213: 6080073234876655988
+    second: Paintings_18
   - first:
-      213: 6905679287618158148
-    second: Living Room_19
+      213: -1913486008668936141
+    second: Paintings_19
   - first:
-      213: -2391205853616335855
-    second: Living Room_0
+      213: -6818286335259719947
+    second: Paintings_20
   - first:
-      213: -7151277221010011947
-    second: Living Room_1
+      213: -5361786344173168592
+    second: Paintings_21
   - first:
-      213: 8546883596628580131
-    second: Living Room_2
+      213: 7623908287201172641
+    second: Paintings_22
   - first:
-      213: 8108223500410425622
-    second: Living Room_3
+      213: 1730342337016467863
+    second: Paintings_23
   - first:
-      213: 1953813833702573294
-    second: Living Room_4
+      213: 7517347650548393584
+    second: Paintings_24
   - first:
-      213: -8332405394706669043
-    second: Living Room_5
+      213: 5017371973169332836
+    second: Paintings_25
   - first:
-      213: 10128820557736610
-    second: Living Room_6
+      213: -8231966284121545431
+    second: Paintings_26
   - first:
-      213: 3687931282964138085
-    second: Living Room_7
+      213: 8937319970672532498
+    second: Paintings_27
   - first:
-      213: -7388601574359828543
-    second: Living Room_8
+      213: -508804437495395178
+    second: Paintings_28
   - first:
-      213: -3130546235299925081
-    second: Living Room_9
+      213: -6707225535842967001
+    second: Paintings_29
   - first:
-      213: 7758570202100923570
-    second: Living Room_10
+      213: 7652008362012374866
+    second: Paintings_30
   - first:
-      213: 8270716664311441527
-    second: Living Room_20
+      213: 2319823242084716132
+    second: Paintings_31
   - first:
-      213: 5500332896785895910
-    second: Living Room_21
+      213: 2245643227050217834
+    second: Paintings_32
   - first:
-      213: 2058634682977148196
-    second: Living Room_22
+      213: 2568214783288621010
+    second: Paintings_33
   - first:
-      213: 610765835183356791
-    second: Living Room_23
+      213: -5259148790680706732
+    second: Paintings_34
   - first:
-      213: 3593526937452339720
-    second: Living Room_24
+      213: -643429306399486726
+    second: Paintings_35
   - first:
-      213: -5360897683809644382
-    second: Living Room_25
+      213: -2360758046500337031
+    second: Paintings_36
   - first:
-      213: 7236620405841391740
-    second: Living Room_26
+      213: -4368747273672748619
+    second: Paintings_37
   - first:
-      213: 6597073373645630423
-    second: Living Room_27
+      213: -92185061896660295
+    second: Paintings_38
   - first:
-      213: 203024676051859266
-    second: Living Room_28
+      213: -6627960034803883875
+    second: Paintings_39
   - first:
-      213: 8480702515962843912
-    second: Living Room_29
+      213: -3259409010924937277
+    second: Paintings_40
   - first:
-      213: 7934914704981721570
-    second: Living Room_30
+      213: -7804636581790732657
+    second: Paintings_41
   - first:
-      213: 6176193918247872804
-    second: Living Room_31
+      213: -6935094323061716287
+    second: Paintings_42
   - first:
-      213: -1431116953436998792
-    second: Living Room_32
+      213: 1671068963745948516
+    second: Paintings_43
   - first:
-      213: 4753839005490489481
-    second: Living Room_33
+      213: -7425948623471339367
+    second: Paintings_44
   - first:
-      213: 1980489381693244197
-    second: Living Room_34
+      213: 5928273063236886462
+    second: Paintings_45
   - first:
-      213: -5847081427046766467
-    second: Living Room_35
+      213: 4223184336127933080
+    second: Paintings_46
   - first:
-      213: 6063470891509658179
-    second: Living Room_36
+      213: 2461205421294043830
+    second: Paintings_47
   - first:
-      213: 2561167255109559269
-    second: Living Room_37
+      213: -537733717389281571
+    second: Paintings_48
+  - first:
+      213: 5721209049994896142
+    second: Paintings_49
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -234,11 +237,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Living Room_0
+      name: Paintings_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -248,18 +251,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1141d5ef1fab0ded0800000000000000
-      internalID: -2391205853616335855
+      spriteID: 9d3eb5cd4f02a0e90800000000000000
+      internalID: -7058793229908712487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_1
+      name: Paintings_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -269,18 +272,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d80b5fa14f81cc90800000000000000
-      internalID: -7151277221010011947
+      spriteID: 829904fa2a8e18d00800000000000000
+      internalID: 973314779911330088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_2
+      name: Paintings_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -290,18 +293,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327d8a90951ac9670800000000000000
-      internalID: 8546883596628580131
+      spriteID: b7cde02f608911990800000000000000
+      internalID: -7416979955704210309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_3
+      name: Paintings_3
       rect:
         serializedVersion: 2
         x: 48
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -311,18 +314,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 611107d7052368070800000000000000
-      internalID: 8108223500410425622
+      spriteID: 66d0f3a971b9e4cc0800000000000000
+      internalID: -3724869316114444954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_4
+      name: Paintings_4
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -332,18 +335,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4061b74575d1b10800000000000000
-      internalID: 1953813833702573294
+      spriteID: c13a08e220f104470800000000000000
+      internalID: 8376729401139700508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_5
+      name: Paintings_5
       rect:
         serializedVersion: 2
         x: 80
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -353,18 +356,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d02e5f3c0795d5c80800000000000000
-      internalID: -8332405394706669043
+      spriteID: d49b5732916bfb6d0800000000000000
+      internalID: -2972457009955882675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_6
+      name: Paintings_6
       rect:
         serializedVersion: 2
         x: 96
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -374,18 +377,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aa665fcb1cf32000800000000000000
-      internalID: 10128820557736610
+      spriteID: ae5bc9ff03b453b20800000000000000
+      internalID: 3113477391215539690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_7
+      name: Paintings_7
       rect:
         serializedVersion: 2
         x: 112
-        y: 128
+        y: 272
         width: 16
         height: 16
       alignment: 0
@@ -395,18 +398,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 568c02d56f92e2330800000000000000
-      internalID: 3687931282964138085
+      spriteID: 431f59af82e66fd70800000000000000
+      internalID: 9076563221293691188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_8
+      name: Paintings_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8746f210c40f4170800000000000000
+      internalID: 8164749872444360586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -416,18 +440,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c7f36db30a667990800000000000000
-      internalID: -7388601574359828543
+      spriteID: 3cac200980bbe4f90800000000000000
+      internalID: -6967425928045344061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_9
+      name: Paintings_10
       rect:
         serializedVersion: 2
         x: 16
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -437,18 +461,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3f20c09c01e84d0800000000000000
-      internalID: -3130546235299925081
+      spriteID: 5f5bc9c9df71aee40800000000000000
+      internalID: 5686383857530353141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_10
+      name: Paintings_11
       rect:
         serializedVersion: 2
         x: 32
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -458,18 +482,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bcf72dfd7afbab60800000000000000
-      internalID: 7758570202100923570
+      spriteID: aafb3c30f00e6ccc0800000000000000
+      internalID: -3691016489491251286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_11
+      name: Paintings_12
       rect:
         serializedVersion: 2
         x: 48
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -479,18 +503,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ec5ce92c038a9050800000000000000
-      internalID: 5808098757713878246
+      spriteID: 1ced6e3cd584e68b0800000000000000
+      internalID: -5157104955736793407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_12
+      name: Paintings_13
       rect:
         serializedVersion: 2
         x: 64
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -500,18 +524,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d751fce7f2c82390800000000000000
-      internalID: -7842804380977768490
+      spriteID: 7f4e03592a0280150800000000000000
+      internalID: 5838952799545648375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_13
+      name: Paintings_14
       rect:
         serializedVersion: 2
         x: 80
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -521,18 +545,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34d4ae1000011f4e0800000000000000
-      internalID: -1949759571456537277
+      spriteID: 5dccfb2d3ebc2a160800000000000000
+      internalID: 7035409747259935957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_14
+      name: Paintings_15
       rect:
         serializedVersion: 2
         x: 96
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -542,18 +566,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bfd6a62a9217c2e0800000000000000
-      internalID: -2105693847489683533
+      spriteID: 881e6c344eef4c0a0800000000000000
+      internalID: -6862079675862687352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_15
+      name: Paintings_16
       rect:
         serializedVersion: 2
         x: 112
-        y: 112
+        y: 256
         width: 16
         height: 16
       alignment: 0
@@ -563,18 +587,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e6a8c3562223eff0800000000000000
-      internalID: -8125226314848542
+      spriteID: fd747503415b8cca0800000000000000
+      internalID: -5996343805528815649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_16
+      name: Paintings_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06bff48c807d6c20800000000000000
+      internalID: 3201338658959373834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_18
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -584,18 +629,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa4c4651cd01ce20800000000000000
-      internalID: 3368989120277531296
+      spriteID: 479ee2db462c06450800000000000000
+      internalID: 6080073234876655988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_17
+      name: Paintings_19
       rect:
         serializedVersion: 2
         x: 16
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -605,18 +650,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3a78a5d45affb6a0800000000000000
-      internalID: -6431146500592993734
+      spriteID: 338ab9afc9ee175e0800000000000000
+      internalID: -1913486008668936141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_18
+      name: Paintings_20
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -626,18 +671,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a774b5ba15c20fc90800000000000000
-      internalID: -7138156680103377030
+      spriteID: 5f6c1f1f3b49061a0800000000000000
+      internalID: -6818286335259719947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_19
+      name: Paintings_21
       rect:
         serializedVersion: 2
         x: 48
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -647,18 +692,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44eb04769b6e5df50800000000000000
-      internalID: 6905679287618158148
+      spriteID: 038940a5abb1795b0800000000000000
+      internalID: -5361786344173168592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_20
+      name: Paintings_22
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -668,18 +713,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 778ef2e6cfc77c270800000000000000
-      internalID: 8270716664311441527
+      spriteID: 1ac58caa1309dc960800000000000000
+      internalID: 7623908287201172641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_21
+      name: Paintings_23
       rect:
         serializedVersion: 2
         x: 80
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -689,18 +734,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e1915ba0ab155c40800000000000000
-      internalID: 5500332896785895910
+      spriteID: 7919fa11039630810800000000000000
+      internalID: 1730342337016467863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_22
+      name: Paintings_24
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -710,18 +755,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42dd629465db19c10800000000000000
-      internalID: 2058634682977148196
+      spriteID: 076ed0c0cdbf25860800000000000000
+      internalID: 7517347650548393584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_23
+      name: Paintings_25
       rect:
         serializedVersion: 2
         x: 112
-        y: 96
+        y: 240
         width: 16
         height: 16
       alignment: 0
@@ -731,18 +776,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77b7c078a40e97800800000000000000
-      internalID: 610765835183356791
+      spriteID: 46242c6f93941a540800000000000000
+      internalID: 5017371973169332836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_24
+      name: Paintings_26
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -752,18 +797,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 802e4a5d5b5ced130800000000000000
-      internalID: 3593526937452339720
+      spriteID: 92561f7874e22cd80800000000000000
+      internalID: -8231966284121545431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_25
+      name: Paintings_27
       rect:
         serializedVersion: 2
         x: 16
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -773,18 +818,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a0df47b5f34a95b0800000000000000
-      internalID: -5360897683809644382
+      spriteID: 21cd0ff492db70c70800000000000000
+      internalID: 8937319970672532498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_26
+      name: Paintings_28
       rect:
         serializedVersion: 2
         x: 32
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -794,18 +839,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c70f488fae3ad6460800000000000000
-      internalID: 7236620405841391740
+      spriteID: 69cc1f25f0d50f8f0800000000000000
+      internalID: -508804437495395178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_27
+      name: Paintings_29
       rect:
         serializedVersion: 2
         x: 48
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -815,18 +860,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dbe551d7438d8b50800000000000000
-      internalID: 6597073373645630423
+      spriteID: 722a6ab59e52be2a0800000000000000
+      internalID: -6707225535842967001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_28
+      name: Paintings_30
       rect:
         serializedVersion: 2
         x: 64
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -836,18 +881,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 247b5b00ed941d200800000000000000
-      internalID: 203024676051859266
+      spriteID: 257f01c2015613a60800000000000000
+      internalID: 7652008362012374866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_29
+      name: Paintings_31
       rect:
         serializedVersion: 2
         x: 80
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -857,18 +902,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8031abd610281b570800000000000000
-      internalID: 8480702515962843912
+      spriteID: 46e872e92faa13020800000000000000
+      internalID: 2319823242084716132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_30
+      name: Paintings_32
       rect:
         serializedVersion: 2
         x: 96
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -878,18 +923,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e1857912ea7e1e60800000000000000
-      internalID: 7934914704981721570
+      spriteID: a611798fd902a2f10800000000000000
+      internalID: 2245643227050217834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_31
+      name: Paintings_33
       rect:
         serializedVersion: 2
         x: 112
-        y: 80
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -899,18 +944,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 429a71155af36b550800000000000000
-      internalID: 6176193918247872804
+      spriteID: 2d733d80db124a320800000000000000
+      internalID: 2568214783288621010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_32
+      name: Paintings_34
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -920,18 +965,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 873395696b6a32ce0800000000000000
-      internalID: -1431116953436998792
+      spriteID: 4512d8ef900c307b0800000000000000
+      internalID: -5259148790680706732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_33
+      name: Paintings_35
       rect:
         serializedVersion: 2
         x: 16
-        y: 64
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -941,60 +986,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98828a9736709f140800000000000000
-      internalID: 4753839005490489481
+      spriteID: afc8bf174741217f0800000000000000
+      internalID: -643429306399486726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_34
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 523424d799c1c7b10800000000000000
-      internalID: 1980489381693244197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Living Room_35
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d78e718db6efadea0800000000000000
-      internalID: -5847081427046766467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Living Room_36
+      name: Paintings_36
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1004,18 +1007,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 342ba5276a6c52450800000000000000
-      internalID: 6063470891509658179
+      spriteID: 97ac3b58017ec3fd0800000000000000
+      internalID: -2360758046500337031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Living Room_37
+      name: Paintings_37
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 48
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -1025,8 +1028,260 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e3ea238c081b8320800000000000000
-      internalID: 2561167255109559269
+      spriteID: 5b1974f40871f53c0800000000000000
+      internalID: -4368747273672748619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba5d04bc2e78bef0800000000000000
+      internalID: -92185061896660295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_39
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90670cf671c404a0800000000000000
+      internalID: -6627960034803883875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf9c1e06c044c2d0800000000000000
+      internalID: -3259409010924937277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_41
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e285d216c50b390800000000000000
+      internalID: -7804636581790732657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca0416f47891cf90800000000000000
+      internalID: -6935094323061716287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463e14b6e54d03710800000000000000
+      internalID: 1671068963745948516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_44
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99890b1421bb1f890800000000000000
+      internalID: -7425948623471339367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_45
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf50c111f4754250800000000000000
+      internalID: 5928273063236886462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a36ef37c3cb9a30800000000000000
+      internalID: 4223184336127933080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_47
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b24f776a45f72220800000000000000
+      internalID: 2461205421294043830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_48
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6f24778069988f0800000000000000
+      internalID: -537733717389281571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paintings_49
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0322b69151d56f40800000000000000
+      internalID: 5721209049994896142
       vertices: []
       indices: 
       edges: []
