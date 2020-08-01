@@ -1535,7 +1535,7 @@ PrefabInstance:
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.26
+      value: 1.03
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
@@ -1612,15 +1612,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneSwitcher
       objectReference: {fileID: 0}
+    - target: {fileID: 5897762021902968338, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.025277764
+      value: -0.025277734
       objectReference: {fileID: 0}
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Size.x
       value: 1.919018
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.6808724
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.3907156
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef703c10597d34874aaada298d9dab0b, type: 3}
