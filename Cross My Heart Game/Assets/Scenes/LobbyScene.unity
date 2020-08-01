@@ -804,7 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1567265}
-  smoothing: 0.01
+  smoothing: 0.02
   map: {fileID: 725981425}
   custom: 0
   minPosition: {x: 0, y: 0}

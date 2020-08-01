@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1632013027}
-  smoothing: 0.01
+  smoothing: 0.02
   map: {fileID: 690758657}
   custom: 1
   minPosition: {x: 0, y: 0}
