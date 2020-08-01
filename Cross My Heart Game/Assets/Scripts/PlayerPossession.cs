@@ -81,6 +81,23 @@ public class PlayerPossession : MonoBehaviour
             playerInRange = true;
             item = other.gameObject;
         }
+        if (other.CompareTag("Furniture")) {
+            if (transform.position.y > other.transform.position.y) {
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            } else {
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.CompareTag("Furniture")) {
+            if (transform.position.y > other.transform.position.y) {
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            } else {
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
