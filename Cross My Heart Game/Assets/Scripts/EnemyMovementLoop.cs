@@ -139,7 +139,6 @@ public class EnemyMovementLoop : MonoBehaviour
 
         if (ray.collider != null) 
         {
-            Debug.Log("Collided against " + ray.collider.gameObject);
             if (ray.collider.gameObject.CompareTag("Player"))
             {
                 Debug.Log("Saw player!!!");

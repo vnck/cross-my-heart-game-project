@@ -487,7 +487,7 @@ PrefabInstance:
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.94
+      value: 16.965
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
@@ -577,12 +577,12 @@ PrefabInstance:
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.47668076
+      value: 1.4308662
       objectReference: {fileID: 0}
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.25567627
+      value: 0.283535
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef703c10597d34874aaada298d9dab0b, type: 3}
@@ -718,6 +718,7 @@ GameObject:
   - component: {fileID: 1324645811}
   - component: {fileID: 1324645810}
   - component: {fileID: 1324645813}
+  - component: {fileID: 1324645814}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -743,7 +744,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -803,13 +804,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1567265}
-  smoothing: 0.01
+  smoothing: 0.02
   map: {fileID: 725981425}
   custom: 0
   minPosition: {x: 0, y: 0}
   maxPosition: {x: 0, y: 0}
   minPositionCustom: {x: -3, y: 6.9}
   maxPositionCustom: {x: 1.9, y: 17}
+--- !u!114 &1324645814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324645809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827441d266621f24c96725c40356d074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1468632232
 PrefabInstance:
   m_ObjectHideFlags: 0

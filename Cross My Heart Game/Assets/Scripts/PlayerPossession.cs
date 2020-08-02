@@ -25,7 +25,8 @@ public class PlayerPossession : MonoBehaviour
     private SpriteRenderer playerSprite;
     private Sprite normalPlayerSprite;
 
-    
+    public GameObject pBoxContainer;
+    private SpriteRenderer pBox;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class PlayerPossession : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
         normalPlayerSprite = playerSprite.sprite;
         playerAnim = GetComponent<Animator>();
+        pBox = pBoxContainer.GetComponent<SpriteRenderer>();
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -48,6 +50,7 @@ public class PlayerPossession : MonoBehaviour
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
                 playerAnim.Play("possession", 0, 0);
                 StartCoroutine(waitForAnim());
+                pBox.enabled = false;
             } else if (isPossessed) {
                 // health -= 1;
                 isPossessed = false;
@@ -80,6 +83,24 @@ public class PlayerPossession : MonoBehaviour
         if (other.CompareTag("Item")) {
             playerInRange = true;
             item = other.gameObject;
+            pBox.enabled = true;
+        }
+        if (other.CompareTag("Furniture")) {
+            if (transform.position.y > other.transform.position.y) {
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            } else {
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.CompareTag("Furniture")) {
+            if (transform.position.y > other.transform.position.y) {
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            } else {
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
         }
     }
 
@@ -88,6 +109,7 @@ public class PlayerPossession : MonoBehaviour
         if (other.CompareTag("Item")) {
             playerInRange = false;
             item = null;
+            pBox.enabled = false;
         }
     }
 
@@ -132,6 +154,7 @@ public class PlayerPossession : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         playerSprite.color = Color.white;
         isDepossessing = false;
+        pBox.enabled = true;
         yield return null;
     }
 }
