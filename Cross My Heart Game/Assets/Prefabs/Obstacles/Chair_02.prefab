@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4429152871529593248
+--- !u!1 &593718015647883414
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,63 +8,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2063321341054648753}
-  - component: {fileID: 5990060501962101252}
-  - component: {fileID: 1446029892358198350}
+  - component: {fileID: 3019856659248224391}
+  - component: {fileID: 7379768356176497458}
+  - component: {fileID: 2403683003168869752}
   m_Layer: 8
-  m_Name: Book
+  m_Name: Chair_02
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2063321341054648753
+--- !u!4 &3019856659248224391
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4429152871529593248}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 593718015647883414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 75.55274, y: -4.5441856, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5990060501962101252
+--- !u!61 &7379768356176497458
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4429152871529593248}
+  m_GameObject: {fileID: 593718015647883414}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007525444, y: -0.028177738}
+  m_Offset: {x: -0.0075263977, y: -0.27521753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7242336, y: 0.884902}
+  m_Size: {x: 0.8576126, y: 1.4484968}
   m_EdgeRadius: 0
---- !u!212 &1446029892358198350
+--- !u!212 &2403683003168869752
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4429152871529593248}
+  m_GameObject: {fileID: 593718015647883414}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -94,12 +94,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1475265637
-  m_SortingLayer: 4
+  m_SortingLayerID: -1964330605
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4455232240493665095, guid: 0f96768ce40f1481f91f2466ce67e6cc,
+  m_Sprite: {fileID: 2999467781092095864, guid: 0f96768ce40f1481f91f2466ce67e6cc,
     type: 3}
-  m_Color: {r: 0.78431374, g: 0.50980395, b: 0.18431373, a: 1}
+  m_Color: {r: 0.35686275, g: 0.52156866, b: 0.8, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
