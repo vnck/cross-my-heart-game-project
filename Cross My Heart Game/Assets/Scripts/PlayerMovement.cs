@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         if (timeDownX > timeDownY) {
             movement = Vector2.right * movement.x;
         }
-        else if (timeDownX < timeDownY) {
+        else {
             movement = Vector2.up * movement.y;
         }
         // Debug.Log(movement);
