@@ -32,7 +32,9 @@ public class SceneSwitch : MonoBehaviour
                 }
                 else {
                     Debug.Log(other.GetComponent<PlayerPossession>().itemName);
-                    SaySmt.Line("Priest", "Hey, no ghosts allowed!");
+                    SaySmt.PrepLine("Priest", "Hey, no ghosts allowed!");
+                    SaySmt.PrepLine("Clyde", "I think I need a disguise to get in...");
+                    SaySmt.PlayLines();
                 }
             } else {
                 changeScene();
