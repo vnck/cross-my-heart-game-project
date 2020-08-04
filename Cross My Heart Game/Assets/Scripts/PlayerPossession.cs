@@ -62,7 +62,6 @@ public class PlayerPossession : MonoBehaviour
                 StartCoroutine(waitForAnim());
                 pBox.enabled = false;
             } else if (isPossessed) {
-                // health -= 1;
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
                 isPossessed = false;
                 isDepossessing = true;
@@ -74,16 +73,17 @@ public class PlayerPossession : MonoBehaviour
                     Debug.Log("Help");
                     item.transform.position = transform.position;
                     item.SetActive(true);
-                } else {
-                    // clone item
-                    GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
-                    newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
-                    newItem.GetComponent<SpriteRenderer>().color = itemColor;
-                    newItem.layer = itemLayer;
-                    newItem.GetComponent<Item>().moveSpeed = itemSpeed;
-                    newItem.GetComponent<Item>().label = itemName;
-                    newItem.GetComponent<Item>().isKey = itemIsKey;
-                }
+                } 
+                // else {
+                //     // clone item
+                //     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
+                //     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
+                //     newItem.GetComponent<SpriteRenderer>().color = itemColor;
+                //     newItem.layer = itemLayer;
+                //     newItem.GetComponent<Item>().moveSpeed = itemSpeed;
+                //     newItem.GetComponent<Item>().label = itemName;
+                //     newItem.GetComponent<Item>().isKey = itemIsKey;
+                // }
                 AstarPath.active.Scan();
                 itemName = "";
                 StartCoroutine(waitForDepossessAnim());
@@ -119,6 +119,7 @@ public class PlayerPossession : MonoBehaviour
                     other.GetComponent<SpriteRenderer>().sprite = other.GetComponent<Door>().unlockedSprite;
                 } else {
                     //Ask Ryan for help with convo box
+                    SaySmt.Line("Me", "Door is locked!");
                     Debug.Log("Door locked! Need key");
                 }
             }
@@ -140,7 +141,7 @@ public class PlayerPossession : MonoBehaviour
         if (other.CompareTag("Item")) {
             playerInRange = false;
             pBox.enabled = false;
-            item = null;
+            // item = null;
         }
     }
 
