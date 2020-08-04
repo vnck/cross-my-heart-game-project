@@ -94,7 +94,7 @@ public class PlayerPossession : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Inside item");
-        if (other.CompareTag("Item")) {
+        if (other.CompareTag("Item") && item == null) {
             playerInRange = true;
             item = other.gameObject;
             pBox.enabled = true;
@@ -134,7 +134,6 @@ public class PlayerPossession : MonoBehaviour
         Debug.Log("Outside item");
         if (other.CompareTag("Item")) {
             playerInRange = false;
-            item = null;
             pBox.enabled = false;
         }
     }
@@ -184,6 +183,7 @@ public class PlayerPossession : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         playerSprite.color = Color.white;
         isDepossessing = false;
+        item = null;
         pBox.enabled = true;
         yield return null;
     }
