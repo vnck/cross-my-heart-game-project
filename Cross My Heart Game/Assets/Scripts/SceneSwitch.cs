@@ -15,6 +15,7 @@ public class SceneSwitch : MonoBehaviour
     public bool possessionCheck;
 
     private void Start() {
+        currentDestinationSwitchId = -1;
         if (player == null) { player = GameObject.FindGameObjectWithTag("Player"); }
         if (currentDestinationSwitchId == switchId)
         {

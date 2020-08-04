@@ -63,16 +63,18 @@ public class PlayerPossession : MonoBehaviour
                 GetComponent<PlayerMovement>().speed = 5;
                 playerAnim.enabled = true;
                 playerAnim.Play("depossession", 0, 0);
-                itemName = "";
                 if (item != null) {
                     Debug.Log("Help");
                     item.transform.position = transform.position;
                     item.SetActive(true);
                 } else {
+                    // clone item
                     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
                     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
                     newItem.GetComponent<SpriteRenderer>().color = itemColor;
+                    newItem.GetComponent<Item>().label = itemName;
                 }
+                itemName = "";
                 StartCoroutine(waitForDepossessAnim());
             } else {
                 SaySmt.Line("Me", "Can't seem to possess anything nearby!");
