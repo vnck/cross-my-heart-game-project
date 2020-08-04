@@ -12,6 +12,7 @@ public class PlayerPossession : MonoBehaviour
     private GameObject item;
     public GameObject itemPrefab;
     private Sprite itemSprite;
+    private int itemLayer;
     private Color itemColor;
     
     // Range for enemies to be distracted
@@ -46,7 +47,7 @@ public class PlayerPossession : MonoBehaviour
         if (Input.GetKeyDown("p")) {
             if (!isPossessed && playerInRange) {
                 isPossessed = true;
-                isPossessing = true;
+                isPossessing =true;
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
                 playerAnim.Play("possession", 0, 0);
                 StartCoroutine(waitForAnim());
@@ -66,7 +67,9 @@ public class PlayerPossession : MonoBehaviour
                     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
                     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
                     newItem.GetComponent<SpriteRenderer>().color = itemColor;
+                    newItem.layer = itemLayer; // Furniture
                 }
+                AstarPath.active.Scan();
                 StartCoroutine(waitForDepossessAnim());
             } else {
                 SaySmt.Line("Me", "Can't seem to possess anything nearby!");
@@ -141,6 +144,7 @@ public class PlayerPossession : MonoBehaviour
         playerAnim.enabled = false;
         itemSprite = item.GetComponent<SpriteRenderer>().sprite;
         itemColor = item.GetComponent<SpriteRenderer>().color;
+        itemLayer = item.layer;
         playerSprite.sprite = itemSprite;
         playerSprite.color = itemColor;
         transform.position = item.transform.position;
