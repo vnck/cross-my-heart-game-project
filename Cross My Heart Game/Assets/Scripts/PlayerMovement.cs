@@ -85,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            StartCoroutine(waitForDeathAnim());
             SaySmt.Line("", "GAME OVER!", true);
             playerPossession.reset();
         }
@@ -93,5 +94,10 @@ public class PlayerMovement : MonoBehaviour
     public bool IsStill()
     {
         return movement.x == 0 && movement.y == 0;
+    }
+    IEnumerator waitForDeathAnim() {
+        yield return new WaitForSeconds(0.5f);
+        playerAnimator.Play("death", 0, 0);
+        yield return null;
     }
 }

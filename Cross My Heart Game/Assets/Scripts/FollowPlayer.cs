@@ -5,10 +5,11 @@ using UnityEngine.Tilemaps;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public float smoothing;
     
     public GameObject map;
+    public GameObject targetObject;
     public bool custom=false;
     public Vector2 minPosition;
     public Vector2 maxPosition;
@@ -30,18 +31,15 @@ public class FollowPlayer : MonoBehaviour
     // LateUpdate is called last per frame
     void LateUpdate()
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        if (players.Length >= 1) {
-            target = players[0].transform;
-            if(transform.position != target.position){
-                Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
+        target = targetObject.transform;
+        if(transform.position != target.position){
+            Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
 
-                // clamping
-                targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
-                targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y,maxPosition.y);
+            // clamping
+            targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
+            targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y,maxPosition.y);
 
-                transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
-            }
+            transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
         }
     }
 }
