@@ -11,6 +11,9 @@ public class SceneSwitch : MonoBehaviour
     static GameObject player;
     static int currentDestinationSwitchId;
 
+    public string conditionalItem;
+    public bool possessionCheck;
+
     private void Start() {
         if (player == null) { player = GameObject.FindGameObjectWithTag("Player"); }
         if (currentDestinationSwitchId == switchId)
@@ -21,9 +24,23 @@ public class SceneSwitch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
-            Debug.Log(switchId + " triggered, going to " + destinationSwitchId);
-            currentDestinationSwitchId = destinationSwitchId;
-            SceneManager.LoadScene(scene_index);
+            if (possessionCheck){
+                if (other.GetComponent<PlayerPossession>().itemName == conditionalItem){
+                    changeScene();
+                    Debug.Log(other.GetComponent<PlayerPossession>().itemName);
+                }
+                else {
+                    Debug.Log(other.GetComponent<PlayerPossession>().itemName);
+                    SaySmt.Line("Priest", "Hey, no ghosts allowed!");
+                }
+            } else {
+                changeScene();
+            }
         }
     }
+    private void changeScene() {
+    Debug.Log(switchId + " triggered, going to " + destinationSwitchId);
+    currentDestinationSwitchId = destinationSwitchId;
+    SceneManager.LoadScene(scene_index);
+}
 }

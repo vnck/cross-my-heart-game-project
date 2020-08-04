@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     // private bool isPossessed;
 
     // Item attributes
+    public string label;
     public float health;
     public float moveSpeed;
     // private Vector3 change;
