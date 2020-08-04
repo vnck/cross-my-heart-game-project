@@ -13,6 +13,7 @@ public class PlayerPossession : MonoBehaviour
     public GameObject itemPrefab;
     private Sprite itemSprite;
     private Color itemColor;
+    public bool possessingKey;
     
     // Range for enemies to be distracted
     public float range;
@@ -47,6 +48,9 @@ public class PlayerPossession : MonoBehaviour
             if (!isPossessed && playerInRange) {
                 isPossessed = true;
                 isPossessing = true;
+                if (item.GetComponent<Item>().isKey) {
+                    possessingKey = true;
+                }
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
                 playerAnim.Play("possession", 0, 0);
                 StartCoroutine(waitForAnim());
@@ -55,6 +59,9 @@ public class PlayerPossession : MonoBehaviour
                 // health -= 1;
                 isPossessed = false;
                 isDepossessing = true;
+                if (possessingKey == true) {
+                    possessingKey = false;
+                }
                 GetComponent<PlayerMovement>().speed = 5;
                 playerAnim.enabled = true;
                 playerAnim.Play("depossession", 0, 0);
@@ -92,6 +99,20 @@ public class PlayerPossession : MonoBehaviour
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
             }
         }
+        if (other.CompareTag("Door")) {
+            bool locked = other.GetComponent<Door>().isLocked;
+            if (locked) {
+                if (possessingKey) {
+                    other.GetComponent<Door>().isLocked = false;
+                    other.GetComponent<SpriteRenderer>().sprite = other.GetComponent<Door>().unlockedSprite;
+                    //activate the RoomSwitcher
+                    // other.GetComponent<RoomSwitcher>().enabled = true;
+                } else {
+                    //Ask Ryan for help with convo box
+                    Debug.Log("Door locked! Need key");
+                }
+            }
+        } 
     }
 
     private void OnTriggerStay2D(Collider2D other) {

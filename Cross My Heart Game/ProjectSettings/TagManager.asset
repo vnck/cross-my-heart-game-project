@@ -8,6 +8,7 @@ TagManager:
   - Convo
   - Enemy
   - Furniture
+  - Door
   layers:
   - Default
   - TransparentFX
