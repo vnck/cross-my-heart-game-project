@@ -105,12 +105,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   keyObjects: []
-  speed: 0
-  investigationSpeed: 0
-  chaseSpeed: 0
-  suspiciousWaitTime: 0
-  investigationWaitTime: 0
-  startledWatiTime: 0
+  speed: 2
+  investigationSpeed: 3
+  chaseSpeed: 4
+  suspiciousWaitTime: 1
+  investigationWaitTime: 2
+  startledWatiTime: 1
   alertBoxContainer: {fileID: 9122925976276006115}
   questionBoxContainer: {fileID: 6477594787631369308}
 --- !u!114 &4184026533300184158
