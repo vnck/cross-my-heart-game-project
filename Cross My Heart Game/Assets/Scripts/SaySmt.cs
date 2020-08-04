@@ -44,9 +44,9 @@ public class SaySmt : MonoBehaviour
         } else {
             convo.GetComponentInChildren<Text>().text = person + ": " + message;
         }
-        SaySmt.reset = reset;
         speaking = true;
         Time.timeScale = 0;
+        SaySmt.reset = reset;
     }
 
     private void Update() {
@@ -59,7 +59,7 @@ public class SaySmt : MonoBehaviour
             if (lines.Count > 0){ 
                 PlayLines();
             }
-            if (reset) 
+            else if (reset) 
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
