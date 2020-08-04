@@ -13,8 +13,10 @@ public class PlayerPossession : MonoBehaviour
     public GameObject itemPrefab;
     private Sprite itemSprite;
     private int itemLayer;
+    private float itemSpeed;
     private Color itemColor;
     public string itemName;
+    private bool itemIsKey;
     
     // Range for enemies to be distracted
     public float range;
@@ -72,8 +74,10 @@ public class PlayerPossession : MonoBehaviour
                     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
                     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
                     newItem.GetComponent<SpriteRenderer>().color = itemColor;
-                    newItem.layer = itemLayer; // Furniture
+                    newItem.layer = itemLayer;
+                    newItem.GetComponent<Item>().moveSpeed = itemSpeed;
                     newItem.GetComponent<Item>().label = itemName;
+                    newItem.GetComponent<Item>().isKey = itemIsKey;
                 }
                 AstarPath.active.Scan();
                 itemName = "";
@@ -165,6 +169,8 @@ public class PlayerPossession : MonoBehaviour
         itemSprite = item.GetComponent<SpriteRenderer>().sprite;
         itemColor = item.GetComponent<SpriteRenderer>().color;
         itemName = item.GetComponent<Item>().label;
+        itemSpeed = item.GetComponent<Item>().moveSpeed;
+        itemIsKey = item.GetComponent<Item>().isKey;
         playerSprite.sprite = itemSprite;
         playerSprite.color = itemColor;
         transform.position = item.transform.position;
