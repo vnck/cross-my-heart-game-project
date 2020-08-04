@@ -60,6 +60,7 @@ public class PlayerPossession : MonoBehaviour
                 pBox.enabled = false;
             } else if (isPossessed) {
                 // health -= 1;
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
                 isPossessed = false;
                 isDepossessing = true;
                 GetComponent<PlayerMovement>().speed = 5;
@@ -94,7 +95,7 @@ public class PlayerPossession : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Inside item");
-        if (other.CompareTag("Item") && item == null) {
+        if (other.CompareTag("Item") && isPossessed == false) {
             playerInRange = true;
             item = other.gameObject;
             pBox.enabled = true;
@@ -135,6 +136,7 @@ public class PlayerPossession : MonoBehaviour
         if (other.CompareTag("Item")) {
             playerInRange = false;
             pBox.enabled = false;
+            item = null;
         }
     }
 
