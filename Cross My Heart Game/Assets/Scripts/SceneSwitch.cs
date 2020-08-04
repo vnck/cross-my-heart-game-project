@@ -31,12 +31,14 @@ public class SceneSwitch : MonoBehaviour
                     Debug.Log(other.GetComponent<PlayerPossession>().itemName);
                 }
                 else {
-                    Debug.Log(other.GetComponent<PlayerPossession>().itemName);
                     SaySmt.PrepLine("Priest", "Hey, no ghosts allowed!");
                     SaySmt.PrepLine("Clyde", "I think I need a disguise to get in...");
                     SaySmt.PlayLines();
                 }
-            } else {
+            } else if (destinationSwitchId < 0) {
+                SaySmt.Line("", "A mysterious voice tells you to not look back.");
+            }
+             else {
                 changeScene();
             }
         }
