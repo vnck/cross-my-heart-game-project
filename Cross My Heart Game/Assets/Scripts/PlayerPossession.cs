@@ -54,6 +54,9 @@ public class PlayerPossession : MonoBehaviour
                 if (item.GetComponent<Item>().isKey) {
                     itemName = "Key";
                 }
+                if (item.GetComponent<Item>().moveSpeed == 0) {
+                    GetComponents<Collider2D>()[0].isTrigger = true;
+                }
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
                 playerAnim.Play("possession", 0, 0);
                 StartCoroutine(waitForAnim());
@@ -64,6 +67,7 @@ public class PlayerPossession : MonoBehaviour
                 isPossessed = false;
                 isDepossessing = true;
                 GetComponent<PlayerMovement>().speed = 5;
+                GetComponents<Collider2D>()[0].isTrigger = false;
                 playerAnim.enabled = true;
                 playerAnim.Play("depossession", 0, 0);
                 if (item != null) {
