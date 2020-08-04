@@ -1574,6 +1574,7 @@ Transform:
   - {fileID: 875232313258954152}
   - {fileID: 875232311962741073}
   - {fileID: 875232313718077126}
+  - {fileID: 1506471638}
   m_Father: {fileID: 668878535}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2482,7 +2483,7 @@ Transform:
   m_Children:
   - {fileID: 1577179081}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &275926301
 GameObject:
@@ -5465,29 +5466,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 199452361}
-  - {fileID: 1244089352}
-  - {fileID: 875232312242153114}
-  - {fileID: 875232313441109294}
-  - {fileID: 1510883601}
-  - {fileID: 953105290}
-  - {fileID: 1702221067}
-  - {fileID: 1704958546}
-  - {fileID: 752706499}
-  - {fileID: 1278067718}
-  - {fileID: 1160694652}
-  - {fileID: 118372836}
-  - {fileID: 551834446}
-  - {fileID: 1460785739}
-  - {fileID: 1377091780}
-  - {fileID: 1995805712}
-  - {fileID: 1481395707}
-  - {fileID: 1346713193}
-  - {fileID: 739280168}
-  - {fileID: 875232312108115226}
-  - {fileID: 875232313258954152}
-  - {fileID: 875232311962741073}
-  - {fileID: 875232313718077126}
-  - {fileID: 1506471638}
   m_Father: {fileID: 778545782}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9691,7 +9669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1037149396
 MonoBehaviour:
@@ -9850,14 +9828,14 @@ Transform:
   - {fileID: 8369427088812699106}
   - {fileID: 1649508317}
   - {fileID: 1816180769}
-  - {fileID: 24266032}
   - {fileID: 860116323}
+  - {fileID: 24266032}
   - {fileID: 1923819028}
   - {fileID: 1994860524}
-  - {fileID: 680314216}
   - {fileID: 2012243709}
-  - {fileID: 256160317}
   - {fileID: 2142062730}
+  - {fileID: 680314216}
+  - {fileID: 256160317}
   m_Father: {fileID: 778545782}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14963,7 +14941,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 668878535}
+    m_TransformParent: {fileID: 199452361}
     m_Modifications:
     - target: {fileID: 4286693058805030856, guid: a86b72e806e46984aad74a96734ca643,
         type: 3}
