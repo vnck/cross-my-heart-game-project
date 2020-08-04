@@ -12,8 +12,11 @@ public class PlayerPossession : MonoBehaviour
     private GameObject item;
     public GameObject itemPrefab;
     private Sprite itemSprite;
+    private int itemLayer;
+    private float itemSpeed;
     private Color itemColor;
     public string itemName;
+    private bool itemIsKey;
     
     // Range for enemies to be distracted
     public float range;
@@ -57,6 +60,7 @@ public class PlayerPossession : MonoBehaviour
                 pBox.enabled = false;
             } else if (isPossessed) {
                 // health -= 1;
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
                 isPossessed = false;
                 isDepossessing = true;
                 GetComponent<PlayerMovement>().speed = 5;
@@ -71,8 +75,12 @@ public class PlayerPossession : MonoBehaviour
                     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
                     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
                     newItem.GetComponent<SpriteRenderer>().color = itemColor;
+                    newItem.layer = itemLayer;
+                    newItem.GetComponent<Item>().moveSpeed = itemSpeed;
                     newItem.GetComponent<Item>().label = itemName;
+                    newItem.GetComponent<Item>().isKey = itemIsKey;
                 }
+                AstarPath.active.Scan();
                 itemName = "";
                 StartCoroutine(waitForDepossessAnim());
             } else {
@@ -87,7 +95,7 @@ public class PlayerPossession : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Inside item");
-        if (other.CompareTag("Item")) {
+        if (other.CompareTag("Item") && isPossessed == false) {
             playerInRange = true;
             item = other.gameObject;
             pBox.enabled = true;
@@ -127,8 +135,8 @@ public class PlayerPossession : MonoBehaviour
         Debug.Log("Outside item");
         if (other.CompareTag("Item")) {
             playerInRange = false;
-            item = null;
             pBox.enabled = false;
+            item = null;
         }
     }
 
@@ -162,6 +170,8 @@ public class PlayerPossession : MonoBehaviour
         itemSprite = item.GetComponent<SpriteRenderer>().sprite;
         itemColor = item.GetComponent<SpriteRenderer>().color;
         itemName = item.GetComponent<Item>().label;
+        itemSpeed = item.GetComponent<Item>().moveSpeed;
+        itemIsKey = item.GetComponent<Item>().isKey;
         playerSprite.sprite = itemSprite;
         playerSprite.color = itemColor;
         transform.position = item.transform.position;
@@ -175,6 +185,7 @@ public class PlayerPossession : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         playerSprite.color = Color.white;
         isDepossessing = false;
+        item = null;
         pBox.enabled = true;
         yield return null;
     }
