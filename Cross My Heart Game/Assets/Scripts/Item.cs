@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     // Item attributes
+    public string label;
     public float health;
     public float moveSpeed;
     public bool isKey;

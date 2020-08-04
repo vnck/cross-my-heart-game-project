@@ -13,7 +13,7 @@ public class PlayerPossession : MonoBehaviour
     public GameObject itemPrefab;
     private Sprite itemSprite;
     private Color itemColor;
-    public bool possessingKey;
+    public string itemName;
     
     // Range for enemies to be distracted
     public float range;
@@ -49,7 +49,8 @@ public class PlayerPossession : MonoBehaviour
                 isPossessed = true;
                 isPossessing = true;
                 if (item.GetComponent<Item>().isKey) {
-                    possessingKey = true;
+                    Debug.Log("KEY");
+                    itemName = "Key";
                 }
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
                 playerAnim.Play("possession", 0, 0);
@@ -59,12 +60,10 @@ public class PlayerPossession : MonoBehaviour
                 // health -= 1;
                 isPossessed = false;
                 isDepossessing = true;
-                if (possessingKey == true) {
-                    possessingKey = false;
-                }
                 GetComponent<PlayerMovement>().speed = 5;
                 playerAnim.enabled = true;
                 playerAnim.Play("depossession", 0, 0);
+                itemName = "";
                 if (item != null) {
                     Debug.Log("Help");
                     item.transform.position = transform.position;
@@ -102,11 +101,11 @@ public class PlayerPossession : MonoBehaviour
         if (other.CompareTag("Door")) {
             bool locked = other.GetComponent<Door>().isLocked;
             if (locked) {
-                if (possessingKey) {
+                if (itemName == "Key") {
                     other.GetComponent<Door>().isLocked = false;
                     other.GetComponent<SpriteRenderer>().sprite = other.GetComponent<Door>().unlockedSprite;
                     //activate the RoomSwitcher
-                    // other.GetComponent<RoomSwitcher>().enabled = true;
+                    other.GetComponent<RoomSwitcher>().enabled = true;
                 } else {
                     //Ask Ryan for help with convo box
                     Debug.Log("Door locked! Need key");
@@ -139,6 +138,7 @@ public class PlayerPossession : MonoBehaviour
         GetComponent<PlayerMovement>().speed = 5;
         playerSprite.sprite = normalPlayerSprite;
         playerSprite.color = Color.white;
+        itemName = "";
         playerAnim.enabled = true;
         playerAnim.Play("Idle", 0);
         if (item)
@@ -162,6 +162,7 @@ public class PlayerPossession : MonoBehaviour
         playerAnim.enabled = false;
         itemSprite = item.GetComponent<SpriteRenderer>().sprite;
         itemColor = item.GetComponent<SpriteRenderer>().color;
+        itemName = item.GetComponent<Item>().label;
         playerSprite.sprite = itemSprite;
         playerSprite.color = itemColor;
         transform.position = item.transform.position;

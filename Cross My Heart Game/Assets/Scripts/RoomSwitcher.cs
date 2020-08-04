@@ -21,11 +21,14 @@ public class RoomSwitcher : MonoBehaviour
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") {
-            Debug.Log("Room Switch " + switchId + " triggered, going to Room Switch " + destinationSwitchId);
-            // currentDestinationSwitchId = destinationSwitchId;
-            Debug.Log("Switching: " + destinationSwitch.transform.position);
-            player.transform.position = destinationSwitch.transform.position;
+        if (other.tag == "Player" && GetComponent<Door>() != null) {
+            if (GetComponent<Door>().isLocked == false) {
+                Debug.Log("Room Switch " + switchId + " triggered, going to Room Switch " + destinationSwitchId);
+                // currentDestinationSwitchId = destinationSwitchId;
+                Debug.Log("Switching: " + destinationSwitch.transform.position);
+                player.transform.position = destinationSwitch.transform.position;
+            }
+            // player.transform.position = new Vector3(destinationSwitch.transform.position.x, destinationSwitch.transform.position.y, 0);
         }
     }
 }

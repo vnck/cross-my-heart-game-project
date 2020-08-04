@@ -12,10 +12,10 @@ public class Door : MonoBehaviour
     {
         isLocked = true;
     }
-    
-    // void Update() {
-    //     if (isLocked == false) {
 
+    // void Update() {
+    //     if (isLocked == true) {
+    //         GetComponent<RoomSwitcher>().enabled = false;
     //     }
     // }
 }
