@@ -49,7 +49,6 @@ public class PlayerPossession : MonoBehaviour
                 isPossessed = true;
                 isPossessing = true;
                 if (item.GetComponent<Item>().isKey) {
-                    Debug.Log("KEY");
                     itemName = "Key";
                 }
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
@@ -106,8 +105,6 @@ public class PlayerPossession : MonoBehaviour
                 if (itemName == "Key") {
                     other.GetComponent<Door>().isLocked = false;
                     other.GetComponent<SpriteRenderer>().sprite = other.GetComponent<Door>().unlockedSprite;
-                    //activate the RoomSwitcher
-                    other.GetComponent<RoomSwitcher>().enabled = true;
                 } else {
                     //Ask Ryan for help with convo box
                     Debug.Log("Door locked! Need key");
