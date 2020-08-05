@@ -117,7 +117,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.023378134, y: -1.2869148}
@@ -148,6 +148,7 @@ MonoBehaviour:
   isLocked: 0
   unlockedSprite: {fileID: -8095762551567468589, guid: 84745ab4717a24c9895ce0f6bafc7688,
     type: 3}
+  unlockingKey: 
 --- !u!114 &3646558397439938228
 MonoBehaviour:
   m_ObjectHideFlags: 0
