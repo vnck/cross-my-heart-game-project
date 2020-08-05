@@ -111,19 +111,6 @@ public class PlayerPossession : MonoBehaviour
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
             }
         }
-        if (other.CompareTag("Door")) {
-            bool locked = other.GetComponent<Door>().isLocked;
-            if (locked) {
-                if (itemName == "Key") {
-                    other.GetComponent<Door>().isLocked = false;
-                    other.GetComponent<SpriteRenderer>().sprite = other.GetComponent<Door>().unlockedSprite;
-                } else {
-                    //Ask Ryan for help with convo box
-                    SaySmt.Line("Me", "Door is locked!");
-                    Debug.Log("Door locked! Need key");
-                }
-            }
-        } 
     }
 
     private void OnTriggerStay2D(Collider2D other) {
