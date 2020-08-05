@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: 8599436577718238185
     second: space_down
+  - first:
+      213: -9080700020481880845
+    second: o_box
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -274,6 +277,27 @@ TextureImporter:
       bones: []
       spriteID: 9eb75637106575770800000000000000
       internalID: 8599436577718238185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: o_box
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 216
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc8b47617fdaf180800000000000000
+      internalID: -9080700020481880845
       vertices: []
       indices: 
       edges: []

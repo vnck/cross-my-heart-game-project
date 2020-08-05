@@ -35,6 +35,8 @@ public class PlayerPossession : MonoBehaviour
 
     public GameObject pBoxContainer;
     private SpriteRenderer pBox;
+    public GameObject oBoxContainer;
+    private SpriteRenderer oBox;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,7 @@ public class PlayerPossession : MonoBehaviour
         normalPlayerSprite = playerSprite.sprite;
         playerAnim = GetComponent<Animator>();
         pBox = pBoxContainer.GetComponent<SpriteRenderer>();
+        oBox = oBoxContainer.GetComponent<SpriteRenderer>();
         // DontDestroyOnLoad(this.gameObject);
     }
 
@@ -99,15 +102,16 @@ public class PlayerPossession : MonoBehaviour
                 AstarPath.active.Scan();
                 itemName = "";
                 StartCoroutine(waitForDepossessAnim());
-            } else if (npcInRange) {
-                npc.GetComponent<Npc>().Speak();
             } else {
                 SaySmt.Line("Me", "Can't seem to possess anything nearby!");
             }
         }
-
-        if (Input.GetKeyDown("o") && isPossessed) {
-            itemPrefab.GetComponent<Item>().StationaryAction();
+        if (Input.GetKeyDown("o")) {
+            if (isPossessed) {
+                itemPrefab.GetComponent<Item>().StationaryAction();
+            } else if (npcInRange) {
+                npc.GetComponent<Npc>().Speak();
+            }
         }
     }
 
@@ -119,7 +123,7 @@ public class PlayerPossession : MonoBehaviour
             pBox.enabled = true;
         }
         if (other.CompareTag("NPC")) {
-            pBox.enabled = true;
+            oBox.enabled = true;
             npc = other.gameObject;
             npcInRange = true;
         }
@@ -150,7 +154,7 @@ public class PlayerPossession : MonoBehaviour
             // item = null;
         }
         if (other.CompareTag("NPC")) {
-            pBox.enabled = false;
+            oBox.enabled = false;
             npcInRange = false;
             npc = null;
         }
@@ -166,7 +170,7 @@ public class PlayerPossession : MonoBehaviour
         playerAnim.SetBool("isDead", false);
         GetComponent<PlayerMovement>().isDead = false;
         playerAnim.Play("Idle", 0);
-        if (item)
+        if (item && isPossessed)
         {
             item.transform.position = transform.position;
             item.SetActive(true);

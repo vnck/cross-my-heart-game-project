@@ -11,8 +11,8 @@ public class OneWayShadow : MonoBehaviour
     private Collider2D collider;
     void Start()
     {
-        lightOn.SetActive(false);
-        lightOff.SetActive(true);
+        lightOn.SetActive(true);
+        lightOff.SetActive(false);
         collider = GetComponent<Collider2D>();
         collider.isTrigger = true;
     }
@@ -26,8 +26,8 @@ public class OneWayShadow : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             passed = true;
-            lightOn.SetActive(true);
-            lightOff.SetActive(false);
+            lightOn.SetActive(false);
+            lightOff.SetActive(true);
             collider.isTrigger = false;
         }
     }

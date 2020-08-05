@@ -89,12 +89,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy") && !isDead)
         {
+            if (IsStill() && playerPossession.isPossessed) {return;}
             isDead = true;
             playerAnimator.SetBool("moving", false);
-            playerAnimator.SetBool("isDead", isDead);
-            // if (IsStill() && playerPossession.isPossessed == true) { return; }
+            playerAnimator.SetBool("isDead", true);
             StartCoroutine(waitForDeathAnim());
-            playerPossession.reset();
         }
     }
 
@@ -102,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return movement.x == 0 && movement.y == 0;
     }
+
     IEnumerator waitForDeathAnim() {
         yield return new WaitForSeconds(0.8f);
         SaySmt.Line("", "GAME OVER!", true);
