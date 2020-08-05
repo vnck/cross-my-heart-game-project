@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
@@ -12,6 +14,7 @@ public class Portal : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("p") && playerInRange) {
+            StartCoroutine(waitForAnim());
             SceneManager.LoadScene(sceneIndex);
         }
     }
@@ -26,5 +29,12 @@ public class Portal : MonoBehaviour
         if (other.CompareTag("Player")) {
             playerInRange = false;
         }
+    }
+
+    IEnumerator waitForAnim() {
+        yield return new WaitForSeconds(0.5f);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.SetActive(false);
+        yield return null;
     }
 }
