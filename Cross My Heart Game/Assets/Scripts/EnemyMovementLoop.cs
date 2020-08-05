@@ -16,7 +16,7 @@ public class EnemyMovementLoop : MonoBehaviour
         Stunned
     }
 
-    private enum Direction 
+    public enum Direction 
     {
         Up,
         Down,
@@ -40,8 +40,10 @@ public class EnemyMovementLoop : MonoBehaviour
 
     private Vector2[] keyPoints; 
     private float[] waitTimes;
+    private Direction[] waitDirections;
     private int currentKeyPointIndex = 0;
     private float waitTime;
+    private Direction waitDirection;
 
     private Vector3 lastPos;
     private Direction currentDirection;
@@ -59,15 +61,18 @@ public class EnemyMovementLoop : MonoBehaviour
 
         keyPoints = new Vector2[keyObjects.Length];
         waitTimes = new float[keyObjects.Length];
+        waitDirections = new Direction[keyObjects.Length];
 
         for (int i = 0; i < keyObjects.Length; i++)
         {
            keyPoints[i] = keyObjects[i].gameObject.transform.position;
            waitTimes[i] = keyObjects[i].GetComponent<WaitStore>().WaitTime;
+           waitDirections[i] = keyObjects[i].GetComponent<WaitStore>().WaitDirection;
            keyObjects[i].SetActive(false);
         }
 
         waitTime = waitTimes[currentKeyPointIndex];
+        waitDirection = waitDirections[currentKeyPointIndex];
 
         PriestManager.investigableTrigger += InvestigableTrigger;
         SetSpeed(speed);
@@ -94,6 +99,11 @@ public class EnemyMovementLoop : MonoBehaviour
             if (state == State.Patrolling)
             {
                 state = State.Idle;
+                currentDirection = waitDirection;
+                if (waitDirection == Direction.Up){ SetAnimMovement(0, 1); }
+                else if (waitDirection == Direction.Down){ SetAnimMovement(0, -1); }
+                else if (waitDirection == Direction.Right){ SetAnimMovement(1, 0); }
+                else if (waitDirection == Direction.Left){ SetAnimMovement(-1, 0); }
             }
             if (waitTime > 0) 
             {
@@ -183,6 +193,7 @@ public class EnemyMovementLoop : MonoBehaviour
             currentKeyPointIndex = 0;
         }
         waitTime = waitTimes[currentKeyPointIndex];
+        waitDirection = waitDirections[currentKeyPointIndex];
         SetTarget(keyObjects[currentKeyPointIndex].transform);
     }
 
