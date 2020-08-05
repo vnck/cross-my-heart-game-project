@@ -51,12 +51,14 @@ public class PlayerPossession : MonoBehaviour
             if (!isPossessed && playerInRange) {
                 isPossessed = true;
                 isPossessing = true;
-                if (item.GetComponent<Item>().isKey) {
-                    itemName = "Key";
-                }
                 if (item.GetComponent<Item>().moveSpeed == 0) {
                     GetComponents<Collider2D>()[0].isTrigger = true;
                 }
+
+                // Copy item's box collider and disable our box colliders temporarily
+                CopyBoxCollider();
+                GetComponents<Collider2D>()[0].enabled = false;
+
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
                 playerAnim.Play("possession", 0, 0);
                 StartCoroutine(waitForAnim());
@@ -67,6 +69,11 @@ public class PlayerPossession : MonoBehaviour
                 isDepossessing = true;
                 GetComponent<PlayerMovement>().speed = 5;
                 GetComponents<Collider2D>()[0].isTrigger = false;
+
+                // Re-enable feet collider and destroy item's collider
+                GetComponents<Collider2D>()[0].enabled = true;
+                Destroy(GetComponents<Collider2D>()[2]);
+
                 playerAnim.enabled = true;
                 playerAnim.Play("depossession", 0, 0);
                 if (item != null) {
@@ -84,6 +91,7 @@ public class PlayerPossession : MonoBehaviour
                 //     newItem.GetComponent<Item>().label = itemName;
                 //     newItem.GetComponent<Item>().isKey = itemIsKey;
                 // }
+                
                 AstarPath.active.Scan();
                 itemName = "";
                 StartCoroutine(waitForDepossessAnim());
@@ -182,5 +190,10 @@ public class PlayerPossession : MonoBehaviour
         item = null;
         pBox.enabled = true;
         yield return null;
+    }
+     void CopyBoxCollider() {
+        BoxCollider2D collider = this.gameObject.AddComponent(typeof(BoxCollider2D)) as BoxCollider2D;
+        collider.offset = item.GetComponent<BoxCollider2D>().offset;
+        collider.size = item.GetComponent<BoxCollider2D>().size;
     }
 }
