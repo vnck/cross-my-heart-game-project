@@ -24,6 +24,10 @@ public class PlayerPossession : MonoBehaviour
     // Player related variables
     private bool playerInRange;
 
+    private GameObject npc;
+
+    private bool npcInRange;
+
     //Animator
     private Animator playerAnim;
     private SpriteRenderer playerSprite;
@@ -87,6 +91,8 @@ public class PlayerPossession : MonoBehaviour
                 AstarPath.active.Scan();
                 itemName = "";
                 StartCoroutine(waitForDepossessAnim());
+            } else if (npcInRange) {
+                npc.GetComponent<Npc>().Speak();
             } else {
                 SaySmt.Line("Me", "Can't seem to possess anything nearby!");
             }
@@ -103,6 +109,11 @@ public class PlayerPossession : MonoBehaviour
             playerInRange = true;
             item = other.gameObject;
             pBox.enabled = true;
+        }
+        if (other.CompareTag("NPC")) {
+            pBox.enabled = true;
+            npc = other.gameObject;
+            npcInRange = true;
         }
         if (other.CompareTag("Furniture")) {
             if (transform.position.y > other.transform.position.y) {
@@ -129,6 +140,11 @@ public class PlayerPossession : MonoBehaviour
             playerInRange = false;
             pBox.enabled = false;
             // item = null;
+        }
+        if (other.CompareTag("NPC")) {
+            pBox.enabled = false;
+            npcInRange = false;
+            npc = null;
         }
     }
 

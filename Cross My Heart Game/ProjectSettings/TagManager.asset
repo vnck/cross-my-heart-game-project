@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Furniture
   - Door
+  - NPC
   layers:
   - Default
   - TransparentFX
