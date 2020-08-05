@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaitStore : MonoBehaviour
 {
-    public int WaitTime = 1;
+    public float WaitTime = 1f;
     public EnemyMovementLoop.Direction WaitDirection = EnemyMovementLoop.Direction.Down;
 
 }

@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5381861962732207046, guid: 4e5b470fcd0da7843a4445c847c54e41,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5381861962732207047, guid: 4e5b470fcd0da7843a4445c847c54e41,
         type: 3}
       propertyPath: m_Offset.y
@@ -92,6 +97,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.6455231
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381861962732207047, guid: 4e5b470fcd0da7843a4445c847c54e41,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5b470fcd0da7843a4445c847c54e41, type: 3}

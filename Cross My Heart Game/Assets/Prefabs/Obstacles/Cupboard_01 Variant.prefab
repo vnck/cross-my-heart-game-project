@@ -116,7 +116,7 @@ PrefabInstance:
     - target: {fileID: 7914322836389695762, guid: 834bdb1968dbe1c4eba6b6a78286ee44,
         type: 3}
       propertyPath: m_Name
-      value: Cupboard_01
+      value: Cupboard_01 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 834bdb1968dbe1c4eba6b6a78286ee44, type: 3}

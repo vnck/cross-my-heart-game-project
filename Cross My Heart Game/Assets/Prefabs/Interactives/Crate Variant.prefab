@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 8279844992686178805, guid: 9251897454bdf934d8967c07967095b3,
         type: 3}
       propertyPath: m_Name
-      value: Crate
+      value: Crate Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8279844992686178806, guid: 9251897454bdf934d8967c07967095b3,
         type: 3}
@@ -92,6 +92,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.86728096
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279844992686178806, guid: 9251897454bdf934d8967c07967095b3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9251897454bdf934d8967c07967095b3, type: 3}
