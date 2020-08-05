@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 {
     public bool isLocked;
     public Sprite unlockedSprite;
+    public string unlockingKey;
 
     // Start is called before the first frame update
     void Start()
@@ -13,9 +14,17 @@ public class Door : MonoBehaviour
         isLocked = true;
     }
 
-    // void Update() {
-    //     if (isLocked == true) {
-    //         GetComponent<RoomSwitcher>().enabled = false;
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player")) {
+            if (isLocked) {
+                if (other.GetComponent<PlayerPossession>().itemName == unlockingKey) {
+                    isLocked = false;
+                    GetComponent<SpriteRenderer>().sprite = unlockedSprite;
+                } else {
+                    SaySmt.Line("Me", "Door is locked!");
+                    Debug.Log("Door locked! Need key");
+                }
+            }
+        }     
+    }
 }
