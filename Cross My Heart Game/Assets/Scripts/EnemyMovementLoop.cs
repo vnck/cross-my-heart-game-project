@@ -46,7 +46,7 @@ public class EnemyMovementLoop : MonoBehaviour
     private Direction waitDirection;
 
     private Vector3 lastPos;
-    private Direction currentDirection;
+    public Direction currentDirection;
 
     private Animator animator;
 
