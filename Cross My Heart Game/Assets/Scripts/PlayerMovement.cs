@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
     private PlayerPossession playerPossession;
 
+    public bool isDead = false;
+
     // Use this for initialization
 	void Start()
 	{
@@ -28,42 +30,44 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate() 
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        
-        if (playerPossession.isPossessing || playerPossession.isDepossessing)
-        {
-            movement.x = 0;
-            movement.y = 0;
+        if (!isDead) {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            
+            if (playerPossession.isPossessing || playerPossession.isDepossessing)
+            {
+                movement.x = 0;
+                movement.y = 0;
+            }
+            
+            //if A/D pressed, save time it was pressed
+            if (movement.x != 0) {
+                if (timeDownX == 0.0f) //if we don't have a stored time for it
+                timeDownX = Time.time;
+            }
+            else {
+                timeDownX = 0.0f; //reset time if no button is being pressed
+            }
+            
+            //if W/S pressed, save time it was pressed
+            if (movement.y != 0) {
+                if (timeDownY == 0.0f) //if we don't have a stored time for it
+                timeDownY = Time.time;
+            } 
+            else {
+                timeDownY = 0.0f; //reset time if no button is being pressed
+            }
+            
+            //check which button was hit last to determine direction
+            if (timeDownX > timeDownY) {
+                movement = Vector2.right * movement.x;
+            }
+            else {
+                movement = Vector2.up * movement.y;
+            }
+            // Debug.Log(movement);
+            UpdateAnimationAndMove();
         }
-        
-        //if A/D pressed, save time it was pressed
-        if (movement.x != 0) {
-            if (timeDownX == 0.0f) //if we don't have a stored time for it
-            timeDownX = Time.time;
-        }
-        else {
-            timeDownX = 0.0f; //reset time if no button is being pressed
-        }
-        
-        //if W/S pressed, save time it was pressed
-        if (movement.y != 0) {
-            if (timeDownY == 0.0f) //if we don't have a stored time for it
-            timeDownY = Time.time;
-        } 
-        else {
-            timeDownY = 0.0f; //reset time if no button is being pressed
-        }
-        
-        //check which button was hit last to determine direction
-        if (timeDownX > timeDownY) {
-            movement = Vector2.right * movement.x;
-        }
-        else {
-            movement = Vector2.up * movement.y;
-        }
-        // Debug.Log(movement);
-        UpdateAnimationAndMove();
     }
 
     void UpdateAnimationAndMove()
@@ -83,10 +87,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && !isDead)
         {
+            isDead = true;
+            playerAnimator.SetBool("moving", false);
+            playerAnimator.SetBool("isDead", isDead);
             StartCoroutine(waitForDeathAnim());
-            SaySmt.Line("", "GAME OVER!", true);
             playerPossession.reset();
         }
     }
@@ -96,8 +102,7 @@ public class PlayerMovement : MonoBehaviour
         return movement.x == 0 && movement.y == 0;
     }
     IEnumerator waitForDeathAnim() {
-        yield return new WaitForSeconds(0.5f);
-        playerAnimator.Play("death", 0, 0);
-        yield return null;
+        yield return new WaitForSeconds(0.8f);
+        SaySmt.Line("", "GAME OVER!", true);
     }
 }

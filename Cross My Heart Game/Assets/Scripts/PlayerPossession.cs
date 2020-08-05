@@ -147,6 +147,8 @@ public class PlayerPossession : MonoBehaviour
         playerSprite.color = Color.white;
         itemName = "";
         playerAnim.enabled = true;
+        playerAnim.SetBool("isDead", false);
+        GetComponent<PlayerMovement>().isDead = false;
         playerAnim.Play("Idle", 0);
         if (item)
         {
