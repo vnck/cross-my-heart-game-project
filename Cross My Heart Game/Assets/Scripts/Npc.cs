@@ -18,15 +18,15 @@ public class Npc : MonoBehaviour
     void Start()
     {
         spoken = false;
-        foreach (var line in lines)
-        {
-            SaySmt.PrepLine(line.speaker != "" ? line.speaker : "", line.message);
-        }
     }
 
     // Update is called once per frame
     public void Speak() {
         if (!spoken) {
+            foreach (var line in lines)
+            {
+                SaySmt.PrepLine(line.speaker != "" ? line.speaker : "", line.message);
+            }
             SaySmt.PlayLines();
             spoken = true;
         } else {
