@@ -45,7 +45,7 @@ public class PlayerPossession : MonoBehaviour
         normalPlayerSprite = playerSprite.sprite;
         playerAnim = GetComponent<Animator>();
         pBox = pBoxContainer.GetComponent<SpriteRenderer>();
-        DontDestroyOnLoad(this.gameObject);
+        // DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
