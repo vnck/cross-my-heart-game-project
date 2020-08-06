@@ -83,6 +83,8 @@ public class PlayerPossession : MonoBehaviour
 
                 playerAnim.enabled = true;
                 playerAnim.Play("depossession", 0, 0);
+                itemName = "";
+                StartCoroutine(waitForDepossessAnim());
                 if (item != null) {
                     Debug.Log("Help");
                     item.transform.position = transform.position;
@@ -100,8 +102,6 @@ public class PlayerPossession : MonoBehaviour
                 // }
                 
                 AstarPath.active.Scan();
-                itemName = "";
-                StartCoroutine(waitForDepossessAnim());
             } else {
                 SaySmt.Line("Me", "Can't seem to possess anything nearby!");
             }
