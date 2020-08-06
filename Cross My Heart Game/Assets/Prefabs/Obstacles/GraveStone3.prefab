@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 973288798294811413}
   - component: {fileID: 6499011075514232655}
-  - component: {fileID: 8391906068260133672}
+  - component: {fileID: 7263024606246462958}
   m_Layer: 0
   m_Name: GraveStone3
   m_TagString: Untagged
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8391906068260133672
-BoxCollider2D:
+--- !u!60 &7263024606246462958
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.751709}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,6 +106,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1288271, y: 0.49944782}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.065846205, y: -0.25418043}
+      - {x: -0.32791615, y: -0.26147175}
+      - {x: -0.06441355, y: -0.5148182}
+      - {x: -0.06381488, y: -1.0053778}
+      - {x: 0.06381488, y: -1.0053773}
+      - {x: 0.07516885, y: -0.5094404}
+      - {x: 0.32253885, y: -0.2507167}
+      - {x: 0.08197904, y: -0.24880314}

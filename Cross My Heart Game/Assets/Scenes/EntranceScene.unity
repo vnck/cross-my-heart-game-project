@@ -165,6 +165,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 85770663261263516, guid: d135bba675e9d4bdca4e5c23ba6809fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 973288798294811413, guid: d135bba675e9d4bdca4e5c23ba6809fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -393,6 +398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone3
       objectReference: {fileID: 0}
+    - target: {fileID: 85770663261263516, guid: d135bba675e9d4bdca4e5c23ba6809fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 973288798294811413, guid: d135bba675e9d4bdca4e5c23ba6809fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -544,6 +554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GraveStone2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303928309458736850, guid: bdd6fd198daca410186cfff534815f99,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd6fd198daca410186cfff534815f99, type: 3}
@@ -850,7 +865,6 @@ Transform:
   - {fileID: 1148749965}
   - {fileID: 1226788346}
   - {fileID: 389841646}
-  - {fileID: 1850048861}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -973,81 +987,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786de9967217de84bbc1852bb2244a91, type: 3}
---- !u!1001 &1032897816
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 890054504}
-    m_Modifications:
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.9353161
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.177264
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 223.1523
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3627535926109370814, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_Name
-      value: Pillar2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5802383656207698966, guid: 5047be69578ad480d86709bbe7226907,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -8076552262776366635, guid: 0f96768ce40f1481f91f2466ce67e6cc,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5047be69578ad480d86709bbe7226907, type: 3}
 --- !u!4 &1148749965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1611196617712299083, guid: bdd6fd198daca410186cfff534815f99,
@@ -1126,6 +1065,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GraveStone1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710348515731493372, guid: 229b352a14f3d40208f18499eb926348,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6849785836268406977, guid: 229b352a14f3d40208f18499eb926348,
         type: 3}
@@ -1312,6 +1256,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944700841076971864, guid: 118cda73770954a83a726654e7e0ad55,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 118cda73770954a83a726654e7e0ad55, type: 3}
@@ -1578,22 +1527,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1632013020}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1638082796
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1032897816}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1991216960}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &1740502625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1904,37 +1837,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: 9ca1d19b38c79406ab98f48460daaf9f,
     type: 3}
---- !u!1 &1850048860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1032897816}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1850048861}
-  m_Layer: 0
-  m_Name: Pillar2 (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1850048861
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1032897816}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850048860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1991216960}
-  m_Father: {fileID: 890054504}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1870577683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2013,6 +1915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveStone2
       objectReference: {fileID: 0}
+    - target: {fileID: 5303928309458736850, guid: bdd6fd198daca410186cfff534815f99,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd6fd198daca410186cfff534815f99, type: 3}
 --- !u!1 &1990589253 stripped
@@ -2063,21 +1970,6 @@ PolygonCollider2D:
       - {x: 4.11853, y: 8.135326}
       - {x: 4.120028, y: 7.132236}
       - {x: 5.0189276, y: 7.1480203}
---- !u!4 &1991216960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1372856336053343358, guid: 5047be69578ad480d86709bbe7226907,
-    type: 3}
-  m_PrefabInstance: {fileID: 1032897816}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638082796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1850048861}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2060370026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8440701717789486165, guid: 9ca1d19b38c79406ab98f48460daaf9f,
