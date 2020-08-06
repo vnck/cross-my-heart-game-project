@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2999218159454069856}
   - component: {fileID: 2999218159454069857}
   - component: {fileID: 2999218159454069861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StoryBook
   m_TagString: Item
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3581357044196600084}
   - component: {fileID: 3581357044196600085}
   - component: {fileID: 3581357044196600081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BirdStatue
   m_TagString: Item
   m_Icon: {fileID: 0}

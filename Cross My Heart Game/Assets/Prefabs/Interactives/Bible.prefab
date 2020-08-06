@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8743146620637696572}
   - component: {fileID: 8743146620637696573}
   - component: {fileID: 8743146620637696569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bible
   m_TagString: Item
   m_Icon: {fileID: 0}

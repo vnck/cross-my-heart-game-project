@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5968184035031261637}
   - component: {fileID: 5968184035031261636}
   - component: {fileID: 5968184035031261632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Laptop
   m_TagString: Item
   m_Icon: {fileID: 0}

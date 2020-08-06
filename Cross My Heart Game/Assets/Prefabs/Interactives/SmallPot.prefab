@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4297570518087385397}
   - component: {fileID: 4297570518087385396}
   - component: {fileID: 4297570518087385392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmallPot
   m_TagString: Item
   m_Icon: {fileID: 0}

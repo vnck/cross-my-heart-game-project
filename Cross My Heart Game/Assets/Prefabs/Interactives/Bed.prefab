@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 419721863970532325}
   m_Layer: 8
   m_Name: Bed
-  m_TagString: Furniture
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

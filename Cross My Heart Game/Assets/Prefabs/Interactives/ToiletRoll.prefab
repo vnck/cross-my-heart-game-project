@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3268996014216486929}
   - component: {fileID: 3268996014216486928}
   - component: {fileID: 3268996014216486932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ToiletRoll
   m_TagString: Item
   m_Icon: {fileID: 0}

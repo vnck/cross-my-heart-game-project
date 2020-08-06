@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 331727886003166523}
   - component: {fileID: 331727886003166522}
   - component: {fileID: 331727886003166526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teapot
   m_TagString: Item
   m_Icon: {fileID: 0}

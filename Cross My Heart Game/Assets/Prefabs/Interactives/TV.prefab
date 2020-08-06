@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7758890821609682002}
   - component: {fileID: 7758890821609682003}
   - component: {fileID: 7758890821609682007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TV
   m_TagString: Item
   m_Icon: {fileID: 0}

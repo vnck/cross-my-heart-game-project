@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4479991074219786833}
   - component: {fileID: 3281988232472479530}
   - component: {fileID: 9113867509700307874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SmallTable
   m_TagString: Item
   m_Icon: {fileID: 0}
