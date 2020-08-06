@@ -238,6 +238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConvoBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7873391677573667596, guid: 786de9967217de84bbc1852bb2244a91,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786de9967217de84bbc1852bb2244a91, type: 3}
 --- !u!1 &339700238 stripped
@@ -1438,7 +1443,7 @@ PrefabInstance:
     - target: {fileID: 1148327617332434081, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}

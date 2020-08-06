@@ -50,7 +50,7 @@ public class SaySmt : MonoBehaviour
     }
 
     private void Update() {
-        if (speaking && Input.GetKeyDown("space")) 
+        if (speaking && Input.GetKeyDown("o")) 
         {
             GameObject convo = GameObject.FindGameObjectWithTag("Convo");
             convo.GetComponent<Canvas>().enabled = false;
