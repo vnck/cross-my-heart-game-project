@@ -9,11 +9,13 @@ public class OneWayShadow : MonoBehaviour
     public GameObject lightOff;
     private bool passed;
     private Collider2D collider;
+    private AudioSource wooshFX;
     void Start()
     {
         lightOn.SetActive(true);
         lightOff.SetActive(false);
         collider = GetComponent<Collider2D>();
+        wooshFX = GetComponent<AudioSource>();
         collider.isTrigger = true;
     }
 
@@ -28,6 +30,7 @@ public class OneWayShadow : MonoBehaviour
             passed = true;
             lightOn.SetActive(false);
             lightOff.SetActive(true);
+            wooshFX.Play(0);
             collider.isTrigger = false;
         }
     }
