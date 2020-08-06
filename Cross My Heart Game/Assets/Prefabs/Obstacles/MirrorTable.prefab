@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2300753720698285246}
   - component: {fileID: 5372968857687679588}
+  - component: {fileID: 8781087479271812621}
   m_Layer: 8
   m_Name: MirrorTable
   m_TagString: Furniture
@@ -42,13 +43,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125391089226113440}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0062770844, y: -0.093706846}
+  m_Offset: {x: 0.0062770844, y: -0.24025226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -59,8 +60,42 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9970055, y: 2.178742}
+  m_Size: {x: 1.9970055, y: 1.4167066}
   m_EdgeRadius: 0
+--- !u!60 &8781087479271812621
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125391089226113440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.0130262375, y: 0.4333582}
+      - {x: -0.96408266, y: 0.42625308}
+      - {x: -0.9660566, y: -0.28984928}
+      - {x: -0.771349, y: -0.2934909}
+      - {x: -0.77666575, y: -0.9523058}
+      - {x: 0.776666, y: -0.9523058}
+      - {x: 0.776897, y: -0.3062744}
+      - {x: 0.94378036, y: -0.30570412}
+      - {x: 0.9445433, y: 0.4392798}
 --- !u!1 &2888088098461879267
 GameObject:
   m_ObjectHideFlags: 0

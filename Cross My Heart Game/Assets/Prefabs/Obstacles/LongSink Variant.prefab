@@ -911,12 +911,12 @@ PrefabInstance:
     - target: {fileID: 252810621822024374, guid: 834bdb1968dbe1c4eba6b6a78286ee44,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.3738885
+      value: 0.37388825
       objectReference: {fileID: 0}
     - target: {fileID: 252810621822024374, guid: 834bdb1968dbe1c4eba6b6a78286ee44,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.4438028
+      value: 1.3571105
       objectReference: {fileID: 0}
     - target: {fileID: 252810621822024374, guid: 834bdb1968dbe1c4eba6b6a78286ee44,
         type: 3}
@@ -1017,7 +1017,7 @@ PrefabInstance:
     - target: {fileID: 7914322836389695762, guid: 834bdb1968dbe1c4eba6b6a78286ee44,
         type: 3}
       propertyPath: m_Name
-      value: LongSink
+      value: LongSink Variant
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4950446819758996732, guid: 834bdb1968dbe1c4eba6b6a78286ee44, type: 3}
