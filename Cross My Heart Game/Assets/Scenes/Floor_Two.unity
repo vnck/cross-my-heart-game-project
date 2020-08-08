@@ -1230,7 +1230,7 @@ PrefabInstance:
     - target: {fileID: 4965864488284252691, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252691, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
@@ -5023,7 +5023,7 @@ PrefabInstance:
     - target: {fileID: 1535899578981626275, guid: ef1c05ef43b55084fb99c6515c9fbd55,
         type: 3}
       propertyPath: m_Name
-      value: Key
+      value: RightKey
       objectReference: {fileID: 0}
     - target: {fileID: 1535899578981626276, guid: ef1c05ef43b55084fb99c6515c9fbd55,
         type: 3}
@@ -5499,6 +5499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646558397439938216, guid: db78abe9fffbad14ebd8dc940e3be382,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 3646558397439938217, guid: db78abe9fffbad14ebd8dc940e3be382,
         type: 3}
@@ -11363,7 +11368,7 @@ PrefabInstance:
     - target: {fileID: 1535899578981626275, guid: ef1c05ef43b55084fb99c6515c9fbd55,
         type: 3}
       propertyPath: m_Name
-      value: Key
+      value: LeftKey
       objectReference: {fileID: 0}
     - target: {fileID: 1535899578981626276, guid: ef1c05ef43b55084fb99c6515c9fbd55,
         type: 3}
@@ -14156,7 +14161,7 @@ PrefabInstance:
     - target: {fileID: 4965864488284252691, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252691, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
