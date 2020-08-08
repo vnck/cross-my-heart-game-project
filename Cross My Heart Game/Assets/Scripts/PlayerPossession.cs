@@ -109,7 +109,7 @@ public class PlayerPossession : MonoBehaviour
         if (Input.GetKeyDown("o")) {
             if (isPossessed) {
                 itemPrefab.GetComponent<Item>().StationaryAction();
-            } else if (npcInRange) {
+            } else if (!SaySmt.speaking && npcInRange) {
                 npc.GetComponent<Npc>().Speak();
             }
         }

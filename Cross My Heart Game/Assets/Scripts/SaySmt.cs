@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class SaySmt : MonoBehaviour
 {
-    static bool speaking = false;
+    public static bool speaking = false;
     static bool reset = false;
+    static bool keyDown = false;
 
     static List<Dictionary<string,string>> lines = new List<Dictionary<string, string>>();
 
@@ -20,16 +21,16 @@ public class SaySmt : MonoBehaviour
 
     static public void PlayLines(bool reset = false) {
         GameObject convo = GameObject.FindGameObjectWithTag("Convo");
-        Debug.Log("CONVO", convo);
+        Debug.Log("opening speech box");
         convo.GetComponent<Canvas>().enabled = true;
 
-        
         if (lines[0]["speaker"] == "") {
         convo.GetComponentInChildren<Text>().text = lines[0]["message"];
         } else {
             convo.GetComponentInChildren<Text>().text = lines[0]["speaker"] + ": " + lines[0]["message"];
         }
         lines.RemoveAt(0);
+        keyDown = true;
         speaking = true;
         Time.timeScale = 0;
         SaySmt.reset = reset;
@@ -37,21 +38,24 @@ public class SaySmt : MonoBehaviour
     static public void Line(string person, string message, bool reset = false)
     {
         GameObject convo = GameObject.FindGameObjectWithTag("Convo");
-        Debug.Log("CONVO", convo);
+        Debug.Log("opening speech box");
         convo.GetComponent<Canvas>().enabled = true;
         if (person == "") {
             convo.GetComponentInChildren<Text>().text = message;
         } else {
             convo.GetComponentInChildren<Text>().text = person + ": " + message;
         }
-        speaking = true;
         Time.timeScale = 0;
+        keyDown = true;
+        speaking = true;
         SaySmt.reset = reset;
     }
 
     private void Update() {
-        if (speaking && Input.GetKeyDown("o")) 
+        
+        if (speaking && Input.GetKeyDown("o") && !keyDown) 
         {
+            Debug.Log("closing speech box");
             GameObject convo = GameObject.FindGameObjectWithTag("Convo");
             convo.GetComponent<Canvas>().enabled = false;
             Time.timeScale = 1;
@@ -63,6 +67,9 @@ public class SaySmt : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+        }
+        else if (Input.GetKeyUp("o") && keyDown) {
+            keyDown = false;
         }
     }
 }
