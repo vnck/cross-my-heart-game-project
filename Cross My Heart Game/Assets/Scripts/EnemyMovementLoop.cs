@@ -50,6 +50,8 @@ public class EnemyMovementLoop : MonoBehaviour
 
     private Animator animator;
 
+    private AudioSource alertSFX;
+
     public GameObject alertBoxContainer;
     public GameObject questionBoxContainer;
     private SpriteRenderer alertBox;
@@ -79,6 +81,7 @@ public class EnemyMovementLoop : MonoBehaviour
         SetNextKeyPoint();
         lastPos = transform.position;
         animator = GetComponent<Animator>();
+        alertSFX = GetComponent<AudioSource>();
         alertBox = alertBoxContainer.GetComponent<SpriteRenderer>();
         questionBox = questionBoxContainer.GetComponent<SpriteRenderer>();
     }
@@ -156,6 +159,7 @@ public class EnemyMovementLoop : MonoBehaviour
                 PlayerMovement pm = ray.collider.gameObject.GetComponent<PlayerMovement>();
                 if (p.isPossessed && pm.IsStill()) { return; }
                 state = State.Startled;
+                alertSFX.Play(0);
                 alertBox.enabled = true;
                 waitTime = startledWatiTime;
                 SetTarget(ray.collider.gameObject.transform);
