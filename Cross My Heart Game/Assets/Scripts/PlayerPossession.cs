@@ -52,7 +52,6 @@ public class PlayerPossession : MonoBehaviour
         pBox = pBoxContainer.GetComponent<SpriteRenderer>();
         oBox = oBoxContainer.GetComponent<SpriteRenderer>();
         wooshSFX = GetComponents<AudioSource>();
-        // DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -60,9 +59,9 @@ public class PlayerPossession : MonoBehaviour
     {
         if (Input.GetKeyDown("p") && Time.timeScale != 0) {
             if (!isPossessed && playerInRange) {
-                if (!isPossessing) { possessing(); }
+                if (!isPossessing) { Possess(); }
             } else if (isPossessed) {
-                if (!isDepossessing) { depossessing(); }
+                if (!isDepossessing) { Depossess(); }
             }
         }
         if (Input.GetKeyDown("o")) {
@@ -74,7 +73,7 @@ public class PlayerPossession : MonoBehaviour
         }
     }
 
-    public void possessing() {
+    public void Possess() {
         isPossessing = true;
         if (item.GetComponent<Item>().moveSpeed == 0) {
             GetComponents<Collider2D>()[0].isTrigger = true;
@@ -87,11 +86,11 @@ public class PlayerPossession : MonoBehaviour
         GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
         wooshSFX[0].Play(0);
         playerAnim.Play("possession", 0, 0);
-        StartCoroutine(waitForAnim());
+        StartCoroutine(WaitForAnim());
         pBox.enabled = false;
     }
 
-    public void depossessing() {
+    public void Depossess() {
         isDepossessing = true;
         GetComponent<SpriteRenderer>().sortingOrder = 1;
         GetComponent<PlayerMovement>().speed = 5;
@@ -105,23 +104,11 @@ public class PlayerPossession : MonoBehaviour
         wooshSFX[0].Play(0);
         playerAnim.Play("depossession", 0, 0);
         itemName = "";
-        StartCoroutine(waitForDepossessAnim());
+        StartCoroutine(WaitForDepossessAnim());
         if (item != null) {
-            Debug.Log("Help");
             item.transform.position = transform.position;
             item.SetActive(true);
         } 
-        // else {
-        //     // clone item
-        //     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
-        //     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
-        //     newItem.GetComponent<SpriteRenderer>().color = itemColor;
-        //     newItem.layer = itemLayer;
-        //     newItem.GetComponent<Item>().moveSpeed = itemSpeed;
-        //     newItem.GetComponent<Item>().label = itemName;
-        //     newItem.GetComponent<Item>().isKey = itemIsKey;
-        // }
-        
         AstarPath.active.Scan();
     }
 
@@ -161,7 +148,6 @@ public class PlayerPossession : MonoBehaviour
         if (other.CompareTag("Item")) {
             playerInRange = false;
             pBox.enabled = false;
-            // item = null;
         }
         if (other.CompareTag("NPC")) {
             oBox.enabled = false;
@@ -170,33 +156,7 @@ public class PlayerPossession : MonoBehaviour
         }
     }
 
-    public void reset() {
-        isPossessed = false;
-        GetComponent<PlayerMovement>().speed = 5;
-        playerSprite.sprite = normalPlayerSprite;
-        playerSprite.color = Color.white;
-        itemName = "";
-        playerAnim.enabled = true;
-        playerAnim.SetBool("isDead", false);
-        GetComponent<PlayerMovement>().isDead = false;
-        playerAnim.Play("Idle", 0);
-        if (item && isPossessed)
-        {
-            item.transform.position = transform.position;
-            item.SetActive(true);
-        }
-        item = null;
-    }
-
-    void StationaryAction() {
-        // need to attract enemies in range
-        // if (Vector3.Distance(transform.position, enemy.transform.position) <= range) {
-        //     //go to player
-        // }
-        // health -= 1;
-    }
-
-    IEnumerator waitForAnim() {
+    IEnumerator WaitForAnim() {
         yield return new WaitForSeconds(0.5f);
         playerAnim.enabled = false;
         itemSprite = item.GetComponent<SpriteRenderer>().sprite;
@@ -213,10 +173,9 @@ public class PlayerPossession : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator waitForDepossessAnim() {
+    IEnumerator WaitForDepossessAnim() {
         yield return new WaitForSeconds(0.5f);
         playerSprite.color = Color.white;
-        // item = null;
         pBox.enabled = true;
         playerInRange = true;
         isPossessed = false;
