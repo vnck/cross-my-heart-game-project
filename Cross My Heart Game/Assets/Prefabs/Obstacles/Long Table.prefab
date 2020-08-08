@@ -830,6 +830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6117631152236307901}
   - component: {fileID: 1973890033935955464}
+  - component: {fileID: 4224715833634456602}
   m_Layer: 8
   m_Name: Long Table
   m_TagString: Furniture
@@ -874,7 +875,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.65288, y: -0.026780128}
+  m_Offset: {x: -4.65288, y: -0.2451353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -885,5 +886,31 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.9852114, y: 1.3661146}
+  m_Size: {x: 4.9852114, y: 0.92940426}
+  m_EdgeRadius: 0
+--- !u!61 &4224715833634456602
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445324472353758636}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.6478477, y: -0.010398388}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.9719896, y: 1.3951187}
   m_EdgeRadius: 0
