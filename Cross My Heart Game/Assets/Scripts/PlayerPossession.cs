@@ -60,9 +60,9 @@ public class PlayerPossession : MonoBehaviour
     {
         if (Input.GetKeyDown("p") && Time.timeScale != 0) {
             if (!isPossessed && playerInRange) {
-                possessing();
+                if (!isPossessing) { possessing(); }
             } else if (isPossessed) {
-                depossessing();
+                if (!isDepossessing) { depossessing(); }
             }
         }
         if (Input.GetKeyDown("o")) {
@@ -75,7 +75,6 @@ public class PlayerPossession : MonoBehaviour
     }
 
     public void possessing() {
-        isPossessed = true;
         isPossessing = true;
         if (item.GetComponent<Item>().moveSpeed == 0) {
             GetComponents<Collider2D>()[0].isTrigger = true;
@@ -93,9 +92,8 @@ public class PlayerPossession : MonoBehaviour
     }
 
     public void depossessing() {
-        GetComponent<SpriteRenderer>().sortingOrder = 1;
-        isPossessed = false;
         isDepossessing = true;
+        GetComponent<SpriteRenderer>().sortingOrder = 1;
         GetComponent<PlayerMovement>().speed = 5;
         GetComponents<Collider2D>()[0].isTrigger = false;
 
@@ -210,6 +208,7 @@ public class PlayerPossession : MonoBehaviour
         playerSprite.color = itemColor;
         transform.position = item.transform.position;
         item.SetActive(false);
+        isPossessed = true;
         isPossessing = false;
         yield return null;
     }
@@ -217,9 +216,11 @@ public class PlayerPossession : MonoBehaviour
     IEnumerator waitForDepossessAnim() {
         yield return new WaitForSeconds(0.5f);
         playerSprite.color = Color.white;
+        // item = null;
+        pBox.enabled = true;
+        playerInRange = true;
+        isPossessed = false;
         isDepossessing = false;
-        item = null;
-        // pBox.enabled = true;
         yield return null;
     }
      void CopyBoxCollider() {
