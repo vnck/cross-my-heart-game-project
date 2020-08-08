@@ -810,7 +810,7 @@ PrefabInstance:
     - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: switchId
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
