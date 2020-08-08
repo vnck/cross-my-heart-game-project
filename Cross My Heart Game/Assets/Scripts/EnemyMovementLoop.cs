@@ -51,6 +51,7 @@ public class EnemyMovementLoop : MonoBehaviour
     private Animator animator;
 
     private AudioSource alertSFX;
+    private AudioSource susSFX;
 
     public GameObject alertBoxContainer;
     public GameObject questionBoxContainer;
@@ -81,7 +82,8 @@ public class EnemyMovementLoop : MonoBehaviour
         SetNextKeyPoint();
         lastPos = transform.position;
         animator = GetComponent<Animator>();
-        alertSFX = GetComponent<AudioSource>();
+        alertSFX = GetComponents<AudioSource>()[0];
+        susSFX = GetComponents<AudioSource>()[1];
         alertBox = alertBoxContainer.GetComponent<SpriteRenderer>();
         questionBox = questionBoxContainer.GetComponent<SpriteRenderer>();
     }
@@ -206,6 +208,7 @@ public class EnemyMovementLoop : MonoBehaviour
         if (Vector3.Distance(transform.position, susTransform.position) < 12)
         {
             Debug.Log("SUSPICIOUS!!");
+            susSFX.Play(0);
             waitTime = suspiciousWaitTime;
             SetTarget(susTransform);
             SetSpeed(0);

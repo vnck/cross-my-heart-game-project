@@ -39,7 +39,7 @@ public class PlayerPossession : MonoBehaviour
     private SpriteRenderer oBox;
 
     //Sound
-    private AudioSource wooshSFX;
+    private AudioSource[] wooshSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +51,7 @@ public class PlayerPossession : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         pBox = pBoxContainer.GetComponent<SpriteRenderer>();
         oBox = oBoxContainer.GetComponent<SpriteRenderer>();
-        wooshSFX = GetComponent<AudioSource>();
+        wooshSFX = GetComponents<AudioSource>();
         // DontDestroyOnLoad(this.gameObject);
     }
 
@@ -60,54 +60,9 @@ public class PlayerPossession : MonoBehaviour
     {
         if (Input.GetKeyDown("p") && Time.timeScale != 0) {
             if (!isPossessed && playerInRange) {
-                isPossessed = true;
-                isPossessing = true;
-                if (item.GetComponent<Item>().moveSpeed == 0) {
-                    GetComponents<Collider2D>()[0].isTrigger = true;
-                }
-
-                // Copy item's box collider and disable our box colliders temporarily
-                CopyBoxCollider();
-                GetComponents<Collider2D>()[0].enabled = false;
-
-                GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
-                wooshSFX.Play(0);
-                playerAnim.Play("possession", 0, 0);
-                StartCoroutine(waitForAnim());
-                pBox.enabled = false;
+                possessing();
             } else if (isPossessed) {
-                GetComponent<SpriteRenderer>().sortingOrder = 1;
-                isPossessed = false;
-                isDepossessing = true;
-                GetComponent<PlayerMovement>().speed = 5;
-                GetComponents<Collider2D>()[0].isTrigger = false;
-
-                // Re-enable feet collider and destroy item's collider
-                GetComponents<Collider2D>()[0].enabled = true;
-                Destroy(GetComponents<Collider2D>()[2]);
-
-                playerAnim.enabled = true;
-                wooshSFX.Play(0);
-                playerAnim.Play("depossession", 0, 0);
-                itemName = "";
-                StartCoroutine(waitForDepossessAnim());
-                if (item != null) {
-                    Debug.Log("Help");
-                    item.transform.position = transform.position;
-                    item.SetActive(true);
-                } 
-                // else {
-                //     // clone item
-                //     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
-                //     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
-                //     newItem.GetComponent<SpriteRenderer>().color = itemColor;
-                //     newItem.layer = itemLayer;
-                //     newItem.GetComponent<Item>().moveSpeed = itemSpeed;
-                //     newItem.GetComponent<Item>().label = itemName;
-                //     newItem.GetComponent<Item>().isKey = itemIsKey;
-                // }
-                
-                AstarPath.active.Scan();
+                depossessing();
             }
         }
         if (Input.GetKeyDown("o")) {
@@ -117,6 +72,59 @@ public class PlayerPossession : MonoBehaviour
                 npc.GetComponent<Npc>().Speak();
             }
         }
+    }
+
+    public void possessing() {
+        isPossessed = true;
+        isPossessing = true;
+        if (item.GetComponent<Item>().moveSpeed == 0) {
+            GetComponents<Collider2D>()[0].isTrigger = true;
+        }
+
+        // Copy item's box collider and disable our box colliders temporarily
+        CopyBoxCollider();
+        GetComponents<Collider2D>()[0].enabled = false;
+
+        GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
+        wooshSFX[0].Play(0);
+        playerAnim.Play("possession", 0, 0);
+        StartCoroutine(waitForAnim());
+        pBox.enabled = false;
+    }
+
+    public void depossessing() {
+        GetComponent<SpriteRenderer>().sortingOrder = 1;
+        isPossessed = false;
+        isDepossessing = true;
+        GetComponent<PlayerMovement>().speed = 5;
+        GetComponents<Collider2D>()[0].isTrigger = false;
+
+        // Re-enable feet collider and destroy item's collider
+        GetComponents<Collider2D>()[0].enabled = true;
+        Destroy(GetComponents<Collider2D>()[2]);
+
+        playerAnim.enabled = true;
+        wooshSFX[0].Play(0);
+        playerAnim.Play("depossession", 0, 0);
+        itemName = "";
+        StartCoroutine(waitForDepossessAnim());
+        if (item != null) {
+            Debug.Log("Help");
+            item.transform.position = transform.position;
+            item.SetActive(true);
+        } 
+        // else {
+        //     // clone item
+        //     GameObject newItem = (GameObject)Instantiate(itemPrefab, transform.position, itemPrefab.transform.rotation);
+        //     newItem.GetComponent<SpriteRenderer>().sprite = itemSprite;
+        //     newItem.GetComponent<SpriteRenderer>().color = itemColor;
+        //     newItem.layer = itemLayer;
+        //     newItem.GetComponent<Item>().moveSpeed = itemSpeed;
+        //     newItem.GetComponent<Item>().label = itemName;
+        //     newItem.GetComponent<Item>().isKey = itemIsKey;
+        // }
+        
+        AstarPath.active.Scan();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -211,7 +219,7 @@ public class PlayerPossession : MonoBehaviour
         playerSprite.color = Color.white;
         isDepossessing = false;
         item = null;
-        pBox.enabled = true;
+        // pBox.enabled = true;
         yield return null;
     }
      void CopyBoxCollider() {

@@ -18,13 +18,21 @@ public class Door : MonoBehaviour
         if (other.CompareTag("Player")) {
             if (isLocked) {
                 if (other.GetComponent<PlayerPossession>().itemName == unlockingKey) {
-                    isLocked = false;
                     GetComponent<SpriteRenderer>().sprite = unlockedSprite;
+                    other.GetComponent<PlayerPossession>().depossessing();
+                    GameObject.Find(unlockingKey).SetActive(false);
+                    StartCoroutine(waitForDepossess());
                 } else {
                     SaySmt.Line("Me", "Door is locked!");
                     Debug.Log("Door locked! Need key");
                 }
             }
         }     
+    }
+
+    IEnumerator waitForDepossess() {
+        yield return new WaitForSeconds(0.5f);
+        isLocked = false;
+        yield return null;
     }
 }
