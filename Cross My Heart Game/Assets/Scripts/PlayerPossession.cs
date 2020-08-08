@@ -54,7 +54,7 @@ public class PlayerPossession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("p")) {
+        if (Input.GetKeyDown("p") && Time.timeScale != 0) {
             if (!isPossessed && playerInRange) {
                 isPossessed = true;
                 isPossessing = true;
