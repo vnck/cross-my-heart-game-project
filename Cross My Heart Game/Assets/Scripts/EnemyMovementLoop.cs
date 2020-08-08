@@ -224,6 +224,10 @@ public class EnemyMovementLoop : MonoBehaviour
         }
     }
 
+    public bool isChasing() {
+        return (state == State.Chasing);
+    }
+
     private void OnDestroy() {
         PriestManager.investigableTrigger -= InvestigableTrigger;
     }

@@ -89,7 +89,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy") && !isDead)
         {
-            if (IsStill() && playerPossession.isPossessed) {return;}
+            bool chasing = other.gameObject.GetComponent<EnemyMovementLoop>().isChasing();
+            if (IsStill() && playerPossession.isPossessed && !chasing) {return;}
             isDead = true;
             playerAnimator.SetBool("moving", false);
             playerAnimator.SetBool("isDead", true);
