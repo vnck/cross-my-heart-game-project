@@ -9,6 +9,7 @@ public class RoomSwitcher : MonoBehaviour
     public GameObject destinationSwitch;
     static GameObject player;
     public float destinationOffset;
+    public bool activated;
     
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class RoomSwitcher : MonoBehaviour
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") {
+        if (other.tag == "Player" && activated) {
             if (GetComponent<Door>() != null) {
                 if (GetComponent<Door>().isLocked == false) {
                     Debug.Log("Room Switch " + switchId + " triggered, going to Room Switch " + destinationSwitchId);
