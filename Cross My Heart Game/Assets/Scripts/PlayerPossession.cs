@@ -112,6 +112,18 @@ public class PlayerPossession : MonoBehaviour
         AstarPath.active.Scan();
     }
 
+    public void PreDeathDepossess() {
+        GetComponent<SpriteRenderer>().sortingOrder = 5;
+        playerAnim.enabled = true;
+        playerSprite.color = Color.white;
+        isPossessed = false;
+        isDepossessing = false;
+        if (item != null) {
+            item.transform.position = transform.position;
+            item.SetActive(true);
+        } 
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Inside item");
         if (other.CompareTag("Item") && isPossessed == false) {
@@ -158,6 +170,11 @@ public class PlayerPossession : MonoBehaviour
 
     IEnumerator WaitForAnim() {
         yield return new WaitForSeconds(0.5f);
+        FinishPossess();
+        yield return null;
+    }
+
+    public void FinishPossess() {
         playerAnim.enabled = false;
         itemSprite = item.GetComponent<SpriteRenderer>().sprite;
         itemColor = item.GetComponent<SpriteRenderer>().color;
@@ -170,18 +187,22 @@ public class PlayerPossession : MonoBehaviour
         item.SetActive(false);
         isPossessed = true;
         isPossessing = false;
-        yield return null;
     }
 
     IEnumerator WaitForDepossessAnim() {
         yield return new WaitForSeconds(0.5f);
+        FinishDepossess();
+        yield return null;
+    }
+
+    public void FinishDepossess() {
         playerSprite.color = Color.white;
         pBox.enabled = true;
         playerInRange = true;
         isPossessed = false;
         isDepossessing = false;
-        yield return null;
     }
+
      void CopyBoxCollider() {
         BoxCollider2D collider = this.gameObject.AddComponent(typeof(BoxCollider2D)) as BoxCollider2D;
         collider.offset = item.GetComponent<BoxCollider2D>().offset;

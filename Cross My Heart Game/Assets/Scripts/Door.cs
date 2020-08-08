@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
             if (isLocked) {
                 if (other.GetComponent<PlayerPossession>().itemName == unlockingKey) {
                     GetComponent<SpriteRenderer>().sprite = unlockedSprite;
-                    other.GetComponent<PlayerPossession>().depossessing();
+                    other.GetComponent<PlayerPossession>().Depossess();
                     GameObject.Find(unlockingKey).SetActive(false);
                     StartCoroutine(waitForDepossess());
                 } else {

@@ -95,12 +95,14 @@ public class PlayerMovement : MonoBehaviour
         {
             bool chasing = other.gameObject.GetComponent<EnemyMovementLoop>().isChasing();
             if (IsStill() && playerPossession.isPossessed && !chasing) {return;}
+            playerPossession.PreDeathDepossess();
             isDead = true;
             playerAnimator.SetBool("moving", false);
             playerAnimator.SetBool("isDead", true);
+            playerAnimator.Play("death", 0, 0);
             main.GetComponents<AudioSource>()[0].enabled = false;
             main.GetComponents<AudioSource>()[1].enabled = false;
-            StartCoroutine(waitForDeathAnim());
+            StartCoroutine(WaitForDeathAnim());
         }
     }
 
@@ -109,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         return movement.x == 0 && movement.y == 0;
     }
 
-    IEnumerator waitForDeathAnim() {
+    IEnumerator WaitForDeathAnim() {
         yield return new WaitForSeconds(0.8f);
         gameOverSFX[1].Play(0);
         SaySmt.Line("", "GAME OVER!", true);
