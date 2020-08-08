@@ -102,8 +102,6 @@ public class PlayerPossession : MonoBehaviour
                 // }
                 
                 AstarPath.active.Scan();
-            } else {
-                SaySmt.Line("Me", "Can't seem to possess anything nearby!");
             }
         }
         if (Input.GetKeyDown("o")) {
