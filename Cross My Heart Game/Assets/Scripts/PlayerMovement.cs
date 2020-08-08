@@ -13,7 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private float timeDownX = 0.0f; //time which A/D was pressed
     private float timeDownY= 0.0f;  //time which W/S was pressed
     private Animator playerAnimator;
+    private AudioSource[] gameOverSFX;
     private PlayerPossession playerPossession;
+    private Camera main;
 
     public bool isDead = false;
 
@@ -26,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
             Destroy(gameObject);
         }
         playerPossession = GetComponent<PlayerPossession>();
+        gameOverSFX = GetComponents<AudioSource>();
+        main = Camera.main;
 	}
 
     void FixedUpdate() 
@@ -93,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
             isDead = true;
             playerAnimator.SetBool("moving", false);
             playerAnimator.SetBool("isDead", true);
+            main.GetComponents<AudioSource>()[0].enabled = false;
+            main.GetComponents<AudioSource>()[1].enabled = false;
             StartCoroutine(waitForDeathAnim());
         }
     }
@@ -104,6 +110,9 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator waitForDeathAnim() {
         yield return new WaitForSeconds(0.8f);
+        gameOverSFX[1].Play(0);
         SaySmt.Line("", "GAME OVER!", true);
+        // This is to enable the Coffin Dance music if we want 
+        // main.GetComponents<AudioSource>()[2].enabled = true;
     }
 }
