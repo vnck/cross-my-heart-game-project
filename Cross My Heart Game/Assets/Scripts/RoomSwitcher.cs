@@ -8,7 +8,7 @@ public class RoomSwitcher : MonoBehaviour
     public int destinationSwitchId;
     public GameObject destinationSwitch;
     static GameObject player;
-    public int destinationOffset;
+    public float destinationOffset;
     
     // Start is called before the first frame update
     void Start()
