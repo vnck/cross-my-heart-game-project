@@ -8,7 +8,7 @@ public class SaySmt : MonoBehaviour
 {
     public static bool speaking = false;
     static bool reset = false;
-    static bool keyDown = false;
+    public static bool prepClose = true;
 
     static List<Dictionary<string,string>> lines = new List<Dictionary<string, string>>();
 
@@ -21,7 +21,7 @@ public class SaySmt : MonoBehaviour
 
     static public void PlayLines(bool reset = false) {
         GameObject convo = GameObject.FindGameObjectWithTag("Convo");
-        Debug.Log("opening speech box");
+        Debug.Log("opening speech box : lines");
         convo.GetComponent<Canvas>().enabled = true;
 
         if (lines[0]["speaker"] == "") {
@@ -30,7 +30,7 @@ public class SaySmt : MonoBehaviour
             convo.GetComponentInChildren<Text>().text = lines[0]["speaker"] + ": " + lines[0]["message"];
         }
         lines.RemoveAt(0);
-        keyDown = true;
+        prepClose = false;
         speaking = true;
         Time.timeScale = 0;
         SaySmt.reset = reset;
@@ -38,28 +38,31 @@ public class SaySmt : MonoBehaviour
     static public void Line(string person, string message, bool reset = false)
     {
         GameObject convo = GameObject.FindGameObjectWithTag("Convo");
-        Debug.Log("opening speech box");
+        Debug.Log("opening speech box : line");
+        Debug.Log("prepClose :" + prepClose + "speaking: " + speaking);
         convo.GetComponent<Canvas>().enabled = true;
         if (person == "") {
             convo.GetComponentInChildren<Text>().text = message;
         } else {
             convo.GetComponentInChildren<Text>().text = person + ": " + message;
         }
-        Time.timeScale = 0;
-        keyDown = true;
+        prepClose = false;
         speaking = true;
+        Time.timeScale = 0;
         SaySmt.reset = reset;
     }
 
     private void Update() {
         
-        if (speaking && Input.GetKeyDown("o") && !keyDown) 
+        if (speaking && Input.GetKeyDown("o") && prepClose) 
         {
             Debug.Log("closing speech box");
+            Debug.Log("prepClose :" + prepClose + "speaking: " + speaking);
             GameObject convo = GameObject.FindGameObjectWithTag("Convo");
             convo.GetComponent<Canvas>().enabled = false;
             Time.timeScale = 1;
             speaking = false;
+            prepClose = false;
             if (lines.Count > 0){ 
                 PlayLines();
             }
@@ -68,8 +71,8 @@ public class SaySmt : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-        else if (Input.GetKeyUp("o") && keyDown) {
-            keyDown = false;
+        else if (Input.GetKeyUp("o") && !prepClose) {
+            prepClose = true;
         }
     }
 }
