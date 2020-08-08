@@ -131,7 +131,7 @@ public class PlayerPossession : MonoBehaviour
             npc = other.gameObject;
             npcInRange = true;
         }
-        if (other.CompareTag("Furniture")) {
+        if (other.CompareTag("Furniture") || other.CompareTag("Item")) {
             if (transform.position.y > other.transform.position.y) {
                 GetComponent<SpriteRenderer>().sortingOrder = -1;
             } else {

@@ -213,6 +213,16 @@ public class EnemyMovementLoop : MonoBehaviour
             questionBox.enabled = true;
         }
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("COMPAREDDD");
+        if (other.CompareTag("Furniture") || other.CompareTag("Item")) {
+            if (transform.position.y > other.transform.position.y) {
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            } else {
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
+        }
+    }
 
     private void OnDestroy() {
         PriestManager.investigableTrigger -= InvestigableTrigger;
