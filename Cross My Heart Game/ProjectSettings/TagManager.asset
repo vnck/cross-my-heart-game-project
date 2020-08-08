@@ -10,6 +10,7 @@ TagManager:
   - Furniture
   - Door
   - NPC
+  - PlayerLight
   layers:
   - Default
   - TransparentFX

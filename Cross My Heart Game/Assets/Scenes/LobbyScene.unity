@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -141,12 +141,12 @@ PrefabInstance:
     - target: {fileID: 7078792947941310294, guid: a27e8efee1b94cd4795fc0d12fcc8bc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: -9.6
       objectReference: {fileID: 0}
     - target: {fileID: 7078792947941310294, guid: a27e8efee1b94cd4795fc0d12fcc8bc6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.04
+      value: 17.11
       objectReference: {fileID: 0}
     - target: {fileID: 7078792947941310294, guid: a27e8efee1b94cd4795fc0d12fcc8bc6,
         type: 3}
@@ -521,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.965
+      value: 17.48
       objectReference: {fileID: 0}
     - target: {fileID: 1358168105920392015, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
@@ -586,7 +586,7 @@ PrefabInstance:
     - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: switchId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2459448094423796762, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
@@ -611,12 +611,12 @@ PrefabInstance:
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Offset.y
-      value: 1.4308662
+      value: 0.7489252
       objectReference: {fileID: 0}
     - target: {fileID: 5988861867971750436, guid: ef703c10597d34874aaada298d9dab0b,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.283535
+      value: 0.38902473
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef703c10597d34874aaada298d9dab0b, type: 3}
@@ -630,6 +630,11 @@ PrefabInstance:
     - target: {fileID: 2945824386537039686, guid: e64975bb9602649fabea6902586a468e,
         type: 3}
       propertyPath: m_Name
+      value: PlayerLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945824386537039686, guid: e64975bb9602649fabea6902586a468e,
+        type: 3}
+      propertyPath: m_TagString
       value: PlayerLight
       objectReference: {fileID: 0}
     - target: {fileID: 2945824386537039689, guid: e64975bb9602649fabea6902586a468e,
@@ -719,6 +724,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e64975bb9602649fabea6902586a468e, type: 3}
+--- !u!1 &687022577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687022580}
+  - component: {fileID: 687022579}
+  - component: {fileID: 687022578}
+  m_Layer: 0
+  m_Name: LegendMap
+  m_TagString: NPC
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &687022578
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687022577}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.1157484, y: -1.9020844}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4239063, y: 1.8713493}
+  m_EdgeRadius: 0
+--- !u!114 &687022579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687022577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a66c1573dda24a478d75638a1fb7df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 
+    message: The sign conveniently tells you that Bonnie is at the top floor.
+  endLine:
+    speaker: 
+    message: The sign conveniently tells you that Bonnie is at the top floor.
+--- !u!4 &687022580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687022577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.5660095, y: 20.337288, z: -461.70605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725981425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7123527930055916630, guid: 944e68df9fc8344bf8e97425b68f5191,
