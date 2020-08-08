@@ -9,17 +9,24 @@ public class SceneSwitch : MonoBehaviour
     public int switchId;
     public int destinationSwitchId;
     static GameObject player;
-    static int currentDestinationSwitchId;
+    static GameObject playerLight;
+    static GameObject camera;
+    static int currentDestinationSwitchId = -1;
 
     public string conditionalItem;
     public bool possessionCheck;
 
+
     private void Start() {
-        currentDestinationSwitchId = -1;
         if (player == null) { player = GameObject.FindGameObjectWithTag("Player"); }
+        if (playerLight == null) { playerLight = GameObject.FindGameObjectWithTag("PlayerLight"); }
+        if (camera == null) { camera = GameObject.FindGameObjectWithTag("MainCamera"); }
         if (currentDestinationSwitchId == switchId)
         {
+            Debug.Log("transporting player to scenechanger " + switchId);
             player.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            playerLight.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            camera.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
         }
     }
 
@@ -37,6 +44,7 @@ public class SceneSwitch : MonoBehaviour
                 }
             } else if (destinationSwitchId < 0) {
                 SaySmt.Line("", "A mysterious voice tells you to not look back.");
+                SaySmt.prepClose = true;
             }
              else {
                 changeScene();

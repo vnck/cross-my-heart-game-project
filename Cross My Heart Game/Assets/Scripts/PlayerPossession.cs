@@ -58,7 +58,7 @@ public class PlayerPossession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("p")) {
+        if (Input.GetKeyDown("p") && Time.timeScale != 0) {
             if (!isPossessed && playerInRange) {
                 isPossessed = true;
                 isPossessing = true;
@@ -108,14 +108,12 @@ public class PlayerPossession : MonoBehaviour
                 // }
                 
                 AstarPath.active.Scan();
-            } else {
-                SaySmt.Line("Me", "Can't seem to possess anything nearby!");
             }
         }
         if (Input.GetKeyDown("o")) {
-            if (isPossessed) {
+            if (isPossessed && Time.timeScale != 0) {
                 itemPrefab.GetComponent<Item>().StationaryAction();
-            } else if (!SaySmt.speaking && npcInRange) {
+            } else if (npcInRange && !SaySmt.speaking && SaySmt.prepClose) {
                 npc.GetComponent<Npc>().Speak();
             }
         }
@@ -205,7 +203,6 @@ public class PlayerPossession : MonoBehaviour
         transform.position = item.transform.position;
         item.SetActive(false);
         isPossessing = false;
-        SaySmt.Line("Me", "Spooktacular!");
         yield return null;
     }
 

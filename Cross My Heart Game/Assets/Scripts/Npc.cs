@@ -9,7 +9,7 @@ using UnityEngine;
  }
 public class Npc : MonoBehaviour
 {
-    public Line[] lines; 
+    public List<Line> lines = new List<Line>(); 
     private bool spoken;
 
     public Line endLine;
@@ -22,7 +22,7 @@ public class Npc : MonoBehaviour
 
     // Update is called once per frame
     public void Speak() {
-        if (!spoken) {
+        if (!spoken && lines.Count > 0) {
             foreach (var line in lines)
             {
                 SaySmt.PrepLine(line.speaker != "" ? line.speaker : "", line.message);
