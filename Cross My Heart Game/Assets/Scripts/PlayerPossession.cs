@@ -38,6 +38,9 @@ public class PlayerPossession : MonoBehaviour
     public GameObject oBoxContainer;
     private SpriteRenderer oBox;
 
+    //Sound
+    private AudioSource wooshSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,7 @@ public class PlayerPossession : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         pBox = pBoxContainer.GetComponent<SpriteRenderer>();
         oBox = oBoxContainer.GetComponent<SpriteRenderer>();
+        wooshSFX = GetComponent<AudioSource>();
         // DontDestroyOnLoad(this.gameObject);
     }
 
@@ -67,6 +71,7 @@ public class PlayerPossession : MonoBehaviour
                 GetComponents<Collider2D>()[0].enabled = false;
 
                 GetComponent<PlayerMovement>().speed = item.GetComponent<Item>().moveSpeed;
+                wooshSFX.Play(0);
                 playerAnim.Play("possession", 0, 0);
                 StartCoroutine(waitForAnim());
                 pBox.enabled = false;
@@ -82,6 +87,7 @@ public class PlayerPossession : MonoBehaviour
                 Destroy(GetComponents<Collider2D>()[2]);
 
                 playerAnim.enabled = true;
+                wooshSFX.Play(0);
                 playerAnim.Play("depossession", 0, 0);
                 itemName = "";
                 StartCoroutine(waitForDepossessAnim());
