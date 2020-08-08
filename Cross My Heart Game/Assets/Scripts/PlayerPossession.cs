@@ -199,7 +199,6 @@ public class PlayerPossession : MonoBehaviour
         transform.position = item.transform.position;
         item.SetActive(false);
         isPossessing = false;
-        SaySmt.Line("Me", "Spooktacular!");
         yield return null;
     }
 
