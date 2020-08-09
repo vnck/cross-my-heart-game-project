@@ -110,7 +110,9 @@ public class PlayerMovement : MonoBehaviour
             EnemyMovementLoop mov = other.gameObject.GetComponent<EnemyMovementLoop>();
             if (mov != null) { chasing = mov.isChasing(); }
             if (IsStill() && playerPossession.isPossessed && !chasing) {return;}
-            playerPossession.PreDeathDepossess();
+            if (playerPossession.isPossessed) {
+                playerPossession.PreDeathDepossess();
+            }
             isDead = true;
             playerAnimator.SetBool("moving", false);
             playerAnimator.SetBool("isDead", true);
