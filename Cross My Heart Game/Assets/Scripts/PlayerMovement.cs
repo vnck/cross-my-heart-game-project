@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
             if (movementSinceLastGraphUpdate > 0.4) {
                 Debug.Log("RESCANNING");
                 Bounds bounds = GetComponents<BoxCollider2D>()[1].bounds;
-                bounds.Expand(5);
+                bounds.Expand(0.5f);
                 var guo = new GraphUpdateObject(bounds);
                 guo.updatePhysics = true;
                 AstarPath.active.UpdateGraphs(guo);

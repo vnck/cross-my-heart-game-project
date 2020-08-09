@@ -11,6 +11,7 @@ TagManager:
   - Door
   - NPC
   - PlayerLight
+  - Book
   layers:
   - Default
   - TransparentFX
