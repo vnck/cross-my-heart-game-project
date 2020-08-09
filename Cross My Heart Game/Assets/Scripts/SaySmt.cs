@@ -71,7 +71,7 @@ public class SaySmt : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-        else if (Input.GetKeyUp("o") && !prepClose) {
+        else if (Input.GetKeyUp("j") && !prepClose) {
             prepClose = true;
         }
     }
