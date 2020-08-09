@@ -192,5 +192,6 @@ public class PlayerPossession : MonoBehaviour
         BoxCollider2D collider = this.gameObject.AddComponent(typeof(BoxCollider2D)) as BoxCollider2D;
         collider.offset = item.GetComponent<BoxCollider2D>().offset;
         collider.size = item.GetComponent<BoxCollider2D>().size;
+        collider.isTrigger = item.GetComponent<BoxCollider2D>().isTrigger;
     }
 }
