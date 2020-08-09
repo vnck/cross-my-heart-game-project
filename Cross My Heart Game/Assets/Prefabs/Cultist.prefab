@@ -285,6 +285,8 @@ MonoBehaviour:
   currentDirection: 0
   alertBoxContainer: {fileID: 1890599913635694861}
   questionBoxContainer: {fileID: 4414350543628939698}
+  hitPoint: {x: 0, y: 0, z: 0}
+  hitDistance: 0
 --- !u!114 &6824998230885145008
 MonoBehaviour:
   m_ObjectHideFlags: 0
