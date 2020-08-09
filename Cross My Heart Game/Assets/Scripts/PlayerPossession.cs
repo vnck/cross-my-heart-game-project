@@ -57,14 +57,14 @@ public class PlayerPossession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("k") && Time.timeScale != 0) {
+        if (Input.GetKeyDown("p") && Time.timeScale != 0) {
             if (!isPossessed && playerInRange) {
                 if (!isPossessing) { Possess(); }
             } else if (isPossessed) {
                 if (!isDepossessing) { Depossess(); }
             }
         }
-        if (Input.GetKeyDown("j")) {
+        if (Input.GetKeyDown("o")) {
             if (isPossessed && Time.timeScale != 0 && item.GetComponent<Item>().moveSpeed == 0) {
                 itemPrefab.GetComponent<Item>().StationaryAction();
             } else if (npcInRange && !SaySmt.speaking && SaySmt.prepClose) {

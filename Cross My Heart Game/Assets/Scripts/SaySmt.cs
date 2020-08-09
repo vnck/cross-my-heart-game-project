@@ -54,7 +54,7 @@ public class SaySmt : MonoBehaviour
 
     private void Update() {
         
-        if (speaking && Input.GetKeyDown("j") && prepClose) 
+        if (speaking && Input.GetKeyDown("o") && prepClose) 
         {
             Debug.Log("closing speech box");
             Debug.Log("prepClose :" + prepClose + "speaking: " + speaking);
@@ -71,7 +71,7 @@ public class SaySmt : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-        else if (Input.GetKeyUp("j") && !prepClose) {
+        else if (Input.GetKeyUp("o") && !prepClose) {
             prepClose = true;
         }
     }
