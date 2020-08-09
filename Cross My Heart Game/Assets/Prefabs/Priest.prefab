@@ -56,10 +56,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 20
-  m_PointLightOuterAngle: 20
-  m_PointLightInnerRadius: 5
-  m_PointLightOuterRadius: 5
+  m_PointLightInnerAngle: 60
+  m_PointLightOuterAngle: 60
+  m_PointLightInnerRadius: 2
+  m_PointLightOuterRadius: 3
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -193,8 +193,6 @@ MonoBehaviour:
   currentDirection: 0
   alertBoxContainer: {fileID: 9122925976276006115}
   questionBoxContainer: {fileID: 6477594787631369308}
-  hitPoint: {x: 0, y: 0, z: 0}
-  hitDistance: 0
 --- !u!114 &4184026533300184158
 MonoBehaviour:
   m_ObjectHideFlags: 0

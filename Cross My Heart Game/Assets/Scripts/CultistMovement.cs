@@ -16,10 +16,8 @@ public class CultistMovement : MonoBehaviour
         lastPos = transform.position;
         animator = GetComponent<Animator>();
         targetBook = FindNearestBook();
-        if (targetBook != null) {
-            targetBook.GetComponent<Book>().isTarget = true;
-            SetTarget(targetBook.transform);     
-        }
+        targetBook.GetComponent<Book>().isTarget = true;
+        SetTarget(targetBook.transform);     
     }
     void SetTarget(Transform trsfrm) { GetComponent<AIDestinationSetter>().target = trsfrm; }
 
