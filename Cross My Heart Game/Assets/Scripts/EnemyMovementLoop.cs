@@ -57,6 +57,8 @@ public class EnemyMovementLoop : MonoBehaviour
     public GameObject questionBoxContainer;
     private SpriteRenderer alertBox;
     private SpriteRenderer questionBox;
+    public Vector3 hitPoint;
+    public float hitDistance;
 
     void Start()
     {
@@ -154,6 +156,8 @@ public class EnemyMovementLoop : MonoBehaviour
 
         if (ray.collider != null) 
         {
+            hitPoint = ray.point;
+            hitDistance = Vector3.Distance(transform.position, hitPoint);
             if (ray.collider.gameObject.CompareTag("Player"))
             {
                 Debug.Log("Saw player!!!");
@@ -167,6 +171,9 @@ public class EnemyMovementLoop : MonoBehaviour
                 SetTarget(ray.collider.gameObject.transform);
                 SetSpeed(0);
             }
+        } else {
+            hitPoint = Vector3.zero;
+            hitDistance = 0;
         }
     }
 
@@ -243,6 +250,7 @@ public class EnemyMovementLoop : MonoBehaviour
         if (currentDirection == Direction.Down) { lineTo = Vector3.down; }
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position + lineTo, transform.position + lineTo * 5);
+        Gizmos.DrawSphere(hitPoint, 0.2f);
     }
 
 }
