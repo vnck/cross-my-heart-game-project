@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Pathfinding;
+using System;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private Camera main;
 
     public bool isDead = false;
+    private float movementSinceLastGraphUpdate;
 
     // Use this for initialization
 	void Start()
@@ -29,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         }
         playerPossession = GetComponent<PlayerPossession>();
         gameOverSFX = GetComponents<AudioSource>();
+        movementSinceLastGraphUpdate = 0;
         main = Camera.main;
 	}
 
@@ -69,7 +73,16 @@ public class PlayerMovement : MonoBehaviour
             else {
                 movement = Vector2.up * movement.y;
             }
-            // Debug.Log(movement);
+            movementSinceLastGraphUpdate += Math.Abs(movement.x) +  Math.Abs(movement.y);
+            if (movementSinceLastGraphUpdate > 0.4) {
+                Debug.Log("RESCANNING");
+                Bounds bounds = GetComponents<BoxCollider2D>()[1].bounds;
+                bounds.Expand(5);
+                var guo = new GraphUpdateObject(bounds);
+                guo.updatePhysics = true;
+                AstarPath.active.UpdateGraphs(guo);
+                movementSinceLastGraphUpdate = 0;
+            }
             UpdateAnimationAndMove();
         }
     }

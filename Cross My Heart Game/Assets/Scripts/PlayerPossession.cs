@@ -164,6 +164,7 @@ public class PlayerPossession : MonoBehaviour
         itemName = item.GetComponent<Item>().label;
         itemSpeed = item.GetComponent<Item>().moveSpeed;
         itemIsKey = item.GetComponent<Item>().isKey;
+        gameObject.layer = 8;
         playerSprite.sprite = itemSprite;
         playerSprite.color = itemColor;
         transform.position = item.transform.position;
@@ -182,6 +183,7 @@ public class PlayerPossession : MonoBehaviour
         playerSprite.color = Color.white;
         pBox.enabled = true;
         playerInRange = true;
+        gameObject.layer = 0;
         isPossessed = false;
         isDepossessing = false;
     }
