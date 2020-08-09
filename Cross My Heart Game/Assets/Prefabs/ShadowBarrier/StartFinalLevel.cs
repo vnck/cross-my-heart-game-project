@@ -16,5 +16,12 @@ public class StartFinalLevel : MonoBehaviour
         if (other.tag == "Player") {
             bgm[1].Play(0);
         }
+        GameObject[] cultists = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(var cultist in cultists) {
+            CultistMovement cm = cultist.GetComponent<CultistMovement>();
+            if (cm != null) {
+                cm.StartMoving();
+            }
+        }
     }
 }

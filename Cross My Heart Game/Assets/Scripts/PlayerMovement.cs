@@ -75,7 +75,6 @@ public class PlayerMovement : MonoBehaviour
             }
             movementSinceLastGraphUpdate += Math.Abs(movement.x) +  Math.Abs(movement.y);
             if (movementSinceLastGraphUpdate > 0.4) {
-                Debug.Log("RESCANNING");
                 Bounds bounds = GetComponents<BoxCollider2D>()[1].bounds;
                 bounds.Expand(0.5f);
                 var guo = new GraphUpdateObject(bounds);
@@ -104,19 +103,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        Debug.Log("COLLIDED");
         if (other.gameObject.CompareTag("Enemy") && !isDead)
         {
-            bool chasing = other.gameObject.GetComponent<EnemyMovementLoop>().isChasing();
+            bool chasing = true;
+            EnemyMovementLoop mov = other.gameObject.GetComponent<EnemyMovementLoop>();
+            if (mov != null) { chasing = mov.isChasing(); }
             if (IsStill() && playerPossession.isPossessed && !chasing) {return;}
             playerPossession.PreDeathDepossess();
             isDead = true;
             playerAnimator.SetBool("moving", false);
             playerAnimator.SetBool("isDead", true);
             playerAnimator.Play("death", 0, 0);
+            StartCoroutine(WaitForDeathAnim());
             main.GetComponents<AudioSource>()[0].enabled = false;
             main.GetComponents<AudioSource>()[1].enabled = false;
             gameOverSFX[2].Play(0);
-            StartCoroutine(WaitForDeathAnim());
         }
         if (other.CompareTag("Furniture") || other.CompareTag("Item")) {
             if (isDead) { return; }
@@ -124,6 +126,13 @@ public class PlayerMovement : MonoBehaviour
                 GetComponent<SpriteRenderer>().sortingOrder = -1;
             } else {
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
+        }
+        if (other.CompareTag("Fire")) {
+            if (playerPossession.isPossessed && playerPossession.item.CompareTag("Book")) {
+                playerPossession.Depossess();
+                Destroy(playerPossession.item);
+                playerPossession.item = null;
             }
         }
     }

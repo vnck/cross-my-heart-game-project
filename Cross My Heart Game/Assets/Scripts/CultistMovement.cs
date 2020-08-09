@@ -11,10 +11,15 @@ public class CultistMovement : MonoBehaviour
     private GameObject targetBookPoint;
     private Vector3 lastPos;
     private Animator animator;
+    private Transform startingPos;
 
     void Start() {
         lastPos = transform.position;
         animator = GetComponent<Animator>();
+        startingPos = transform;
+    }
+
+    public void StartMoving() {
         targetBook = FindNearestBook();
         if (targetBook != null) {
             targetBook.GetComponent<Book>().isTarget = true;
@@ -87,6 +92,8 @@ public class CultistMovement : MonoBehaviour
             if (targetBook != null) {
                 targetBook.GetComponent<Book>().isTarget = true;
                 SetTarget(targetBook.transform);     
+            } else {
+                SetTarget(startingPos);
             }
         }
     }

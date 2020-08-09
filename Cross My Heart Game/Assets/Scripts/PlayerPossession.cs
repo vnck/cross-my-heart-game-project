@@ -9,7 +9,7 @@ public class PlayerPossession : MonoBehaviour
     public bool isDepossessing;
 
     // Item attributes
-    private GameObject item;
+    public GameObject item;
     public GameObject itemPrefab;
     private Sprite itemSprite;
     private int itemLayer;
@@ -34,9 +34,9 @@ public class PlayerPossession : MonoBehaviour
     private Sprite normalPlayerSprite;
 
     public GameObject pBoxContainer;
-    private SpriteRenderer pBox;
+    public SpriteRenderer pBox;
     public GameObject oBoxContainer;
-    private SpriteRenderer oBox;
+    public SpriteRenderer oBox;
 
     //Sound
     private AudioSource[] wooshSFX;
@@ -124,6 +124,7 @@ public class PlayerPossession : MonoBehaviour
         } 
     }
 
+
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Inside item");
         if (other.CompareTag("Item") && isPossessed == false) {
@@ -189,9 +190,11 @@ public class PlayerPossession : MonoBehaviour
 
     public void FinishDepossess() {
         playerSprite.color = Color.white;
-        pBox.enabled = true;
         oBox.enabled = false;
-        playerInRange = true;
+        if (item != null) { 
+            pBox.enabled = true;
+            playerInRange = true;
+        }
         gameObject.layer = 0;
         isPossessed = false;
         isDepossessing = false;
