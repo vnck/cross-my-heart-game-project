@@ -23,7 +23,8 @@ public class Door : MonoBehaviour
                     GameObject.Find(unlockingKey).SetActive(false);
                     StartCoroutine(waitForDepossess());
                 } else {
-                    SaySmt.Line("Me", "Door is locked!");
+                    SaySmt.Line("Clyde", "The door is locked. I think I need a key.");
+                    SaySmt.prepClose = true;
                     Debug.Log("Door locked! Need key");
                 }
             }
