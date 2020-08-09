@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1475265637
   m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingOrder: 999
   m_Sprite: {fileID: -9080700020481880845, guid: 4344be9ada3734901a0f9ad1a2cc12d0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1475265637
   m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingOrder: 999
   m_Sprite: {fileID: -9005941153719796207, guid: 4344be9ada3734901a0f9ad1a2cc12d0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -353,12 +353,15 @@ MonoBehaviour:
   isPossessed: 0
   isPossessing: 0
   isDepossessing: 0
+  item: {fileID: 0}
   itemPrefab: {fileID: 875232311847931869, guid: 6f9ca7e8899f69b49ac0211f0aa3821c,
     type: 3}
   itemName: 
   range: 0
   pBoxContainer: {fileID: 7016674864221213050}
+  pBox: {fileID: 0}
   oBoxContainer: {fileID: 4023367179078925130}
+  oBox: {fileID: 0}
 --- !u!61 &4213852948472285067
 BoxCollider2D:
   m_ObjectHideFlags: 0
