@@ -13,7 +13,7 @@ public class PlayerPossession : MonoBehaviour
     public GameObject itemPrefab;
     private Sprite itemSprite;
     private int itemLayer;
-    private float itemSpeed;
+    public float itemSpeed;
     private Color itemColor;
     public string itemName;
     private bool itemIsKey;

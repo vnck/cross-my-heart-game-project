@@ -47,6 +47,10 @@ public class PlayerMovement : MonoBehaviour
                 movement.x = 0;
                 movement.y = 0;
             }
+            if (playerPossession.isPossessed && playerPossession.itemSpeed == 0) {
+                movement.x = 0;
+                movement.y = 0;
+            }
             
             //if A/D pressed, save time it was pressed
             if (movement.x != 0) {
