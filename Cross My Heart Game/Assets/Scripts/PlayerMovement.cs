@@ -104,6 +104,14 @@ public class PlayerMovement : MonoBehaviour
             main.GetComponents<AudioSource>()[1].enabled = false;
             StartCoroutine(WaitForDeathAnim());
         }
+        if (other.CompareTag("Furniture") || other.CompareTag("Item")) {
+            if (isDead) { return; }
+            if (transform.position.y > other.transform.position.y) {
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            } else {
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
+        }
     }
 
     public bool IsStill()
@@ -117,5 +125,16 @@ public class PlayerMovement : MonoBehaviour
         SaySmt.Line("", "GAME OVER!", true);
         // This is to enable the Coffin Dance music if we want 
         // main.GetComponents<AudioSource>()[2].enabled = true;
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.CompareTag("Furniture")) {
+            if (isDead) { return; }
+            if (transform.position.y > other.transform.position.y) {
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            } else {
+                GetComponent<SpriteRenderer>().sortingOrder = 1;
+            }
+        }
     }
 }
