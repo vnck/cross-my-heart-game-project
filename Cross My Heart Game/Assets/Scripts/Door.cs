@@ -19,11 +19,14 @@ public class Door : MonoBehaviour
             if (isLocked) {
                 if (other.GetComponent<PlayerPossession>().itemName == unlockingKey) {
                     GetComponent<SpriteRenderer>().sprite = unlockedSprite;
+                    GetComponents<AudioSource>()[0].Play(0);
                     other.GetComponent<PlayerPossession>().Depossess();
                     GameObject.Find(unlockingKey).SetActive(false);
                     StartCoroutine(waitForDepossess());
                 } else {
-                    SaySmt.Line("Me", "Door is locked!");
+                    GetComponents<AudioSource>()[1].Play(0);
+                    SaySmt.Line("Clyde", "The door is locked. I think I need a key.");
+                    SaySmt.prepClose = true;
                     Debug.Log("Door locked! Need key");
                 }
             }

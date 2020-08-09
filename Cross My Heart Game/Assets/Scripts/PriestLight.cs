@@ -23,8 +23,13 @@ public class PriestLight : MonoBehaviour
 
     void setLightRotation() {
         currentDirection = GetComponent<EnemyMovementLoop>().currentDirection;
-        lightComponent.pointLightInnerRadius = GetComponent<EnemyMovementLoop>().hitDistance;
-        lightComponent.pointLightOuterRadius = GetComponent<EnemyMovementLoop>().hitDistance;
+        if (GetComponent<EnemyMovementLoop>().hitDistance == 0) {
+            lightComponent.pointLightInnerRadius = 5;
+            lightComponent.pointLightOuterRadius = 5;
+        } else {
+            lightComponent.pointLightInnerRadius = GetComponent<EnemyMovementLoop>().hitDistance;
+            lightComponent.pointLightOuterRadius = GetComponent<EnemyMovementLoop>().hitDistance;
+        }
         int desiredRotation = 0;
         if (currentDirection == EnemyMovementLoop.Direction.Up) { desiredRotation = 0; }
         if (currentDirection == EnemyMovementLoop.Direction.Left) { desiredRotation = 90; }

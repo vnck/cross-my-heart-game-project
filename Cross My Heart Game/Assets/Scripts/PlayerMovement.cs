@@ -115,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.Play("death", 0, 0);
             main.GetComponents<AudioSource>()[0].enabled = false;
             main.GetComponents<AudioSource>()[1].enabled = false;
+            gameOverSFX[2].Play(0);
             StartCoroutine(WaitForDeathAnim());
         }
         if (other.CompareTag("Furniture") || other.CompareTag("Item")) {
@@ -133,9 +134,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     IEnumerator WaitForDeathAnim() {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1.5f);
         gameOverSFX[1].Play(0);
         SaySmt.Line("", "GAME OVER!", true);
+        SaySmt.prepClose = true;
         // This is to enable the Coffin Dance music if we want 
         // main.GetComponents<AudioSource>()[2].enabled = true;
     }
