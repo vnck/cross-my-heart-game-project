@@ -12,6 +12,8 @@ TagManager:
   - NPC
   - PlayerLight
   - Book
+  - BookPoint
+  - Fire
   layers:
   - Default
   - TransparentFX
