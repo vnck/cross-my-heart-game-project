@@ -6,10 +6,12 @@ public class PriestLight : MonoBehaviour
 {
     public EnemyMovementLoop.Direction currentDirection;
     private Transform lightTransform;
+    private UnityEngine.Experimental.Rendering.Universal.Light2D lightComponent;
     // Start is called before the first frame update
     void Start()
     {
         lightTransform = this.gameObject.transform.GetChild(2);
+        lightComponent = lightTransform.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         setLightRotation();
     }
 
@@ -21,6 +23,8 @@ public class PriestLight : MonoBehaviour
 
     void setLightRotation() {
         currentDirection = GetComponent<EnemyMovementLoop>().currentDirection;
+        lightComponent.pointLightInnerRadius = GetComponent<EnemyMovementLoop>().hitDistance;
+        lightComponent.pointLightOuterRadius = GetComponent<EnemyMovementLoop>().hitDistance;
         int desiredRotation = 0;
         if (currentDirection == EnemyMovementLoop.Direction.Up) { desiredRotation = 0; }
         if (currentDirection == EnemyMovementLoop.Direction.Left) { desiredRotation = 90; }
