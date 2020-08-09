@@ -65,7 +65,7 @@ public class PlayerPossession : MonoBehaviour
             }
         }
         if (Input.GetKeyDown("o")) {
-            if (isPossessed && Time.timeScale != 0) {
+            if (isPossessed && Time.timeScale != 0 && item.GetComponent<Item>().moveSpeed == 0) {
                 itemPrefab.GetComponent<Item>().StationaryAction();
             } else if (npcInRange && !SaySmt.speaking && SaySmt.prepClose) {
                 npc.GetComponent<Npc>().Speak();
