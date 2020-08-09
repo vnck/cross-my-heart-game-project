@@ -168,6 +168,7 @@ public class EnemyMovementLoop : MonoBehaviour
                 alertSFX.Play(0);
                 alertBox.enabled = true;
                 waitTime = startledWatiTime;
+                animator.SetBool("moving", false);
                 SetTarget(ray.collider.gameObject.transform);
                 SetSpeed(0);
             }
@@ -182,12 +183,13 @@ public class EnemyMovementLoop : MonoBehaviour
 
     void UpdateCurrentDirection()
     {
+        if (state == State.Startled || state == State.Suspicious) { return; }
         var velocity = transform.position - lastPos;
         lastPos = transform.position;
         if (velocity.y > 0){ currentDirection = Direction.Up; SetAnimMovement(0, 1);}
-        else if (velocity.y < -0){ currentDirection = Direction.Down; SetAnimMovement(0, -1);}
+        else if (velocity.y < 0){ currentDirection = Direction.Down; SetAnimMovement(0, -1);}
         else if (velocity.x > 0){ currentDirection = Direction.Right; SetAnimMovement(1, 0);}
-        else if (velocity.x < -0){ currentDirection = Direction.Left; SetAnimMovement(-1, 0);}
+        else if (velocity.x < 0){ currentDirection = Direction.Left; SetAnimMovement(-1, 0);}
         else { animator.SetBool("moving", false); }
     }
 
@@ -219,6 +221,7 @@ public class EnemyMovementLoop : MonoBehaviour
             waitTime = suspiciousWaitTime;
             SetTarget(susTransform);
             SetSpeed(0);
+            animator.SetBool("moving", false);
             state = State.Suspicious;
             questionBox.enabled = true;
         }
