@@ -867,6 +867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 1806096092998084406, guid: f9597bc38bb4446178c896591b3a9ea3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9597bc38bb4446178c896591b3a9ea3, type: 3}
 --- !u!1 &725981425 stripped

@@ -257,6 +257,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6824998230885145020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6824998230885145021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1301932261b80124fbf565b26e92eca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  keyObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 2
+  investigationSpeed: 3
+  chaseSpeed: 4
+  suspiciousWaitTime: 1
+  investigationWaitTime: 2
+  startledWatiTime: 1
+  currentDirection: 0
+  alertBoxContainer: {fileID: 1890599913635694861}
+  questionBoxContainer: {fileID: 4414350543628939698}
+  hitPoint: {x: 0, y: 0, z: 0}
+  hitDistance: 0
 --- !u!114 &6824998230885145008
 MonoBehaviour:
   m_ObjectHideFlags: 0

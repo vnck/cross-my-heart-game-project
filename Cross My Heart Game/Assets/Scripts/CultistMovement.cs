@@ -21,10 +21,8 @@ public class CultistMovement : MonoBehaviour
 
     public void StartMoving() {
         targetBook = FindNearestBook();
-        if (targetBook != null) {
-            targetBook.GetComponent<Book>().isTarget = true;
-            SetTarget(targetBook.transform);     
-        }
+        targetBook.GetComponent<Book>().isTarget = true;
+        SetTarget(targetBook.transform);     
     }
     void SetTarget(Transform trsfrm) { GetComponent<AIDestinationSetter>().target = trsfrm; }
 
