@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1148327617332434083}
   - component: {fileID: 1148327617332434082}
   - component: {fileID: 1148327617332434085}
+  - component: {fileID: 7975251517134384716}
   m_Layer: 8
   m_Name: PotNPC
   m_TagString: NPC
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1475265637
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2269949439249822484, guid: 0f96768ce40f1481f91f2466ce67e6cc,
+  m_Sprite: {fileID: -5501515812435908980, guid: e17ac5f792cb8489fa8656d613dc67e0,
     type: 3}
   m_Color: {r: 0.504717, g: 1, b: 0.7970401, a: 1}
   m_FlipX: 0
@@ -165,3 +166,22 @@ MonoBehaviour:
   endLine:
     speaker: Pot
     message: ...
+--- !u!95 &7975251517134384716
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148327617332434084}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 200ac06ddec424827a9b6aa00cbe0ba3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

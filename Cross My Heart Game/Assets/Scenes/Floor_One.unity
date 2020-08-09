@@ -888,22 +888,37 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[0].speaker
-      value: Pot
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[0].message
-      value: Psst... They won't find you if you hide inside their furniture.
+      value: Psst... You can hide inside furniture.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: endLine.message
-      value: Psst... They won't find you if you hide inside their furniture.
+      value: Psst... You can hide inside furniture.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.data[1].speaker
+      value: Haru
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.data[1].message
+      value: That way, they won't find you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: endLine.speaker
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
@@ -7386,12 +7401,12 @@ PrefabInstance:
     - target: {fileID: 5642695129345523584, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.328926
+      value: 38.72
       objectReference: {fileID: 0}
     - target: {fileID: 5642695129345523584, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.341566
+      value: 6.15
       objectReference: {fileID: 0}
     - target: {fileID: 5642695129345523584, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
@@ -7959,7 +7974,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fcc2174e801d24c64b615f005a10eebd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 320e9fca152f24b83af3686222793b07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.37
   m_Pitch: 1

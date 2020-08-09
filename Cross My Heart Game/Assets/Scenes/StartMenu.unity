@@ -1540,7 +1540,7 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[1].speaker
-      value: Pot
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
@@ -1550,7 +1550,7 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[2].speaker
-      value: Pot
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
@@ -1575,32 +1575,37 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[4].message
-      value: ... You're a talking pot.
+      value: ... You're a talking dog.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[5].speaker
-      value: Pot
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[5].message
-      value: You better quickly save her.
+      value: ... I'm your spirit animal.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[6].speaker
-      value: Pot
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[6].message
-      value: Quick, the book will take you there.
+      value: Quickly, the book will take you there.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: endLine.message
       value: ... What are you waiting for?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: endLine.speaker
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
