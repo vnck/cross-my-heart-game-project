@@ -4972,7 +4972,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cultist (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7253018946428622098, guid: 0c23112c19e8b384693e6eb08265c859, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c23112c19e8b384693e6eb08265c859, type: 3}
 --- !u!1001 &1398294139
 PrefabInstance:

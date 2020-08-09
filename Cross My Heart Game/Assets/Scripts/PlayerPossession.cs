@@ -131,6 +131,11 @@ public class PlayerPossession : MonoBehaviour
             item = other.gameObject;
             pBox.enabled = true;
         }
+        if (other.CompareTag("Book") && !other.GetComponent<Book>().carried && isPossessed == false) {
+            playerInRange = true;
+            item = other.gameObject;
+            pBox.enabled = true;
+        }
         if (other.CompareTag("NPC")) {
             oBox.enabled = true;
             npc = other.gameObject;
@@ -140,7 +145,7 @@ public class PlayerPossession : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other) {
         Debug.Log("Outside item");
-        if (other.CompareTag("Item")) {
+        if (other.CompareTag("Item") || other.CompareTag("Book")) {
             playerInRange = false;
             pBox.enabled = false;
         }
@@ -164,7 +169,7 @@ public class PlayerPossession : MonoBehaviour
         itemName = item.GetComponent<Item>().label;
         itemSpeed = item.GetComponent<Item>().moveSpeed;
         itemIsKey = item.GetComponent<Item>().isKey;
-        gameObject.layer = 8;
+        gameObject.layer = item.layer;
         playerSprite.sprite = itemSprite;
         playerSprite.color = itemColor;
         transform.position = item.transform.position;
