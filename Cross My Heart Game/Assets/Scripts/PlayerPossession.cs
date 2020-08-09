@@ -171,6 +171,9 @@ public class PlayerPossession : MonoBehaviour
         item.SetActive(false);
         isPossessed = true;
         isPossessing = false;
+        if (item.GetComponent<Item>().moveSpeed == 0) {
+            oBox.enabled = true;
+        }
     }
 
     IEnumerator WaitForDepossessAnim() {
@@ -182,6 +185,7 @@ public class PlayerPossession : MonoBehaviour
     public void FinishDepossess() {
         playerSprite.color = Color.white;
         pBox.enabled = true;
+        oBox.enabled = false;
         playerInRange = true;
         gameObject.layer = 0;
         isPossessed = false;
