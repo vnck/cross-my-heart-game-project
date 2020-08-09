@@ -13,7 +13,7 @@ public class Portal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("p") && playerInRange) {
+        if (Input.GetKeyDown("k") && playerInRange) {
             StartCoroutine(waitForAnim());
             SceneManager.LoadScene(sceneIndex);
         }

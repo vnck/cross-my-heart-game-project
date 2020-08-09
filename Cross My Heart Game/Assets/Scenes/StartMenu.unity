@@ -309,6 +309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryBook
       objectReference: {fileID: 0}
+    - target: {fileID: 2999218159454069858, guid: 11db2816a700e71419a24cb9a932c27c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     - target: {fileID: 2999218159454069861, guid: 11db2816a700e71419a24cb9a932c27c,
         type: 3}
       propertyPath: moveSpeed
@@ -394,7 +399,8 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.18431373
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7273109976066670796, guid: 11db2816a700e71419a24cb9a932c27c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 11db2816a700e71419a24cb9a932c27c, type: 3}
 --- !u!1 &566774945
 GameObject:
