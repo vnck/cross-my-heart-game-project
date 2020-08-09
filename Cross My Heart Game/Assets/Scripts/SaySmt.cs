@@ -54,7 +54,7 @@ public class SaySmt : MonoBehaviour
 
     private void Update() {
         
-        if (speaking && Input.GetKeyDown("o") && prepClose) 
+        if (speaking && Input.GetKeyDown("j") && prepClose) 
         {
             Debug.Log("closing speech box");
             Debug.Log("prepClose :" + prepClose + "speaking: " + speaking);
