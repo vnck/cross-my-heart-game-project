@@ -2828,7 +2828,7 @@ Transform:
   - {fileID: 1942567646}
   - {fileID: 311908264}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311908263
 GameObject:
@@ -6217,12 +6217,12 @@ PrefabInstance:
     - target: {fileID: 4965864488284252690, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.12957478
+      value: 0.18731022
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252690, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.1680851
+      value: 0.052614212
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252691, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
@@ -6367,6 +6367,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646558397439938219, guid: db78abe9fffbad14ebd8dc940e3be382,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.2488562
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646558397439938219, guid: db78abe9fffbad14ebd8dc940e3be382,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.10708022
       objectReference: {fileID: 0}
     - target: {fileID: 3646558397439938220, guid: db78abe9fffbad14ebd8dc940e3be382,
         type: 3}
@@ -7432,12 +7442,12 @@ PrefabInstance:
     - target: {fileID: 4965864488284252690, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.100278854
+      value: 0.18548322
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252690, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.2596016
+      value: 0.08919287
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252691, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
@@ -7487,6 +7497,16 @@ PrefabInstance:
         type: 3}
       propertyPath: unlockingKey
       value: RightKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646558397439938219, guid: db78abe9fffbad14ebd8dc940e3be382,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.243419
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646558397439938219, guid: db78abe9fffbad14ebd8dc940e3be382,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.09620595
       objectReference: {fileID: 0}
     - target: {fileID: 3646558397439938220, guid: db78abe9fffbad14ebd8dc940e3be382,
         type: 3}
@@ -9596,7 +9616,7 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[0].message
-      value: See those yellow furniture?
+      value: See those pink furniture?
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
@@ -9616,7 +9636,7 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[2].message
-      value: But you can use them to make some noise...! (Press O)
+      value: But you can use them to make some noise...! (Press J)
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
@@ -15368,12 +15388,12 @@ PrefabInstance:
     - target: {fileID: 4965864488284252690, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.12829113
+      value: 0.17704844
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252690, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.17065239
+      value: 0.07313776
       objectReference: {fileID: 0}
     - target: {fileID: 4965864488284252691, guid: 9f17f54ee0e8db649a33caad7adfeb4c,
         type: 3}
@@ -15443,6 +15463,100 @@ Transform:
   m_Father: {fileID: 311483850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1902291645
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1148327617332434084, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_Name
+      value: PotNPC (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.data[0].speaker
+      value: Haru
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.data[0].message
+      value: Find keys to unlock the door!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: endLine.message
+      value: Boo!.. I mean Woof!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: endLine.speaker
+      value: Haru
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 66.83789
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b13e6f7301b944d9a6378de09fe89a1, type: 3}
 --- !u!1001 &1922401016
 PrefabInstance:
   m_ObjectHideFlags: 0
