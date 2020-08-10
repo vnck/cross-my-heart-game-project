@@ -8,7 +8,7 @@ public class BookPoint : MonoBehaviour
 
     public bool isTarget = false;
     public bool hasBook = false;
-    private static int booksPlaced = 0;
+    public static int booksPlaced = 0;
 
     public static void BookPlaced() {
         booksPlaced += 1;
