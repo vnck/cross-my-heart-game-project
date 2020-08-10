@@ -85,6 +85,7 @@ public class PlayerPossession : MonoBehaviour
         isPossessing = true;
         if (item.GetComponent<Item>().moveSpeed == 0) {
             GetComponents<Collider2D>()[0].isTrigger = true;
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
 
         // Copy item's box collider and disable our box colliders temporarily
@@ -103,6 +104,7 @@ public class PlayerPossession : MonoBehaviour
         GetComponent<SpriteRenderer>().sortingOrder = 1;
         GetComponent<PlayerMovement>().speed = 5;
         GetComponents<Collider2D>()[0].isTrigger = false;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
         // Re-enable feet collider and destroy item's collider
         GetComponents<Collider2D>()[0].enabled = true;
