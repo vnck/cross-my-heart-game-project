@@ -31,7 +31,7 @@ public class CultistMovement : MonoBehaviour
 
     private GameObject FindNearestBook() {
         GameObject[] books = GameObject.FindGameObjectsWithTag("Book");
-        float closestDistance = 100;
+        float closestDistance = 1000;
         GameObject closestBook = null;
         foreach (var book in books) {
             float distance = Vector3.Distance(book.transform.position, transform.position);
