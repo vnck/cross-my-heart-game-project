@@ -3885,32 +3885,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 851712549}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &859337302 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5642695129345523613, guid: eefee6402706b485dbc1faa2ffa025d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1409320501}
-  m_PrefabAsset: {fileID: 0}
---- !u!249 &859337303
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859337302}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 0
-  m_ForceMagnitude: 100
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!1001 &866168258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6811,7 +6785,7 @@ PrefabInstance:
     - target: {fileID: 5642695129345523586, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
       propertyPath: m_UsedByEffector
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5642695129345523587, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
@@ -6837,6 +6811,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435054889985434951, guid: eefee6402706b485dbc1faa2ffa025d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eefee6402706b485dbc1faa2ffa025d9, type: 3}

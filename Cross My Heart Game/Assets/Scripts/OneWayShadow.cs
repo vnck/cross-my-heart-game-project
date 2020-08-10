@@ -8,15 +8,16 @@ public class OneWayShadow : MonoBehaviour
     public GameObject lightOn;
     public GameObject lightOff;
     private bool passed;
-    private Collider2D collider;
+    private Collider2D[] colliders;
     private AudioSource wooshFX;
     void Start()
     {
         //lightOn.SetActive(true);
         lightOff.SetActive(false);
-        collider = GetComponent<Collider2D>();
+        colliders = GetComponents<Collider2D>();
         wooshFX = GetComponent<AudioSource>();
-        collider.isTrigger = true;
+        colliders[0].isTrigger = true;
+        colliders[1].enabled = false;
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class OneWayShadow : MonoBehaviour
             lightOn.SetActive(false);
             lightOff.SetActive(true);
             wooshFX.Play(0);
-            collider.isTrigger = false;
+            colliders[1].enabled = true;
             passed = true;
         }
     }
