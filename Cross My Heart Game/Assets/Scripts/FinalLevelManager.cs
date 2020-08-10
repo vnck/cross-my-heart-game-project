@@ -74,6 +74,7 @@ public class FinalLevelManager : MonoBehaviour
         gameStarted = false;
         music[0].Stop();
         music[1].Stop();
+        music[3].Play(0);
         camera.GetComponent<FollowPlayer>().enabled = false;
         camera.transform.position = new Vector3(-3,8,-10);
         player.GetComponent<PlayerMovement>().speed = 0;
