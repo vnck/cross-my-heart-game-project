@@ -27,6 +27,9 @@ public class Door : MonoBehaviour
                     other.GetComponent<PlayerPossession>().Depossess();
                     StartCoroutine(waitForDepossess());
                     Destroy(GameObject.Find(unlockingKey));
+                } else if (other.GetComponent<PlayerPossession>().itemName == "FalseKey") {
+                    SaySmt.Line("Clyde", "This is not the right key! :(");
+                    SaySmt.prepClose = true;
                 } else {
                     GetComponents<AudioSource>()[1].Play(0);
                     SaySmt.Line("Clyde", "The door is locked. I think I need a key.");
