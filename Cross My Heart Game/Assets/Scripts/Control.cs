@@ -9,7 +9,7 @@ public class Control : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            SaySmt.Line("", "Press J to unpause,\nPress ESC to go to main menu", false, true);
+            SaySmt.Line("", "Press J to unpause,\nPress Q to go to quit to the main menu", false, true);
             SaySmt.prepClose = true;
         }
     }

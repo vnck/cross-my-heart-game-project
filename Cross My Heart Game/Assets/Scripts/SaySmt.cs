@@ -8,7 +8,7 @@ public class SaySmt : MonoBehaviour
 {
     public static bool speaking = false;
     static bool reset = false;
-    static bool escape = false;
+    public static bool escape = false;
     public static bool prepClose = true;
 
     static List<Dictionary<string,string>> lines = new List<Dictionary<string, string>>();
@@ -76,11 +76,14 @@ public class SaySmt : MonoBehaviour
         else if (Input.GetKeyUp("j") && !prepClose) {
             prepClose = true;
         }
-        if (speaking && Input.GetKeyDown("escape") && SaySmt.escape) {
+        if (speaking && Input.GetKeyDown("q") && SaySmt.escape) {
+            GameObject convo = GameObject.FindGameObjectWithTag("Convo");
+            convo.GetComponent<Canvas>().enabled = false;
             Time.timeScale = 1;
-            SaySmt.speaking = false;
-            SaySmt.escape = false;
             SceneManager.LoadScene(0);
+            speaking = false;
+            escape = false;
+            prepClose = false;
         }
     }
 }
