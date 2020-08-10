@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4114,7 +4114,7 @@ PrefabInstance:
     - target: {fileID: -5945115259635653047, guid: 8451a99f02e034a49a9283016c700ad8,
         type: 3}
       propertyPath: WaitDirection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1779724370179847636, guid: 8451a99f02e034a49a9283016c700ad8,
         type: 3}
@@ -4124,12 +4124,12 @@ PrefabInstance:
     - target: {fileID: 1779724370179847638, guid: 8451a99f02e034a49a9283016c700ad8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -283.07095
+      value: -284.5
       objectReference: {fileID: 0}
     - target: {fileID: 1779724370179847638, guid: 8451a99f02e034a49a9283016c700ad8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -71.32462
+      value: -60.9
       objectReference: {fileID: 0}
     - target: {fileID: 1779724370179847638, guid: 8451a99f02e034a49a9283016c700ad8,
         type: 3}
@@ -6957,6 +6957,31 @@ PrefabInstance:
       propertyPath: keyObjects.Array.data[2]
       value: 
       objectReference: {fileID: 152478092}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: investigationSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: investigationWaitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: startledWatiTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4184026533300184147, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
       propertyPath: m_Name
@@ -9780,17 +9805,42 @@ PrefabInstance:
         type: 3}
       propertyPath: keyObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 625569255}
+      objectReference: {fileID: 842461474}
     - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
       propertyPath: keyObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 487276880}
+      objectReference: {fileID: 625569255}
     - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
       propertyPath: keyObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 842461474}
+      objectReference: {fileID: 487276880}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: investigationSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: chaseSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: startledWatiTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
+        type: 3}
+      propertyPath: investigationWaitTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4184026533300184147, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
       propertyPath: m_Name
@@ -9799,12 +9849,12 @@ PrefabInstance:
     - target: {fileID: 4184026533300184156, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.347903
+      value: 14.07
       objectReference: {fileID: 0}
     - target: {fileID: 4184026533300184156, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.049656
+      value: 6.95
       objectReference: {fileID: 0}
     - target: {fileID: 4184026533300184156, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
@@ -10092,7 +10142,7 @@ PrefabInstance:
     - target: {fileID: 4184026533300184146, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
       propertyPath: chaseSpeed
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4184026533300184147, guid: 92cd4db075057e64eb52125057a70b70,
         type: 3}
