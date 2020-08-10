@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -888,6 +888,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6159193051005737819, guid: 786de9967217de84bbc1852bb2244a91,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.0499268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159193051005737819, guid: 786de9967217de84bbc1852bb2244a91,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -181.64996
+      objectReference: {fileID: 0}
     - target: {fileID: 7873391677573667593, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2112,17 +2122,17 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[0].speaker
-      value: Clyde
+      value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[0].message
-      value: Looks like a cult...
+      value: Hey, pet me...
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
@@ -2132,27 +2142,27 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[1].message
-      value: They kidnapped your girl.
+      value: Ahh... that's the spot.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[2].speaker
-      value: Clyde
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
-        type: 3}
-      propertyPath: lines.Array.data[2].message
-      value: I need to save Bonnie.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
-        type: 3}
-      propertyPath: lines.Array.data[3].speaker
       value: Haru
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
+      propertyPath: lines.Array.data[2].message
+      value: They kidnapped your girl.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.data[3].speaker
+      value: Clyde
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
       propertyPath: lines.Array.data[3].message
-      value: Looks like there's no backdoor.
+      value: I need to save Bonnie.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
@@ -2162,12 +2172,22 @@ PrefabInstance:
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: lines.Array.data[4].message
-      value: You'll have to enter through the front.
+      value: Looks like there's no backdoor.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}
       propertyPath: endLine.speaker
       value: Haru
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.data[5].speaker
+      value: Haru
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148327617332434085, guid: 2b13e6f7301b944d9a6378de09fe89a1,
+        type: 3}
+      propertyPath: lines.Array.data[5].message
+      value: You'll have to enter through the front.
       objectReference: {fileID: 0}
     - target: {fileID: 1148327617332434110, guid: 2b13e6f7301b944d9a6378de09fe89a1,
         type: 3}

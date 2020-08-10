@@ -11,7 +11,6 @@ public class Npc : MonoBehaviour
 {
     public List<Line> lines = new List<Line>(); 
     private bool spoken;
-
     public Line endLine;
 
     // Start is called before the first frame update
