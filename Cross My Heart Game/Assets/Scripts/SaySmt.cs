@@ -8,6 +8,7 @@ public class SaySmt : MonoBehaviour
 {
     public static bool speaking = false;
     static bool reset = false;
+    static bool escape = false;
     public static bool prepClose = true;
 
     static List<Dictionary<string,string>> lines = new List<Dictionary<string, string>>();
@@ -35,7 +36,7 @@ public class SaySmt : MonoBehaviour
         Time.timeScale = 0;
         SaySmt.reset = reset;
     }
-    static public void Line(string person, string message, bool reset = false)
+    static public void Line(string person, string message, bool reset = false, bool escape = false)
     {
         GameObject convo = GameObject.FindGameObjectWithTag("Convo");
         Debug.Log("opening speech box : line");
@@ -49,6 +50,7 @@ public class SaySmt : MonoBehaviour
         prepClose = false;
         speaking = true;
         Time.timeScale = 0;
+        SaySmt.escape = escape;
         SaySmt.reset = reset;
     }
 
@@ -73,6 +75,12 @@ public class SaySmt : MonoBehaviour
         }
         else if (Input.GetKeyUp("j") && !prepClose) {
             prepClose = true;
+        }
+        if (speaking && Input.GetKeyDown("escape") && SaySmt.escape) {
+            Time.timeScale = 1;
+            SaySmt.speaking = false;
+            SaySmt.escape = false;
+            SceneManager.LoadScene(0);
         }
     }
 }
