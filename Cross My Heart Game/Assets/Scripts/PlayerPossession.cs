@@ -66,7 +66,15 @@ public class PlayerPossession : MonoBehaviour
         }
         if (Input.GetKeyDown("j")) {
             if (isPossessed && Time.timeScale != 0 && item.GetComponent<Item>().moveSpeed == 0) {
-                itemPrefab.GetComponent<Item>().StationaryAction();
+                StartCoroutine(WaitForSFX());
+                if (item.GetComponent<Item>().label == "locker"){
+                    Debug.Log("LOCKERRRR");
+                    wooshSFX[3].Play(0);
+                }
+                else if (item.GetComponent<Item>().label == "laptop"){
+                    Debug.Log("LAPTOPPPP");
+                    wooshSFX[4].Play(0);
+                }
             } else if (npcInRange && !SaySmt.speaking && SaySmt.prepClose) {
                 npc.GetComponent<Npc>().Speak();
             }
@@ -161,6 +169,11 @@ public class PlayerPossession : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         FinishPossess();
         yield return null;
+    }
+
+    IEnumerator WaitForSFX() {
+        yield return new WaitForSeconds(0.5f);
+        itemPrefab.GetComponent<Item>().StationaryAction();
     }
 
     public void FinishPossess() {
