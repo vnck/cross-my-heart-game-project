@@ -104,7 +104,7 @@ public class EnemyMovementLoop : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null) {
                 Debug.Log("DISTANCE " + Vector3.Distance(player.transform.position, transform.position));
-                if (Vector3.Distance(player.transform.position, transform.position) < 3f) {
+                if (Vector3.Distance(player.transform.position, transform.position) < 2f) {
                     player.GetComponent<PlayerMovement>().Kill();
                 }
             }
