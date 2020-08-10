@@ -633,12 +633,12 @@ PrefabInstance:
     - target: {fileID: 7078792947941310294, guid: a27e8efee1b94cd4795fc0d12fcc8bc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7
+      value: -2.68
       objectReference: {fileID: 0}
     - target: {fileID: 7078792947941310294, guid: a27e8efee1b94cd4795fc0d12fcc8bc6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.1
+      value: -11.76
       objectReference: {fileID: 0}
     - target: {fileID: 7078792947941310294, guid: a27e8efee1b94cd4795fc0d12fcc8bc6,
         type: 3}
@@ -5094,8 +5094,8 @@ MonoBehaviour:
   - speaker: Bonnie
     message: Yes... the toilet... let's go!
   endLine:
-    speaker: 
-    message: 
+    speaker: Bonnie
+    message: You did it! Now let's go home.
 --- !u!1001 &1034463284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8726,12 +8726,12 @@ PrefabInstance:
     - target: {fileID: 5642695129345523586, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.35602617
+      value: 0.6228261
       objectReference: {fileID: 0}
     - target: {fileID: 5642695129345523586, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.15733051
+      value: 0.41008854
       objectReference: {fileID: 0}
     - target: {fileID: 5642695129345523587, guid: eefee6402706b485dbc1faa2ffa025d9,
         type: 3}
@@ -8747,6 +8747,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShadowBarrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435054889985434951, guid: eefee6402706b485dbc1faa2ffa025d9,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 2.2088542
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435054889985434951, guid: eefee6402706b485dbc1faa2ffa025d9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.211937
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435054889985434951, guid: eefee6402706b485dbc1faa2ffa025d9,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.45181537
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435054889985434951, guid: eefee6402706b485dbc1faa2ffa025d9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.124229
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eefee6402706b485dbc1faa2ffa025d9, type: 3}
