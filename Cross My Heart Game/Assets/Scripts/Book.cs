@@ -11,7 +11,6 @@ public class Book : MonoBehaviour
     public bool isTarget = false;
     public bool carried = false;
     public bool inPlace = false;
-
     private Animation anim;
 
     private void Start() {

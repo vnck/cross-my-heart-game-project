@@ -22,6 +22,7 @@ public class FinalLevelManager : MonoBehaviour
     {
         bookCount = GameObject.FindGameObjectsWithTag("BookPoint").Length;
         music = GetComponents<AudioSource>();
+        music[1].Play(0);
         stationaryCultists = GameObject.Find("StationaryCultists");
         mobileCultists = GameObject.Find("MobileCultists");
         sacrificialBonnie = GameObject.Find("SacrificialBonnie");
@@ -31,11 +32,11 @@ public class FinalLevelManager : MonoBehaviour
     void FixedUpdate()
     {
         if (gameStarted){
-            Debug.Log("Books Burnt: " + booksBurnt + ", Books Placed: " + booksPlaced);
+            Debug.Log("Total Books: " + bookCount + ", Books Burnt: " + booksBurnt + ", Books Placed: " + booksPlaced);
             if (player.GetComponent<PlayerMovement>().isDead){
                 ResetLevel();
             }
-            else if (bookCount - booksBurnt < enemyGoal) {
+            else if ((bookCount - booksBurnt) < enemyGoal) {
                 WinGame();
             }
             else if (booksPlaced == enemyGoal)
@@ -49,23 +50,32 @@ public class FinalLevelManager : MonoBehaviour
     void WinGame()
     {
         winGame = true;
+        gameStarted = false;
         stationaryCultists.SetActive(false);
         mobileCultists.SetActive(false);
         sacrificialBonnie.SetActive(false);
+        music[0].Stop();
+        music[1].Stop();
+        music[2].Play(0);
         SaySmt.PrepLine("Cultists", "Noooo we lost!!!");
         SaySmt.PlayLines();
+        SaySmt.prepClose = true;
     }
 
     void LoseGame()
     {
         loseGame = true;
+        gameStarted = false;
+        music[0].Stop();
+        music[1].Stop();
         SaySmt.PrepLine("Cultists", "Hahaha we win!!!");
         SaySmt.PlayLines();
+        SaySmt.prepClose = true;
     }
 
     public void StartLevel()
     {
-        music[0].Play(0);
+        music[0].Play(1);
         gameStarted = true;
         GameObject[] cultists = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(var cultist in cultists) {
