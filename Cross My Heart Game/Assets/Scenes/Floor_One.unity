@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4072,6 +4072,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flowerpot
       objectReference: {fileID: 0}
+    - target: {fileID: 4305614988535788597, guid: 44e4eaa1c9b512b4da73de93a159bc2a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4305614988535788598, guid: 44e4eaa1c9b512b4da73de93a159bc2a,
         type: 3}
       propertyPath: m_Offset.y
@@ -7366,6 +7371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stool_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279844992686178805, guid: 9251897454bdf934d8967c07967095b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8279844992686178806, guid: 9251897454bdf934d8967c07967095b3,
         type: 3}
