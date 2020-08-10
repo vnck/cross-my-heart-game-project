@@ -10,7 +10,8 @@ public class RoomSwitcher : MonoBehaviour
     static GameObject player;
     static GameObject playerLight;
     static GameObject camera;
-    public float destinationOffset;
+    public float xDesOffset;
+    public float yDesOffset;
     public bool activated;
     
     // Start is called before the first frame update
@@ -27,17 +28,18 @@ public class RoomSwitcher : MonoBehaviour
             if (GetComponent<Door>() != null) {
                 if (GetComponent<Door>().isLocked == false) {
                     Debug.Log("Room Switch " + switchId + " triggered, going to Room Switch " + destinationSwitchId);
-                    player.transform.position = new Vector3(destinationSwitch.transform.position.x, destinationSwitch.transform.position.y + destinationOffset, 0);
-                    playerLight.transform.position = new Vector3(destinationSwitch.transform.position.x, destinationSwitch.transform.position.y + destinationOffset, 0);
-                    camera.transform.position = new Vector3(destinationSwitch.transform.position.x, destinationSwitch.transform.position.y + destinationOffset, -10);
+                    changePos();
                 }
             } else if (GetComponent<Door>() == null) {
-                Debug.Log(destinationOffset);
                 Debug.Log("Room Switch " + switchId + " triggered, going to Room Switch " + destinationSwitchId);
-                player.transform.position = new Vector3(destinationSwitch.transform.position.x, destinationSwitch.transform.position.y + destinationOffset, 0);
-                playerLight.transform.position = new Vector3(destinationSwitch.transform.position.x, destinationSwitch.transform.position.y + destinationOffset, 0);
-                camera.transform.position = new Vector3(destinationSwitch.transform.position.x, destinationSwitch.transform.position.y + destinationOffset, -10);
+                changePos();
             }
         }
+    }
+
+    void changePos() {
+        player.transform.position = new Vector3(destinationSwitch.transform.position.x + xDesOffset, destinationSwitch.transform.position.y + yDesOffset, 0);
+        playerLight.transform.position = new Vector3(destinationSwitch.transform.position.x + xDesOffset, destinationSwitch.transform.position.y + yDesOffset, 0);
+        camera.transform.position = new Vector3(destinationSwitch.transform.position.x + xDesOffset, destinationSwitch.transform.position.y + yDesOffset, -10);
     }
 }

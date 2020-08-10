@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         gameOverSFX = GetComponents<AudioSource>();
         movementSinceLastGraphUpdate = 0;
         main = Camera.main;
+        PriestManager.chasing = false;
 	}
 
     void FixedUpdate() 

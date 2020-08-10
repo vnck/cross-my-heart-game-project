@@ -12,7 +12,7 @@ public class OneWayShadow : MonoBehaviour
     private AudioSource wooshFX;
     void Start()
     {
-        lightOn.SetActive(true);
+        //lightOn.SetActive(true);
         lightOff.SetActive(false);
         collider = GetComponent<Collider2D>();
         wooshFX = GetComponent<AudioSource>();
@@ -23,6 +23,12 @@ public class OneWayShadow : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (PriestManager.chasing) {
+            collider.isTrigger = false;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
