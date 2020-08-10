@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2999218159454069857}
   - component: {fileID: 2999218159454069861}
   - component: {fileID: 7273109976066670796}
+  - component: {fileID: 3921608808974151641}
   m_Layer: 0
   m_Name: StoryBook
   m_TagString: Book
@@ -34,7 +35,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 43.376648}
 --- !u!212 &2999218159454069863
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -163,3 +164,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTarget: 0
   carried: 0
+  inPlace: 0
+--- !u!111 &3921608808974151641
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999218159454069858}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 91e06fa10d8554ecdb7db30b553fa847, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 91e06fa10d8554ecdb7db30b553fa847, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

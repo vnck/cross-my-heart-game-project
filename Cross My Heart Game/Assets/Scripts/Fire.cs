@@ -20,6 +20,7 @@ public class Fire : MonoBehaviour
                 playerPossession.Depossess();
                 Destroy(playerPossession.item);
                 playerPossession.item = null;
+                FinalLevelManager.BurnBook();
             }
         }
     }

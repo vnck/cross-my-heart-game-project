@@ -1405,7 +1405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429269078}
   m_Layer: 8
-  m_Name: BonnieSacrifice
+  m_Name: SacrificialBonnie
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7745,8 +7745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39caa8f833407487fb41bb2e96eebfa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stationaryCultists: {fileID: 0}
-  mobileCultists: {fileID: 0}
+  stationaryCultists: {fileID: 520050785}
+  mobileCultists: {fileID: 679866698}
+  sacrificialBonnie: {fileID: 429269077}
   gameStarted: 0
 --- !u!4 &1968885022
 Transform:

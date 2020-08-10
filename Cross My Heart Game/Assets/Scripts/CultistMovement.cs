@@ -102,6 +102,7 @@ public class CultistMovement : MonoBehaviour
         if (hasBook && other.gameObject == targetBookPoint) {
             Vector3 newPos = new Vector3(other.gameObject.transform.position.x, other.gameObject.transform.position.y, targetBook.transform.position.z);
             targetBook.transform.position = newPos;
+            targetBook.GetComponent<Book>().inPlace = true;
             BookPoint.BookPlaced();
             hasBook = false;
             targetBook = FindNearestBook();
