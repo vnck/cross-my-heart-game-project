@@ -30,6 +30,9 @@ public class Door : MonoBehaviour
                 } else if (other.GetComponent<PlayerPossession>().itemName == "FalseKey") {
                     SaySmt.Line("Clyde", "Looks like this is a fake key! :(");
                     SaySmt.prepClose = true;
+                } else if (other.GetComponent<PlayerPossession>().itemName.Contains("Key")) {
+                    SaySmt.Line("Clyde", "Doesn't look like the right key...");
+                    SaySmt.prepClose = true;
                 } else {
                     GetComponents<AudioSource>()[1].Play(0);
                     SaySmt.Line("Clyde", "The door is locked. I think I need a key.");
