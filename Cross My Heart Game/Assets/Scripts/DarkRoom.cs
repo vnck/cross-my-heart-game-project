@@ -26,8 +26,8 @@ public class DarkRoom : MonoBehaviour
                 light.pointLightInnerRadius = 10F;
                 light.pointLightOuterRadius = 10;
             } else {
-                light.pointLightInnerRadius = .5F;
-                light.pointLightOuterRadius = .5F;
+                light.pointLightInnerRadius = 1F;
+                light.pointLightOuterRadius = 1F;
             }
         } else {
             light.pointLightInnerRadius = 3;
