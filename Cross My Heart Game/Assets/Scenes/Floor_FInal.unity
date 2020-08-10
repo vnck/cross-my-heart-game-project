@@ -5090,9 +5090,9 @@ MonoBehaviour:
   - speaker: Clyde
     message: Wait.. how are we getting out?
   - speaker: Bonnie
-    message: I found a way through the sewers!
+    message: I found a way... through the sewers!
   - speaker: Bonnie
-    message: Let's go!
+    message: Yes... the toilet... let's go!
   endLine:
     speaker: 
     message: 
