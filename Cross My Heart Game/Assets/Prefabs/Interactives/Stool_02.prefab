@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0d45fafc61e924baeec0e3ae9d2527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: 
+  label: stool
   health: 2
   moveSpeed: 3
   isKey: 0
