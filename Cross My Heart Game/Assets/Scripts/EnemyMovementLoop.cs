@@ -172,6 +172,7 @@ public class EnemyMovementLoop : MonoBehaviour
                 animator.SetBool("moving", false);
                 SetTarget(ray.collider.gameObject.transform);
                 SetSpeed(0);
+                PriestManager.chasing = true;
             }
         } else {
             hitPoint = Vector3.zero;

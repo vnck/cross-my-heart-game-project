@@ -6,6 +6,7 @@ public class PriestManager : MonoBehaviour
 {
     public delegate void InvestigableTrigger(Transform transform);
     public static event InvestigableTrigger investigableTrigger;
+    public static bool chasing = false;
 
     public static void TriggerSuspicious()
     {
