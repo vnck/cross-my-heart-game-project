@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
                     StartCoroutine(waitForDepossess());
                     Destroy(GameObject.Find(unlockingKey));
                 } else if (other.GetComponent<PlayerPossession>().itemName == "FalseKey") {
-                    SaySmt.Line("Clyde", "This is not the right key! :(");
+                    SaySmt.Line("Clyde", "Looks like this is a fake key! :(");
                     SaySmt.prepClose = true;
                 } else {
                     GetComponents<AudioSource>()[1].Play(0);
