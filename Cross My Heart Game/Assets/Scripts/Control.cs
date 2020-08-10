@@ -9,6 +9,7 @@ public class Control : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             SaySmt.Line("", "Paused");
+            SaySmt.prepClose = true;
         }
     }
 }
