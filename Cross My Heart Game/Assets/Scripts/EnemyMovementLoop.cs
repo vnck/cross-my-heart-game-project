@@ -134,6 +134,7 @@ public class EnemyMovementLoop : MonoBehaviour
             { 
                 state = State.Chasing; 
                 alertBox.enabled = false;
+                GetComponent<AILerp>().repathRate = 0.2f;
                 SetSpeed(chaseSpeed);
             }
             else if (state == State.Idle) { 
