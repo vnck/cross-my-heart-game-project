@@ -123,6 +123,9 @@ public class PlayerPossession : MonoBehaviour
             Debug.Log("STOOOOOOOOL");
             transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
         }
+        if (item.GetComponent<Item>().label == "locker") {
+            transform.position = new Vector2(transform.position.x, transform.position.y - 0.5f);
+        }
         AstarPath.active.Scan();
     }
 
