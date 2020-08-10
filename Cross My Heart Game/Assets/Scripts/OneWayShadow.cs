@@ -26,12 +26,12 @@ public class OneWayShadow : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
-            passed = true;
+        if (other.CompareTag("Player") && !passed) {
             lightOn.SetActive(false);
             lightOff.SetActive(true);
             wooshFX.Play(0);
             collider.isTrigger = false;
+            passed = true;
         }
     }
 

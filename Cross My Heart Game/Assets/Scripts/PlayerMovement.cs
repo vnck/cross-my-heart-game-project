@@ -134,13 +134,6 @@ public class PlayerMovement : MonoBehaviour
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
             }
         }
-        if (other.CompareTag("Fire")) {
-            if (playerPossession.isPossessed && playerPossession.item.CompareTag("Book")) {
-                playerPossession.Depossess();
-                Destroy(playerPossession.item);
-                playerPossession.item = null;
-            }
-        }
     }
 
     public bool IsStill()

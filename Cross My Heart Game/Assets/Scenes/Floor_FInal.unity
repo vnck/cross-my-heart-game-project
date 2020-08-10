@@ -1645,6 +1645,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 233580737}
     m_Modifications:
+    - target: {fileID: -6507735032290388785, guid: 73e93042895f04b41afb28eec2adb08d,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1445004562}
     - target: {fileID: 2794653567382084241, guid: 73e93042895f04b41afb28eec2adb08d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1749,7 +1754,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 484919863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81014510d57d648f091e710db4895fa5, type: 3}
+  m_Script: {fileID: 11500000, guid: cdabe16b357d143a58e289b0ab5fbc64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &484919869
@@ -1764,7 +1769,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 215c453edce06284e8bd833cd15c5877, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2412,7 +2417,12 @@ PrefabInstance:
     - target: {fileID: 6159193051005737819, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.0499878
+      value: -3.0500488
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159193051005737819, guid: 786de9967217de84bbc1852bb2244a91,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -181.6499
       objectReference: {fileID: 0}
     - target: {fileID: 7873391677573667593, guid: 786de9967217de84bbc1852bb2244a91,
         type: 3}
@@ -3728,6 +3738,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 233580737}
     m_Modifications:
+    - target: {fileID: -6507735032290388785, guid: 73e93042895f04b41afb28eec2adb08d,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1445004562}
     - target: {fileID: 2794653567382084241, guid: 73e93042895f04b41afb28eec2adb08d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8152,6 +8167,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 233580737}
     m_Modifications:
+    - target: {fileID: -6507735032290388785, guid: 73e93042895f04b41afb28eec2adb08d,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1445004562}
+    - target: {fileID: 798900490381650226, guid: 73e93042895f04b41afb28eec2adb08d,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2794653567382084241, guid: 73e93042895f04b41afb28eec2adb08d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8242,6 +8267,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 233580737}
     m_Modifications:
+    - target: {fileID: -6507735032290388785, guid: 73e93042895f04b41afb28eec2adb08d,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1445004562}
     - target: {fileID: 2794653567382084241, guid: 73e93042895f04b41afb28eec2adb08d,
         type: 3}
       propertyPath: m_LocalPosition.x
