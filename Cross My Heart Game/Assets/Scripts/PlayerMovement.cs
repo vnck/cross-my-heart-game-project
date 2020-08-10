@@ -115,17 +115,7 @@ public class PlayerMovement : MonoBehaviour
             EnemyMovementLoop mov = other.gameObject.GetComponent<EnemyMovementLoop>();
             if (mov != null) { chasing = mov.isChasing(); }
             if (IsStill() && playerPossession.isPossessed && !chasing) {return;}
-            if (playerPossession.isPossessed) {
-                playerPossession.PreDeathDepossess();
-            }
-            isDead = true;
-            playerAnimator.SetBool("moving", false);
-            playerAnimator.SetBool("isDead", true);
-            playerAnimator.Play("death", 0, 0);
-            Die();
-            main.GetComponents<AudioSource>()[0].enabled = false;
-            main.GetComponents<AudioSource>()[1].enabled = false;
-            gameOverSFX[2].Play(0);
+            Kill();
         }
         if (other.CompareTag("Furniture") || other.CompareTag("Item")) {
             if (isDead) { return; }
@@ -135,6 +125,23 @@ public class PlayerMovement : MonoBehaviour
                 GetComponent<SpriteRenderer>().sortingOrder = 1;
             }
         }
+    }
+
+
+
+    public void Kill() {
+        if (isDead) { return; }
+        if (playerPossession.isPossessed) {
+            playerPossession.PreDeathDepossess();
+        }
+        isDead = true;
+        playerAnimator.SetBool("moving", false);
+        playerAnimator.SetBool("isDead", true);
+        playerAnimator.Play("death", 0, 0);
+        Die();
+        main.GetComponents<AudioSource>()[0].enabled = false;
+        main.GetComponents<AudioSource>()[1].enabled = false;
+        gameOverSFX[2].Play(0);
     }
 
     public bool IsStill()

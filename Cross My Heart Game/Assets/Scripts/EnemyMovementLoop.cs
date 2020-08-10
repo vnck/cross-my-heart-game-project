@@ -100,6 +100,14 @@ public class EnemyMovementLoop : MonoBehaviour
         if (state != State.Chasing && state != State.Startled) 
         {
             CheckPlayer();
+        } else {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null) {
+                Debug.Log("DISTANCE " + Vector3.Distance(player.transform.position, transform.position));
+                if (Vector3.Distance(player.transform.position, transform.position) < 1f) {
+                    player.GetComponent<PlayerMovement>().Kill();
+                }
+            }
         }
         if (GetComponent<AILerp>().reachedDestination || GetComponent<AILerp>().reachedEndOfPath || GetComponent<AILerp>().speed == 0)
         {
