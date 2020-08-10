@@ -8,6 +8,7 @@ public class CultistMovement : MonoBehaviour
 {
     private bool hasBook = false;
     private GameObject targetBook;
+    private bool takingBook;
     private GameObject targetBookPoint;
     private Vector3 lastPos;
     private Animator animator;
@@ -22,8 +23,10 @@ public class CultistMovement : MonoBehaviour
     public void StartMoving() {
         targetBook = FindNearestBook();
         targetBook.GetComponent<Book>().isTarget = true;
+        Debug.Log(targetBook.transform);
         SetTarget(targetBook.transform);     
     }
+
     void SetTarget(Transform trsfrm) { GetComponent<AIDestinationSetter>().target = trsfrm; }
 
     private GameObject FindNearestBook() {
@@ -42,7 +45,7 @@ public class CultistMovement : MonoBehaviour
 
     private GameObject FindNearestEmptyBookPoint() {
         GameObject[] bookPoints = GameObject.FindGameObjectsWithTag("BookPoint");
-        float closestDistance = 100;
+        float closestDistance = 1000;
         GameObject closestBookPoint = null;
         foreach (var bookPoint in bookPoints) {
             float distance = Vector3.Distance(bookPoint.transform.position, transform.position);
@@ -59,7 +62,22 @@ public class CultistMovement : MonoBehaviour
         if (hasBook) {
             targetBook.transform.position = transform.position;
         }
+        if (Vector3.Distance(targetBook.transform.position, transform.position) < 0.5 && !takingBook) {
+            takingBook = true;
+            StartCoroutine(WaitToTakeBook());
+        }
     }
+
+    IEnumerator WaitToTakeBook() {
+        yield return new WaitForSeconds(2);
+        if (!hasBook) {
+            Debug.Log("failed to take book!");
+            targetBook = null;
+            StartMoving();
+            takingBook = false;
+        }
+    }
+
     void UpdateCurrentDirection()
     {
         var velocity = transform.position - lastPos;
