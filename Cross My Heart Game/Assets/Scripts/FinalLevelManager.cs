@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class FinalLevelManager : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class FinalLevelManager : MonoBehaviour
     GameObject stationaryCultists;
     GameObject mobileCultists;
     GameObject sacrificialBonnie;
-    GameObject fireRings;
+    GameObject director;
     public GameObject player;
+    public GameObject camera;
     AudioSource[] music;
     public bool gameStarted;
-    bool winGame;
-    bool loseGame;
+    public bool winGame;
+    public bool loseGame;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,8 @@ public class FinalLevelManager : MonoBehaviour
         stationaryCultists = GameObject.Find("StationaryCultists");
         mobileCultists = GameObject.Find("MobileCultists");
         sacrificialBonnie = GameObject.Find("SacrificialBonnie");
-        fireRings = GameObject.Find("FireRings");
+        director = GameObject.Find("TimelineManager");
+        camera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -70,10 +73,22 @@ public class FinalLevelManager : MonoBehaviour
         gameStarted = false;
         music[0].Stop();
         music[1].Stop();
-        fireRings.SetActive(true);
+        camera.GetComponent<FollowPlayer>().enabled = false;
+        camera.transform.position = new Vector3(-3,8,-10);
         player.GetComponent<PlayerMovement>().speed = 0;
-        SaySmt.PrepLine("Cultists", "Hahaha we win!!!");
+        director.GetComponent<PlayableDirector>().Play();
+        sacrificialBonnie.SetActive(false);
+        SaySmt.PrepLine("Demon", "HAHA!");
+        SaySmt.PrepLine("Demon", "I HAVE BEEN SUMMONED!");
         SaySmt.PlayLines();
+        SaySmt.prepClose = true;
+        StartCoroutine(PlayerDeath());
+    }
+
+    IEnumerator PlayerDeath() {
+        yield return new WaitForSeconds(5f);
+        player.GetComponent<PlayerMovement>().gameOverSFX[1].Play(0);
+        SaySmt.Line("", "GAME OVER!", true);
         SaySmt.prepClose = true;
     }
 

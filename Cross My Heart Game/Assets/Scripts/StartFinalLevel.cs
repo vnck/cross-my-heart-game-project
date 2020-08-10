@@ -14,7 +14,7 @@ public class StartFinalLevel : MonoBehaviour
 
     // Update is called once per frame
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.tag == "Player" && !levelManager.GetComponent<FinalLevelManager>().gameStarted) {
+        if (other.tag == "Player" && !levelManager.GetComponent<FinalLevelManager>().gameStarted && !levelManager.GetComponent<FinalLevelManager>().winGame && !levelManager.GetComponent<FinalLevelManager>().loseGame) {
             levelManager.GetComponent<FinalLevelManager>().StartLevel();
         }
     }

@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float timeDownX = 0.0f; //time which A/D was pressed
     private float timeDownY= 0.0f;  //time which W/S was pressed
     private Animator playerAnimator;
-    private AudioSource[] gameOverSFX;
+    public AudioSource[] gameOverSFX;
     private PlayerPossession playerPossession;
     private Camera main;
 
@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("moving", false);
             playerAnimator.SetBool("isDead", true);
             playerAnimator.Play("death", 0, 0);
-            StartCoroutine(WaitForDeathAnim());
+            Die();
             main.GetComponents<AudioSource>()[0].enabled = false;
             main.GetComponents<AudioSource>()[1].enabled = false;
             gameOverSFX[2].Play(0);
@@ -139,6 +139,11 @@ public class PlayerMovement : MonoBehaviour
     public bool IsStill()
     {
         return movement.x == 0 && movement.y == 0;
+    }
+
+    public void Die()
+    {
+        StartCoroutine(WaitForDeathAnim());
     }
 
     IEnumerator WaitForDeathAnim() {
