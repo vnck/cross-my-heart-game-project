@@ -62,7 +62,8 @@ public class FinalLevelManager : MonoBehaviour
         music[0].Stop();
         music[1].Stop();
         music[2].Play(0);
-        SaySmt.PrepLine("Cultists", "Noooo we lost!!!");
+        SaySmt.PrepLine("Priests", "Noooo the ritual is ruined!!!");
+        SaySmt.PrepLine("Priests", "We will be back.....");
         SaySmt.PlayLines();
         SaySmt.prepClose = true;
     }
@@ -80,6 +81,7 @@ public class FinalLevelManager : MonoBehaviour
         sacrificialBonnie.SetActive(false);
         SaySmt.PrepLine("Demon", "HAHA!");
         SaySmt.PrepLine("Demon", "I HAVE BEEN SUMMONED!");
+        SaySmt.PrepLine("Demon", "DIEEE LITTLE GHOST!");
         SaySmt.PlayLines();
         SaySmt.prepClose = true;
         StartCoroutine(PlayerDeath());
