@@ -10,6 +10,7 @@ public class Control : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             SaySmt.Line("", "Press J to unpause,\nPress ESC to go to main menu", false, true);
+            SaySmt.prepClose = true;
         }
     }
 }
