@@ -119,6 +119,10 @@ public class PlayerPossession : MonoBehaviour
             item.transform.position = transform.position;
             item.SetActive(true);
         } 
+        if (item.GetComponent<Item>().label == "stool") {
+            Debug.Log("STOOOOOOOOL");
+            transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
+        }
         AstarPath.active.Scan();
     }
 
