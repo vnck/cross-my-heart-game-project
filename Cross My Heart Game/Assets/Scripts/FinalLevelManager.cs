@@ -11,6 +11,7 @@ public class FinalLevelManager : MonoBehaviour
     GameObject stationaryCultists;
     GameObject mobileCultists;
     GameObject sacrificialBonnie;
+    GameObject fireRings;
     public GameObject player;
     AudioSource[] music;
     public bool gameStarted;
@@ -20,12 +21,13 @@ public class FinalLevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bookCount = GameObject.FindGameObjectsWithTag("BookPoint").Length;
+        bookCount = GameObject.FindGameObjectsWithTag("Book").Length;
         music = GetComponents<AudioSource>();
         music[1].Play(0);
         stationaryCultists = GameObject.Find("StationaryCultists");
         mobileCultists = GameObject.Find("MobileCultists");
         sacrificialBonnie = GameObject.Find("SacrificialBonnie");
+        fireRings = GameObject.Find("FireRings");
     }
 
     // Update is called once per frame
@@ -68,6 +70,8 @@ public class FinalLevelManager : MonoBehaviour
         gameStarted = false;
         music[0].Stop();
         music[1].Stop();
+        fireRings.SetActive(true);
+        player.GetComponent<PlayerMovement>().speed = 0;
         SaySmt.PrepLine("Cultists", "Hahaha we win!!!");
         SaySmt.PlayLines();
         SaySmt.prepClose = true;
