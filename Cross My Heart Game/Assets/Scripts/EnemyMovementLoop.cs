@@ -216,6 +216,7 @@ public class EnemyMovementLoop : MonoBehaviour
 
     void InvestigableTrigger(Transform susTransform) // Called when a distraction event occurs.
     {
+        if (state == State.Chasing || state == State.Startled) { return; }
         if (Vector3.Distance(transform.position, susTransform.position) < 12)
         {
             Debug.Log("SUSPICIOUS!!");
