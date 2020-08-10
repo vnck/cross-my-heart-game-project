@@ -7,16 +7,21 @@ public class OverviewCam : MonoBehaviour
     public GameObject camera;
     public GameObject player;
     private bool playerInRange = false;
+    public bool viewing = false;
 
     void Update()
     {
-        if (Input.GetKey("j") && playerInRange) {
+        if (Input.GetKeyDown("j") && playerInRange && !viewing) {
+            viewing = true;
+        } else if (Input.GetKeyDown("j") && playerInRange && viewing) {
+            viewing = false;
+        }
+        if (viewing) {
             camera.GetComponents<FollowPlayer>()[0].enabled = false;
             camera.GetComponents<FollowPlayer>()[1].enabled = true;
             camera.GetComponent<Camera>().orthographicSize = 12;
             player.GetComponent<PlayerMovement>().speed = 0;
-        }
-        if (Input.GetKeyUp("j") && playerInRange) {
+        } else {
             player.GetComponent<PlayerMovement>().speed = 5;
             camera.GetComponents<FollowPlayer>()[0].enabled = true;
             camera.GetComponents<FollowPlayer>()[1].enabled = false;
